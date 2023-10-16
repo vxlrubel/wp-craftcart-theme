@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="./Images/Jamidar.png" type="image/x-icon">
-        <title>JOMIDARI</title>
 
         <!-- font-awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
         <!-- google fronts -->  
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,19 +14,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,900&display=swap" rel="stylesheet">
 
         <!-- bootstrap file link -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
         <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 
         <!-- OWL carosule link -->
-        <link rel="stylesheet" href="./css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
-        <!-- css file links -->
-        <link rel="stylesheet" href="main.css">
+        <?php wp_head(); ?>
         
     </head>
 
-    <body>
+    <body <?php body_class(); ?>>
         <!-- Navber Start -->
         <nav>
             <!--Navber For Laptop And Computer -->
@@ -74,7 +69,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="logo col-2">
-                                <a href="./index.html"><img src="./Images/Jamidar.png" alt=""></a>
+                                <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?> /assets/img/Jamidar.png" alt=""></a>
                             </div>
 
                             <div class="Serchber col-7">
@@ -115,7 +110,7 @@
 
                                             <div class="CartSummaryProduct row">
                                                 <div class="col-3">
-                                                    <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 </div>
                                                 
                                                 <div class="col-9">
@@ -163,27 +158,27 @@
                                             <p>Register</p>
                                         </div> -->
 
-                                        <img src="./Images/userImg1.png" alt="" id="switchAccount">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
 
                                         <!-- switch acount start -->
                                         <div class="WtitchDiv">
                                             <div>
                                                 <a href="#">
-                                                    <img src="./Images/switch-account/BuyAndSell.png" alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/BuyAndSell.png" alt="">
                                                     Buy & Sell
                                                 </a>
                                             </div>
 
                                             <div>
                                                 <a href="#">
-                                                    <img src="./Images/switch-account/document.png" alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/document.png" alt="">
                                                     Document Processing
                                                 </a>
                                             </div>
 
                                             <div>
                                                 <a href="#">
-                                                    <img src="./Images/switch-account/RealstatMarkatinh.png" alt="">
+                                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/RealstatMarkatinh.png" alt="">
                                                     Real Estate Marketing
                                                 </a>
                                             </div>
@@ -441,7 +436,7 @@
 
                                     <li class="nav-item">
                                         <div class="d-flex">
-                                            <!-- <img src="./Images/vegetable.webp" alt=""> -->
+                                            <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/vegetable.webp" alt=""> -->
                                             <a class="nav-link" aria-current="page" href="./AllProduct.html">Bath</a>
                                         </div>
                                     </li>
@@ -510,7 +505,7 @@
                             <!-- navber menu -->   
 
                             <div class="col-4 LogoTabe">
-                                <a href="./index.html"><img src="./Images/Jamidar.png" alt=""></a>
+                                <a href="./index.html"><img src="<?php echo get_template_directory_uri(); ?> /assets/img/Jamidar.png" alt=""></a>
                             </div>
                             
                             <div class="col-4 CartTabe">
@@ -682,14 +677,14 @@
 
                             <div class="carousel-inner">
                                 <div class="carousel-item active" data-bs-interval="10000">
-                                    <img src="./Images/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
+                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
                                 </div>
 
                                 <div class="carousel-item" data-bs-interval="2000">
-                                    <img src="./Images/Heros/heros-carosul-2.webp" class="d-block w-100" alt="...">
+                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-2.webp" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="./Images/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
+                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
                                 </div>
 
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -714,17 +709,17 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="#">
-                                        <img src="./Images/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="#">
-                                        <img src="./Images/Heros/heros-carosul-2.webp" class="d-block w-100" alt="...">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-2.webp" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="#">
-                                        <img src="./Images/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-carosul-1.webp" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                             </div>
@@ -744,19 +739,19 @@
                     <div class="col-3 hideOnPhone HerosRightSide">
                         <div>
                             <a href="#">
-                                <img src="./Images/Heros/heros-right-1.webp" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-1.webp" alt="">
                             </a>
                         </div>
                         
                         <div>
                             <a href="#">
-                                <img src="./Images/Heros/heros-right-2.webp" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-2.webp" alt="">
                             </a>
                         </div>
                         
                         <div>
                             <a href="#">
-                                <img src="./Images/Heros/heros-right-3.webp" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-3.webp" alt="">
                             </a>
                         </div>
                     </div>
@@ -772,7 +767,7 @@
                     <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
                         <div class="ServicesImg Freeshoping">
                             <a href="#">
-                                <!-- <img src="./Images/Serivices/Sevices-icon-1.png" alt=""> -->
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Sevices-icon-1.png" alt=""> -->
                                 <i class="fa-solid fa-truck-fast"></i>
                             </a>
                         </div>
@@ -795,7 +790,7 @@
                     <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
                         <div class="ServicesImg Policy">
                             <a href="#">
-                                <img src="./Images/Serivices/Services-icon-2.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Services-icon-2.png" alt="">
                             </a>
                         </div>
                         
@@ -817,7 +812,7 @@
                     <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
                         <div class="ServicesImg Support">
                             <a href="#">
-                                <!-- <img src="./Images/Serivices/Services-icon-3.png" alt=""> -->
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Services-icon-3.png" alt=""> -->
                                 <i class="fa-solid fa-headset"></i>
                             </a>
                         </div>
@@ -840,7 +835,7 @@
                     <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
                         <div class="ServicesImg Points">
                             <a href="#">
-                                <!-- <img src="./Images/Serivices/Services-icon-4.png" alt=""> -->
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Services-icon-4.png" alt=""> -->
                                 <i class="fa fa-trophy"></i>
                             </a>
                         </div>
@@ -863,7 +858,7 @@
                     <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
                         <div class="ServicesImg payment">
                             <a href="#">
-                                <!-- <img src="./Images/Serivices/Services-icon-5.png" alt=""> -->
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Services-icon-5.png" alt=""> -->
                                 <i class="fa-sharp fa-solid fa-sack-dollar"></i>
                             </a>
                         </div>
@@ -893,19 +888,19 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -923,31 +918,31 @@
 
                     <div class="owl-carousel BrandCrosul owl-theme">
                         <div class="item">
-                            <img src="./Images/BrandLogo/LafargeHolcim_logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/LafargeHolcim_logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/Basundhara logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Basundhara logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/premier-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/premier-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/CrownCement-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/CrownCement-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/cement-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/cement-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/akij-loog.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/akij-loog.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/Shah cemetn.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Shah cemetn.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -968,14 +963,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/furniture.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/furniture.png" alt="">
                                         <span>Furniture</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/furniture.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/furniture.png" alt="">
                                         <span>Furniture</span>
                                     </a>
                                 </div>
@@ -986,14 +981,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/LightIcon.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/LightIcon.png" alt="">
                                         <span>Light</span>
                                     </a>
                                 </div>
                                 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/LightIcon.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/LightIcon.png" alt="">
                                         <span>Light</span>
                                     </a>
                                 </div>
@@ -1004,14 +999,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/kitchen.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/kitchen.png" alt="">
                                         <span>kitchen</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/kitchen.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/kitchen.png" alt="">
                                         <span>kitchen</span>
                                     </a>
                                 </div>
@@ -1022,14 +1017,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/tabletop.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/tabletop.png" alt="">
                                         <span>Tabletop</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/tabletop.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/tabletop.png" alt="">
                                         <span>Tabletop</span>
                                     </a>
                                 </div>
@@ -1040,14 +1035,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/Bath-icon.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/Bath-icon.jpg" alt="">
                                         <span>Bath</span>
                                     </a>
                                 </div>
                                 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/Bath-icon.jpg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/Bath-icon.jpg" alt="">
                                         <span>Bath</span>
                                     </a>
                                 </div>
@@ -1058,14 +1053,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/double-bed.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/double-bed.png" alt="">
                                         <span>BedRoom</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/double-bed.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/double-bed.png" alt="">
                                         <span>BedRoom</span>
                                     </a>
                                 </div>
@@ -1076,14 +1071,14 @@
                             <div class="Catagoris2Div">
                                 <div >
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/pet-food.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/pet-food.png" alt="">
                                         <span>Pet Supplies</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/pet-food.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/pet-food.png" alt="">
                                         <span>Pet Supplies</span>
                                     </a>
                                 </div>
@@ -1094,14 +1089,14 @@
                             <div class="Catagoris2Div">
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/playtime.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/playtime.png" alt="">
                                         <span>Kids</span>
                                     </a>
                                 </div>
 
                                 <div>
                                     <a href="./AllProduct.html">
-                                        <img src="./Images/Catagoris/playtime.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/playtime.png" alt="">
                                         <span>Kids</span>
                                     </a>
                                 </div>
@@ -1148,7 +1143,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1187,7 +1182,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1226,7 +1221,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1265,7 +1260,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Light/llight8.webp" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1304,7 +1299,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product5.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1343,7 +1338,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product5.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1382,7 +1377,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product6.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1421,7 +1416,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1460,7 +1455,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product8.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1499,7 +1494,7 @@
                                 <div class="PerProductDiv">
                                     <a href="./Product-Page.html">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1541,7 +1536,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product1.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1578,7 +1573,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product11.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product11.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1619,7 +1614,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product2.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1656,85 +1651,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product.jpg" alt="">
-                                            <div class="DiscountPersentese">
-                                                -30%
-                                            </div>
-                                            <div class="ProductLove">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="PrductText">
-                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                            <ul class="StartList"> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="DuleProduct">
-                                <div class="PerProductDiv">
-                                    <a href="#">
-                                        <div class="ProductImgage">
-                                            <img src="./Images/Product/Product5.jpg" alt="">
-                                            <div class="DiscountPersentese">
-                                                -30%
-                                            </div>
-                                            <div class="ProductLove">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="PrductText">
-                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                            <ul class="StartList"> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="PerProductDiv">
-                                    <a href="#">
-                                        <div class="ProductImgage">
-                                            <img src="./Images/Product/Product6.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1775,7 +1692,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product4.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1812,7 +1729,85 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product3.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
+                                            <div class="DiscountPersentese">
+                                                -30%
+                                            </div>
+                                            <div class="ProductLove">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="PrductText">
+                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+
+                                            <ul class="StartList"> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="DuleProduct">
+                                <div class="PerProductDiv">
+                                    <a href="#">
+                                        <div class="ProductImgage">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product4.jpg" alt="">
+                                            <div class="DiscountPersentese">
+                                                -30%
+                                            </div>
+                                            <div class="ProductLove">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="PrductText">
+                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+
+                                            <ul class="StartList"> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="PerProductDiv">
+                                    <a href="#">
+                                        <div class="ProductImgage">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product3.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1853,7 +1848,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product7.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product7.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1890,7 +1885,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product8.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1931,7 +1926,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product9.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product9.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -1968,85 +1963,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product10.jpg" alt="">
-                                            <div class="DiscountPersentese">
-                                                -30%
-                                            </div>
-                                            <div class="ProductLove">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="PrductText">
-                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                            <ul class="StartList"> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="DuleProduct">
-                                <div class="PerProductDiv">
-                                    <a href="#">
-                                        <div class="ProductImgage">
-                                            <img src="./Images/Product/product12.webp" alt="">
-                                            <div class="DiscountPersentese">
-                                                -30%
-                                            </div>
-                                            <div class="ProductLove">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="PrductText">
-                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                            <ul class="StartList"> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li> 
-                                                <li>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </a>
-                                </div>
-                                
-                                <div class="PerProductDiv">
-                                    <a href="#">
-                                        <div class="ProductImgage">
-                                            <img src="./Images/Product/product13.webp" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product10.jpg" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -2087,7 +2004,7 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/Product11.jpg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/product12.webp" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -2124,7 +2041,85 @@
                                 <div class="PerProductDiv">
                                     <a href="#">
                                         <div class="ProductImgage">
-                                            <img src="./Images/Product/product14.webp" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/product13.webp" alt="">
+                                            <div class="DiscountPersentese">
+                                                -30%
+                                            </div>
+                                            <div class="ProductLove">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="PrductText">
+                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+
+                                            <ul class="StartList"> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="DuleProduct">
+                                <div class="PerProductDiv">
+                                    <a href="#">
+                                        <div class="ProductImgage">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product11.jpg" alt="">
+                                            <div class="DiscountPersentese">
+                                                -30%
+                                            </div>
+                                            <div class="ProductLove">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="PrductText">
+                                            <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                            <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+
+                                            <ul class="StartList"> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li> 
+                                                <li>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="PerProductDiv">
+                                    <a href="#">
+                                        <div class="ProductImgage">
+                                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/product14.webp" alt="">
                                             <div class="DiscountPersentese">
                                                 -30%
                                             </div>
@@ -2280,7 +2275,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2319,7 +2314,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2358,7 +2353,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2397,7 +2392,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2436,7 +2431,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2475,7 +2470,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2514,7 +2509,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product6.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2553,7 +2548,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product7.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product7.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2592,7 +2587,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2631,7 +2626,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2674,7 +2669,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2713,7 +2708,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2752,7 +2747,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2791,7 +2786,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product6.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2830,7 +2825,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product7.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product7.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2869,7 +2864,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2908,7 +2903,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2947,7 +2942,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -2986,7 +2981,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3025,7 +3020,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3068,7 +3063,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3107,7 +3102,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3146,7 +3141,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3185,7 +3180,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product6.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3224,7 +3219,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product7.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product7.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3263,7 +3258,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3302,7 +3297,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3346,7 +3341,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product6.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3385,7 +3380,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product7.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product7.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3424,7 +3419,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3463,7 +3458,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product8.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product8.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3502,7 +3497,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3541,7 +3536,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3580,7 +3575,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3619,7 +3614,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3658,7 +3653,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3697,7 +3692,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Product5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3746,19 +3741,19 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -3848,7 +3843,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3887,7 +3882,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3926,7 +3921,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -3965,7 +3960,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4004,7 +3999,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4043,7 +4038,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4082,7 +4077,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4121,7 +4116,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4160,7 +4155,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4199,7 +4194,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4242,7 +4237,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4281,7 +4276,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4320,7 +4315,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4359,7 +4354,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4398,7 +4393,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4437,7 +4432,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4476,7 +4471,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4515,7 +4510,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4554,7 +4549,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4593,7 +4588,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4636,7 +4631,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4675,7 +4670,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4714,7 +4709,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4753,7 +4748,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4792,7 +4787,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4831,7 +4826,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4870,7 +4865,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4909,7 +4904,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4948,7 +4943,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -4987,7 +4982,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5030,7 +5025,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5069,85 +5064,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5186,7 +5103,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5225,7 +5142,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5264,7 +5220,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5303,7 +5259,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5342,7 +5337,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5381,7 +5376,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5506,7 +5501,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet5.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet5.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5545,7 +5540,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet3.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet3.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5584,7 +5579,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet4.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet4.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5623,7 +5618,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet2.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet2.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5662,7 +5657,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet46.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet46.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5701,7 +5696,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet48.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet48.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5740,7 +5735,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet46.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet46.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5779,7 +5774,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet47.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet47.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5818,7 +5813,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet49.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet49.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5857,7 +5852,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Pet/pet491.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Pet/pet491.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5900,7 +5895,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5939,7 +5934,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -5978,7 +5973,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6017,7 +6012,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6056,7 +6051,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6095,7 +6090,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6134,7 +6129,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6173,7 +6168,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6212,7 +6207,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6251,7 +6246,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6294,7 +6289,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6333,7 +6328,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6372,7 +6367,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6411,7 +6406,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6450,7 +6445,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6489,7 +6484,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6528,7 +6523,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6567,7 +6562,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6606,7 +6601,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6645,7 +6640,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6688,7 +6683,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6727,85 +6722,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6844,7 +6761,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6883,7 +6800,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6922,7 +6878,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -6961,7 +6917,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7000,7 +6995,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7039,7 +7034,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7088,19 +7083,19 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-2.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner-3.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
                         </a>
                     </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
                         <a href="#">
-                            <img src="./Images/Banner/Banner.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -7190,7 +7185,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7229,7 +7224,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern1.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern1.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7268,7 +7263,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern2.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern2.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7307,7 +7302,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern3.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern3.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7346,7 +7341,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern4.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern4.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7385,7 +7380,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern5.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern5.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7424,7 +7419,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7463,7 +7458,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7502,7 +7497,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7541,7 +7536,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Kitchern/Kitchern9.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Kitchern/Kitchern9.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7584,7 +7579,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7623,7 +7618,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7662,7 +7657,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7701,7 +7696,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7740,7 +7735,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7779,7 +7774,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7818,7 +7813,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7857,7 +7852,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7896,7 +7891,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7935,7 +7930,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -7978,7 +7973,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8017,7 +8012,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8056,7 +8051,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8095,7 +8090,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8134,7 +8129,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8173,7 +8168,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8212,7 +8207,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8251,7 +8246,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8290,7 +8285,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8329,7 +8324,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8372,7 +8367,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8411,85 +8406,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8528,7 +8445,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8567,7 +8484,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8606,7 +8562,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8645,7 +8601,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8684,7 +8679,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8723,7 +8718,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8848,7 +8843,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8887,7 +8882,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding1.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding1.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8926,7 +8921,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding2.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding2.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -8965,7 +8960,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding3.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding3.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9004,7 +8999,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding4.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding4.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9043,7 +9038,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding5.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding5.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9082,7 +9077,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9121,7 +9116,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9160,7 +9155,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9199,7 +9194,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Bedding/Bedding9.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Bedding/Bedding9.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9242,7 +9237,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9281,7 +9276,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9320,7 +9315,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9359,7 +9354,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9398,7 +9393,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9437,7 +9432,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9476,7 +9471,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9515,7 +9510,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9554,7 +9549,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9593,7 +9588,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9636,7 +9631,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9675,7 +9670,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight1.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9714,7 +9709,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9753,7 +9748,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9792,7 +9787,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9831,7 +9826,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9870,7 +9865,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9909,7 +9904,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9948,7 +9943,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -9987,7 +9982,7 @@
                                     <div class="PerProductDiv">
                                         <a href="#">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10030,7 +10025,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10069,85 +10064,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight8.webp" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-    
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-    
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight8.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10186,7 +10103,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight2.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10225,7 +10142,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight3.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight2.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10264,7 +10220,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight4.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight3.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10303,7 +10259,46 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight5.jpg" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight4.jpg" alt="">
+                                                <div class="DiscountPersentese">
+                                                    -30%
+                                                </div>
+                                                <div class="ProductLove">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </div>
+                                            </div>
+    
+                                            <div class="PrductText">
+                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
+                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
+    
+                                                <ul class="StartList"> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li> 
+                                                    <li>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                    <div class="PerProductDiv">
+                                        <a href="./Product-Page.html">
+                                            <div class="ProductImgage">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight5.jpg" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10342,7 +10337,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight6.webp" alt="">6
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight6.webp" alt="">6
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10381,7 +10376,7 @@
                                     <div class="PerProductDiv">
                                         <a href="./Product-Page.html">
                                             <div class="ProductImgage">
-                                                <img src="./Images/Product/Light/llight7.webp" alt="">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight7.webp" alt="">
                                                 <div class="DiscountPersentese">
                                                     -30%
                                                 </div>
@@ -10434,31 +10429,31 @@
 
                     <div class="owl-carousel BrandCrosul owl-theme">
                         <div class="item">
-                            <img src="./Images/BrandLogo/LafargeHolcim_logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/LafargeHolcim_logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/Basundhara logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Basundhara logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/premier-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/premier-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/CrownCement-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/CrownCement-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/cement-logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/cement-logo.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/akij-loog.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/akij-loog.png" alt="">
                         </div>
 
                         <div class="item">
-                            <img src="./Images/BrandLogo/Shah cemetn.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Shah cemetn.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -10717,12 +10712,12 @@
         <script src="./js/Common.js"></script>
 
         <!-- bootstap script -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
         <script src="js/jquery-3.6.1.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script> -->
 
         <script>
             // Brand carosul
@@ -10767,30 +10762,9 @@
                         loop:true
                     }
                 }
-            })
-        
-            // FlashCarosul carosul
-            // $('.FlashCarosul').owlCarousel({
-            //     loop:true,
-            //     margin:10,
-            //     dots: false,
-            //     nav:false,
-            //     autoplay: true,
-            //     autoplayTimeout: 3000,
-            //     responsive:{
-            //         0:{
-            //             items:2,
-            //         },
-            //         600:{
-            //             items:3,
-            //         },
-            //         1000:{
-            //             items:5,
-            //             loop:true
-            //         }
-            //     }
-            // })
+            });
         
         </script>
+        <?php wp_footer() ?>
     </body>
 </html>
