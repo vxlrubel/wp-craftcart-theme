@@ -8,3 +8,10 @@ if( ! function_exists('cc_error') ){
         throw new Exception( $error_message );
     }
 }
+
+if( ! function_exists('cc_editor') ){
+    function cc_editor(){
+        if( is_user_logged_in() && current_user_can( 'edit_posts' ) )
+            return true;
+    }
+}

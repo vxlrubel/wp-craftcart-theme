@@ -113,6 +113,12 @@ class Register_Scripts{
             ],
             'main'        => [
                 'src' => CC_ASSETS_CSS . 'main.css'
+            ],
+            'about-us'    => [
+                'src' => CC_ASSETS_CSS . 'about-us.css'
+            ],
+            'craftcart'    => [
+                'src' => get_stylesheet_uri()
             ]
         ];
 
