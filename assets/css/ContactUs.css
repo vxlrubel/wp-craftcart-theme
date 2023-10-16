@@ -1,0 +1,177 @@
+.ContactUSection{
+    padding-top: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.ContactInfo{
+   padding: 10px;
+}
+
+.ContactInfo ul{
+   border: 2px solid var(--logoColor-2);
+   border-radius: 8px;
+}
+
+.ContactUSection h1{
+    text-align: center;
+    color: var(--logoColor-2);
+    text-transform: capitalize;
+}
+
+.ContactUSection .para{
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--logoColor-1);
+}
+
+.Contactli{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.Contactli:not(:last-child){
+    border-bottom: 2px solid  var(--logoColor-2);
+}
+
+.IconContact{
+    margin-right: .5rem;
+    font-size: 40px;
+    color: var(--logoColor-1);
+}
+
+.TextContact{
+    width: 80%;
+}
+
+.TextContact P{
+    margin: 0%;
+}
+
+.MapAndContact .Map{
+    padding: 10px;
+}
+
+.mapouter{
+    padding: 10px;
+    border: 2px solid var(--logoColor-2);
+    border-radius: 8px;
+}
+
+.gmap_iframe,
+.gmap_canvas,
+.mapouter{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.gmap_iframe{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.contactFrom{
+    text-align: center;
+    padding: 1rem 0; 
+    background-color: #687b93;
+    color: white;
+    margin-bottom: 0;
+    /* margin-bottom: -1rem; */
+}
+
+.contactFrom label,
+.contactFrom input{
+    display: block;
+    text-align: left !important;
+}
+
+.FormDiv{
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.contactFrom input{
+    border: 1px solid var(--logoColor-2);
+}
+
+.contactFrom input:focus{
+    outline: 0;
+}
+
+.FormDiv textarea{
+    height: 150px;
+    border: 1px solid var(--logoColor-2);
+    border-radius: 7px;
+    color: rgb(0, 0, 0) !important;
+    padding: 10px;
+}
+
+.FormDiv textarea:focus{
+    box-shadow: 0 0 10px var(--logoColor-1);
+    border: 1px solid none;
+    outline: none;
+}
+
+.FormDiv .SubmitBtn{
+    padding: 11px 32px;
+    background-color: var(--logoColor-2);
+    outline: 0;
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin: auto;
+    border-radius: 7px;
+    border: 2px solid transparent;
+}
+
+.FormDiv .SubmitBtn:hover{
+    border: 2px solid var(--logoColor-2);
+    background-color: var(--logoColor-1);
+}
+
+.contactFrom img{
+    border-radius: 7px;
+    /* margin-top: 28px; */
+    margin-top: -34px;
+}
+
+@media screen and (max-width: 767px) {
+    .contactFrom img{
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contactFrom img{
+        margin-top: 18px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .ContactUSection{
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .contactFrom{
+        padding: 2.2rem 0;
+        padding-bottom: 3.2rem !important;
+    }
+}
+
+footer{
+    margin-top: 0;
+}
+
+
+:root {
+    --logoColor-1: #2c66af;
+    --logoColor-2: #ff863f;
+    --servocehover: #e79855;
+    --navColor: rgb(216, 216, 216);
+    --navIconColor: red;
+    --navmidbg: #75b535;
+    --TopNev: #3c516a;
+    --DestopCatagori: #3e6a10;
+}

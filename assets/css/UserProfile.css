@@ -1,0 +1,484 @@
+.NavigatinSection{
+    padding-top: 2.2rem;
+}
+
+.UserMenu button{
+    max-width: auto;
+    padding-left: 12px;
+    border: none;
+    outline: none;
+    background: none;
+    text-align: left;
+    border-left: 4px solid rgba(255, 166, 0, 0);
+    margin-bottom: .8rem !important;
+    color: #5a5959 !important;
+    font-weight: 700;
+}
+
+.UserMenu .active{
+    border-bottom: 4px solid orange;
+    border-left: none;
+    color: var(--logoColor-2) !important;
+}
+
+.MenuDaitels.tab-content{
+    padding: 0.2rem 1rem !important;
+    color: black !important;
+    margin: 0;
+}
+
+.tablist{
+    padding: 10px 2px;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: rgb(249 249 249);
+    box-shadow: 0 0 5px #cbcbcb;
+}
+
+.MenuDaitels.tab-content .active{
+    color: black !important;
+}
+
+.MenuDaitels.tab-content h5{
+    font-weight: 600 !important;
+    color: #525252 !important;
+    text-transform: uppercase;
+}
+
+.MenuDaitels.tab-content .UnderAll,
+.MenuDaitels.tab-content .active .UnderAll{
+    color: #323232 !important;
+}
+
+.MenuDaitels.tab-content .UnderAll h5,
+.MenuDaitels.tab-content .active .UnderAll h5{
+    font-size: 17px;
+    font-weight: 500 !important;
+    margin-bottom: 1rem;
+}
+
+.UnderAll{
+    margin-top: 1.5rem;
+    font-size: 15px !important;
+}
+
+.UlDivMyAcount{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.UlDivMyAcount ul li{ 
+    display: block;
+    margin-bottom: .3rem;
+}
+
+.UlDivMyAcount ul .tititle{ 
+    font-weight: 700 !important;
+}
+
+.UlDivMyAcount li a:hover{ 
+    color: var(--logoColor-2);
+}
+
+.UnderAll2{
+    margin-top: 1.2rem;
+}
+
+.TableSpan{
+    border-bottom: 1px solid rgb(83, 83, 83);
+}
+
+.OderTable{
+    border: 1px solid black;
+}
+
+.OrderList {
+    margin-top: 2rem;
+}
+
+.OrderList a:hover {
+    color: var(--logoColor-2);
+}
+
+.OrderList tr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.OrderList img{
+    width: 150%;
+}
+
+.ORderResponsive{
+    box-shadow: 0 0 3px #dddddd;
+    border-radius: 7px;
+}
+
+.ORderResponsive:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.ORderResponsive .TableSpan{
+    padding: 8px;
+    font-size: 14px;
+    background: #d9d9d9;
+} 
+
+.ORderResponsive .Oderable{
+    padding: 0;
+    margin: 0;
+} 
+
+.OrderList button{
+    outline: 0px;
+    background-color: var(--logoColor-1);
+    padding: 7px 22px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.OrderList button:hover{
+    background-color: var(--logoColor-2);
+}
+
+.WishBTn2{
+    border: 1px solid rgba(0, 0, 0, 0) !important;
+    background: #e3e3e3 !important;
+    color: #424141 !important;
+    padding: 2px 10px !important;
+}
+
+.WishBTn2:hover{
+    border: 1px solid var(--logoColor-2) !important;
+    color: #bb0101 !important;
+}
+
+.AddressAddbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AddressAddbtn button{
+    border: none;
+    outline: none;
+    background-color: var(--logoColor-1);
+    padding: 5px 10px;
+    border-radius: 7px;
+    color: white;
+}
+
+.AddressAddbtn button:hover{
+    background-color: var(--logoColor-2);
+}
+
+.addressInfoFrom{
+    display: none;
+}
+
+.addressInfoFrom,
+.phaymentInfoFrom{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.PasswordEdit{
+    margin-top: 2.5rem;
+    text-align: center
+}
+
+
+.addressInfoFrom div,
+.phaymentInfoFrom div div,
+.PasswordEdit div{
+    margin-bottom: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.addressInfoFrom div label,
+.phaymentInfoFrom div div label,
+.PasswordEdit div label{
+    margin-right: .4rem;
+    width: 150px;
+}
+
+.addressInfoFrom input,
+.phaymentInfoFrom input,
+.PasswordEdit input{
+    height: 35px;
+    border: 1px solid #9f9d9d;
+    width: calc(80% - 150px);
+}
+
+.addressInfoFrom input:focus,
+.phaymentInfoFrom input:focus,
+.PasswordEdit input:focus{
+    border: 1px solid var(--logoColor-2);
+    box-shadow: 0 0 5px var(--logoColor-2);
+}
+
+.addressInfoFrom p,
+.phaymentInfoFrom p,
+.PasswordEdit p{
+    border: none;
+    outline: none;
+    background-color: var(--logoColor-1);
+    padding: 8px 16px;
+    color: white !important;
+    font-weight: 500;
+    border-radius: 7px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.addressInfoFrom p:hover,
+.phaymentInfoFrom p:hover,
+.PasswordEdit p:hover{
+    background-color: var(--logoColor-2);
+}
+
+.phaymentInfoFrom h3{
+    color: #2c66af;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.collectedAddress{
+    font-size: 13px;
+    padding: 5px;
+    margin-top: 2.2rem;
+}
+
+.collectedAddress .BoxADD{
+    box-shadow: 0 0 5px #cfcccc;
+    padding: 13px 23px;
+    border-radius: 10px;
+}
+
+.AddEdit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.AddressBox:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.AddressBox span{
+    display: block;
+    margin-bottom: .3rem;
+}
+
+.LocatinType{
+    background-color: rgb(211 211 211);
+    padding: 3px 5px;
+    display: inline-block !important;
+    border-radius: 5px;
+    color: var(--logoColor-1);
+}
+
+.EditAll{
+    text-align: right;
+}
+
+.EditAll:hover{
+    color: var(--logoColor-2);
+    cursor: pointer;
+}
+
+.AddresSubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddresSubmit p:not(:last-child){
+    margin-right: .5rem;
+}
+
+.CalcleAdd{
+    background-color: rgb(139, 139, 139) !important;
+    color: var(--logoColor-1) !important;
+}
+
+.CheckBoxDiv label{
+    width: 148px !important;
+}
+
+.CheckBox{
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: .5rem;
+}
+
+.EmailChnage{
+     display: block !important;
+}
+
+.PaymentAccountsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-top: 1px solid rgb(71, 71, 71);
+    border-bottom: 1px solid rgb(71, 71, 71);
+}
+
+.ImageAndNumber{
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+}
+
+.ImageAndNumber img{
+    width: 31px;
+    border-radius: 6px;
+    margin-right: .7rem;
+}
+
+.PaymentAccountsDiv .PaymentDelet{
+    background-color: #e4e4e4;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: black;
+}
+
+.PaymentAccountsDiv .PaymentDelet:hover{
+    border: 1px solid #af0707;
+    color: #af0707;
+}
+
+@media screen and (min-width: 768px) {
+    .UserMenu button{
+        width: 100%;
+    }
+
+    .UserMenu .active {
+        border-left: 4px solid orange;
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .UserMenu{
+        margin-bottom: 1rem;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .MenuDaitels {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        width: 100%;
+    }
+    .MenuDaitels.tab-content{
+        padding: 0.2rem 5px !important;
+    }    
+    .UserMenu div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .UserMenu div button{
+        margin-right: 19px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .TableSpan{
+        width: 150%;
+    }
+
+    .table-responsive table tr{
+        width: 150%;
+        overflow: scroll;
+        padding: 7px 0;
+    }
+    
+    .OrderList {
+        margin-top: .8rem;
+    }
+
+    .NavigatinSection{
+        padding-bottom: 0;
+    }
+    .UnderAll {
+        margin-top: .8rem;
+    }
+
+    .UlDivMyAcount ul{
+        width: 100%;
+    }
+
+    .MenuDaitels.tab-content .UnderAll h5, 
+    .MenuDaitels.tab-content .active .UnderAll h5{
+        margin-bottom: 0.8rem;
+    }
+
+    .UlDivMyAcount ul:not(:last-child){
+        margin-bottom: .5rem;
+    }
+
+    .collectedAddress,
+    .addressInfoFrom,
+    .PasswordEdit{
+        margin-top: 1rem;
+    }
+
+    .addressInfoFrom div label, .PasswordEdit div label{
+        width: 127px;
+        margin-right: .2rem;
+    }
+
+    .addressInfoFrom input, .PasswordEdit input{
+        height: 29px;
+        width: calc(98% - 137px);
+    }
+
+    .AddresSubmit{
+        margin-bottom: 0 !important;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .UserMenu div button{
+        margin-right: 5px;
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    .NavigatinSection{
+        padding-top: 60px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #Orders{
+        margin-bottom: .5rem;
+    }
+    
+}
+
+:root {
+    --logoColor-1: #2c66af;
+    --logoColor-2: #ff863f;
+    --servocehover: #e79855;
+    --navColor: rgb(216, 216, 216);
+    --navIconColor: red;
+    --navmidbg: #75b535;
+    --TopNev: #3c516a;
+    --DestopCatagori: #3e6a10;
+}

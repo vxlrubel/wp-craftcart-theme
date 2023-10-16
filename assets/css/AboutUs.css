@@ -1,0 +1,626 @@
+.BlogSection{
+    padding-top: 20px;
+    margin-bottom: -1rem;
+    padding-bottom: 0;
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .BlogSection{
+        margin-bottom: 0rem;
+    }
+}
+
+.AboutUsPerDiv2{
+    max-width: 800px;
+    margin: auto;
+}
+
+.AboutUsPerDiv{
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .BlogSection{
+        padding-top: 50px;
+    } 
+}
+
+/* @media screen and (max-width: 1101) and (min-width: 1024px){
+    
+} */
+
+.AboutUsLeft{
+    color: black !important;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.AboutUsPerDiv p{
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+}
+
+.RightPerDiv{
+    margin-bottom: 1.4rem;
+}
+
+.AboutUsPerDiv h5{
+    margin-bottom: 1rem;
+    color: var(--logoColor-1);
+    font-weight: bold;
+    font-size: 1.45rem;
+}
+
+.AboutUsLeft a:hover{
+    color: var(--logoColor-2);
+}
+
+.AboutUsLeft div p a{
+    font-weight: bold;
+}
+
+.AboutUsLeft img{
+    width: 95%;
+    margin: auto;
+    margin-bottom: .5rem;
+}
+
+.AboutUsRight{
+    color: black;
+}
+
+.AboutUsRight h5{
+    color: black;
+    text-align: center;
+    padding: 10px;
+    background: #ff863f;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: .7rem;
+    text-transform: uppercase;
+}
+
+.AboutUSLi{
+    display: flex;
+    align-items: center;
+    background-color: rgb(226 226 226);
+    font: 20px;
+    border-radius: 6px;
+}
+
+.AboutUSLi:not(:last-child){
+    margin-bottom: .7rem;
+}
+
+.AboutUsRight .IconDivAboutus{
+    background-color: var(--logoColor-1);
+    margin-right: .7rem;
+    color: white !important;
+    padding: 5px 6px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+}
+
+.AboutUsRight .IconDivAboutus i{
+    color: white !important;
+}
+
+.AboutUsRight .LinkDiv{
+    font-size: 20px;
+    padding: 5px 0px;
+}
+
+.AboutUsRight .LinkDiv a{
+    color: var(--logoColor-1);
+}
+
+.AboutUsRight .LinkDiv a:hover{
+    color: var(--logoColor-2);
+}
+
+.LinkFrist{
+    padding: 6px 10px !important;
+    font-size: 17px !important;
+}
+
+/* Terms And Cond page start*/
+.TermsAndCond{
+    font-size: 15px;
+}
+/* Terms And Cond page end*/
+
+.PerBlogDIv{
+    box-shadow: 0 0 5px rgb(214 204 204);
+    padding: 11px;
+    border-radius: 10px;
+    height: min-content;
+    padding-bottom: 23px;
+    font-size: 18px;
+    border: 1px solid #2c66af78;
+}
+
+.PerBlogDIv:hover{
+    border: 1px solid var(--logoColor-2);
+}
+
+.PerBlogDIvCol:not(:last-child){
+    padding-bottom: 25px;
+}
+
+.PerBlogDIv h2{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: .8rem;
+    color: var(--logoColor-1);
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.PerBlogDIv ul{
+    font-size: 15px;
+    margin-bottom: .5rem;
+    text-transform: capitalize;
+}
+
+.PerBlogDIv ul li i{
+    margin-right: .2rem;
+}
+
+.PerBlogDIv ul li:not(:last-child){
+    margin-right: .5rem;
+}
+
+.PerVlogImg{
+    width: 100%;
+    overflow: hidden;
+}
+
+.PerBlogDIv img{
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+    border-radius: 7px;
+}
+
+.PerBlogDIv p{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.PerBlogDIv .BlogDatilsL{
+    border: none;
+    outline: none;
+    background-color: var(--logoColor-1);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.PerBlogDIv .BlogDatilsL:hover{
+    color: white;
+    background-color: var(--logoColor-2);
+}
+
+/* Blog page end */
+
+/* Blog Daitles start */
+.DaitlesPerDIv .MainTilte{
+    font-weight: bolder;
+}
+
+.DaitlesPerDIv h3{
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+.DaitlesPerDIv .imageDivBlog{
+    overflow: hidden;
+}
+
+.DaitlesPerDIv img{
+    width: 70%;
+    height: auto;
+    border-radius: 7px;
+}
+
+.DaitlesPerDIv p{
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.DaitlesPerDIv p:not(:last-child){
+    margin-bottom: .7rem;
+}
+
+.DaitlesPerDIv:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.CommentCount{
+    font-size: 24px;
+}
+
+.CommentCount span{
+    margin-right: .5rem;
+}
+
+.BlogBtn .button{
+    font-size: 16px;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--logoColor-1);
+}
+
+.BlogBtn .button:hover{
+    color: white;
+    cursor: pointer;
+    background-color: var(--logoColor-2);
+}
+
+.ShowComment{
+    padding: 10px;
+    margin-top: .5rem;
+}
+
+.ShowComment .NmaeCommenter{
+    font-size: 20px;
+    color: rgb(30, 30, 30);
+    font-weight: 600;
+}
+
+.ShowComment .CommentDate{
+    font-size: 16px;
+}
+
+.ShowComment .SubmitedCommet{
+    padding: 20px;
+    font-size: 15px;
+    margin-top: .6rem;
+    border-radius: 7px;
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.ShowComment .SubmitedCommet span{
+    display: block;
+}
+
+.ShowComment .SubmitedCommet .CommentReply{
+    padding: 8px 15px;
+    border-radius: 7px;
+    color: white;
+    margin-top: 1rem;
+    background: var(--logoColor-2);
+}
+
+.ReolyForm{
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.ReolyForm form div{
+    display: block;
+    padding-top: 1rem;
+}
+
+
+.ReolyForm form label{
+    display: block;
+    width: 100%;
+}
+
+.ReolyForm form input{
+    display: block;
+    width: 100%;
+    float: none;
+    margin-top: .5rem;
+    max-width: 400px;
+    border: 1px solid #a8a8a8 !important;
+}
+
+.ReolyForm form textarea{
+    border: 1px solid #a8a8a8 !important;
+    display: block;
+    width: 100%;
+    float: none;
+    margin-top: .5rem;
+    height: 150px;
+    border-radius: 7px;
+    font-size: 16px ;
+    padding: 10px;
+}
+
+.ReolyForm form textarea:focus{
+    border: 1px solid black !important;
+    outline:  none !important;
+}
+
+.ReolyForm button{
+    border: none;
+    padding: 12px 26px;
+    border-radius: 7px;
+    color: white;
+    margin: auto;
+    margin-top: 1rem;
+    background: var(--logoColor-1);
+}
+
+.ReolyForm button:hover{
+    background: var(--logoColor-2);
+}
+/* Blog Daitles end */
+
+/* support start */
+.suportMain{
+    padding-bottom: 0;
+    padding-top: 1.3rem;
+}
+
+.suportMain a:hover{
+    color: black;
+}
+
+.SupportAstDIv{
+    padding-top: .6rem;
+    background: linear-gradient(#b8d8e3, #62BDF4);
+}
+
+.SupportAstDIv .banner.banner-inner{
+    background: none;
+}
+
+.HelpeHeros{
+    padding: 41px 0;
+    padding-bottom: 30px !important;
+    color: black;
+}
+
+.HelpeHeros h2{
+    margin-bottom: 23px;
+    font-size: 2.5rem;
+}
+
+.HelpeSearch{
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 35px !important;
+    position: relative;
+    justify-content: center;
+}
+
+.HelpeSearch .Searchbtn{
+    position: absolute;
+    top: 8px;
+    right: 46px;
+    font-size: 20px;
+    color: #797979;
+    cursor: pointer;
+}
+
+.HelpeSearch input{
+    height: 49px;
+    border: 1px solid #919191;
+}
+
+.SupportListDiv h4{
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.SupportPertpe{
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 18px 11px;
+    margin-bottom: 1rem !important;
+    text-align: justify;
+}
+
+.SupportPertpe:hover{
+    border: 2px solid var(--logoColor-2);
+    box-shadow:  0 0 10px #c5c5c5;
+}
+
+.SupportPertpe h6{
+    font-weight: bold;
+    font-size: 19px;
+    text-align: left;
+    color: var(--logoColor-1);
+}
+
+.SupportPertpe .SuportIcon{
+    box-shadow: 0 0 7px #d6d6d6;
+    border: 1px solid var(--logoColor-1);
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    min-height: 72px;
+    min-width: 78px;
+    max-height: 72px;
+    max-width: 78px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.SupportPertpe i{
+    font-size: 35px;
+    color: var(--logoColor-1);
+}
+/* support end */
+
+/* support single page start */
+.PathSuportSEcio{
+    margin-bottom: 3rem;
+}
+
+.PathSuport{
+    text-transform: capitalize;
+    padding-bottom: 20px ;
+    border-bottom: 1px solid black;
+}
+.PathSuport a:hover{
+    color: var(--logoColor-2);
+}
+
+.Question{
+    max-height: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.suportMain .Question button{
+    padding: 5px 5px;
+    margin-bottom: 0rem;
+    text-align: left;
+    width: 100%;
+    font-style: italic;
+}
+
+.suportMain .Question .active{
+    background: none !important;
+}
+
+.suportMain .AnswerDiv{
+    margin: 0;
+    padding: 0px 30px;
+}
+
+.suportMain .Answers{
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 0 0 10px #c2c2c2;
+    border: 1px solid #b0b0b0;
+    margin-top: 0 !important;
+    border-left: 5px solid #2c66af;
+    border-right: 5px solid #fe853d;
+}
+
+.suportMain .Answers div{
+    width: 100%;
+}
+
+.suportMain .Answers .active{
+    color: black !important;
+}
+
+@media screen and (max-width: 1023px) {
+    .PathSuport{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .Question{
+        margin-bottom: 1.5rem;
+    }
+
+    .suportMain .AnswerDiv{
+        padding: 0;
+    }
+
+    .HelpeSearch .Searchbtn{
+        right: 30px;
+    }
+
+    .AnswerDiv .tab-content {
+        padding-bottom: .7rem !important;
+    }
+
+    .SupportListDiv {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .SupportPertpe{
+        padding: 10px 4px !important;
+    }
+}
+/* support single page ends */
+
+@media screen and (max-width: 991px) {
+    .PerBlogDIvCol:not(:last-child){
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .PerBlogDIvCol{
+        padding: 0 5px;
+    }
+
+    .PerBlogDIvCol:not(:last-child){
+        padding-bottom: 5px;
+    }
+
+    .DaitlesPerDIv{
+        margin-bottom: 1.2rem;
+    }
+
+    .PerBlogDIv:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+    .PathSuportSEcio {
+        margin-bottom: 2rem;
+    }
+
+    .PerBlogDIv img{
+        width: 100%;
+    }
+
+    .PerBlogDIv{
+        padding: 15px;
+        margin-bottom:  1rem;
+        padding-bottom: 25px;
+    }
+
+    .AboutUsLeft{
+        padding: 10px;
+        padding-right: 10px !important;
+    }
+
+    .DaitlesPerDIv img{
+        width: 85%;
+        height: auto;
+    }
+
+    .SupportListDiv h4{
+        margin-bottom: 10px;
+    }
+
+    .SupportPertpe{
+        padding: 10px 11px;
+        margin-bottom: .2rem !important;
+    }
+
+    .HelpeHeros {
+        padding: 24px 0;
+        padding-bottom: 13px !important;
+    }
+
+    .ReolyForm button{
+        border: none;
+        padding: 8px 18px;
+        border-radius: 7px;
+        font-size: 16px;
+    }
+}
+
+:root {
+    --logoColor-1: #2c66af;
+    --logoColor-2: #ff863f;
+    --servocehover: #e79855;
+    --navColor: rgb(216, 216, 216);
+    --navIconColor: red;
+    --navmidbg: #75b535;
+    --TopNev: #3c516a;
+    --DestopCatagori: #3e6a10;
+}
