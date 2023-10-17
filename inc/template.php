@@ -15,3 +15,32 @@ if( ! function_exists('cc_editor') ){
             return true;
     }
 }
+
+/**
+ * get the post title
+ * get_cc_trim_post_title() this function working inside the loop
+ * 
+ * @param $string_width
+ * @type [string]
+ * @return $title;
+ */
+if( ! function_exists('get_cc_trim_post_title') ){
+    function get_cc_trim_post_title( $string_width = 25 ){
+        $title  = mb_strimwidth( get_the_title( get_the_ID() ), 0, $string_width );
+        return $title;
+    }
+}
+/**
+ * get post content
+ * get_cc_trim_post_content() this function working inside the loop
+ * 
+ * @param $string_width
+ * @type [string]
+ * @return $title;
+ */
+if( ! function_exists('get_cc_trim_post_content') ){
+    function get_cc_trim_post_content( $string_width = 55 ){
+        $title  = mb_strimwidth( get_the_content( get_the_ID() ), 0, $string_width );
+        return $title;
+    }
+}

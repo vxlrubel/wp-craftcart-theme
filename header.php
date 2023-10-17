@@ -25,7 +25,7 @@
 
     <body <?php body_class(); ?>>
         <!-- Navber Start -->
-        <nav>
+        <nav class="header-nav">
             <!--Navber For Laptop And Computer -->
             <div class="ToppNev hideOnPhone">
                 <!-- Top Nevber -->

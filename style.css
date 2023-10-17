@@ -15,3 +15,52 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
 */
 
 /* custom code will be here */
+:root {
+    --cc-color-primary: #2c66af;
+    --cc-color: #ff863f;
+    --cc-color-deep: #db722b;
+}
+
+.cc-btn {
+    background-color: var(--cc-color) !important;
+    border-color: var(--cc-color) !important;
+}
+
+.cc-btn:hover {
+    background-color: var(--cc-color-deep) !important;
+    border-color: var(--cc-color-deep) !important;
+}
+
+.navigation.cc_pagination {
+    position: inherit !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation.cc_pagination .nav-links {
+    display: flex;
+}
+
+.navigation.cc_pagination .nav-links>* {
+    display: inline-flex;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.navigation.cc_pagination .nav-links .current {
+    background-color: var(--cc-color-primary) !important;
+    border-color: var(--cc-color-primary) !important;
+    color: white;
+}
+
+.navigation.cc_pagination .nav-links>*:not(.current):hover {
+    background-color: var(--cc-color) !important;
+    border-color: var(--cc-color) !important;
+    color: white;
+}

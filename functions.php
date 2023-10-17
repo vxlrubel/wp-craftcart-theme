@@ -14,8 +14,8 @@ define( 'CC_ASSETS_CSS', trailingslashit( CC_ASSETS .'css/min' ) );
 define( 'CC_ASSETS_JS', trailingslashit( CC_ASSETS .'js' ) );
 
 
-// include all the require file 
-require_once dirname( __FILE__) . '/inc/autoload.php';
+// include all the require file
+require_once CC_DIR . 'inc/autoload.php';
 
 final class Craft_Cart{
 
@@ -29,8 +29,86 @@ final class Craft_Cart{
 
         // initiate the default programms
         add_action( 'after_setup_theme', [ $this, 'initiate_theme'] );
+
+        add_action( 'admin_bar_menu', [ $this, 'admin_bar_menu' ], 85 );
+
+        // disable gutenberg block editor
+        self::disable_block_editor();
+
+        // enable classic widget
+        self::enable_classic_widget();
+
+        // register sidebar
+        add_action( 'widgets_init', [ $this, 'register_sidebar' ] );
     }
 
+    /**
+     * Register sidebar area
+     *
+     * @return void
+     */
+    public function register_sidebar(){
+        $args = [
+            'name'           => esc_html__( 'Right Sidebar', CC_DOMAIN ),
+            'id'             => 'truvik-right-sidebar',
+            'description'    => esc_html__( 'Drag the widgets item from left to drag here', 'truvik'),
+            'before_widget'  => '<aside class="widget with-title">',
+            'after_widget'   => "</aside>\n",
+            'before_title'   => '<h3 class="widget-title">',
+            'after_title'    => "</h3>\n",
+            'show_in_rest'   => true,
+        ];
+        register_sidebar( $args );
+    }
+
+    /**
+     * enable classic editor
+     *
+     * @return void
+     */
+    public static function enable_classic_widget(){
+        // Disables the block editor from managing widgets in the Gutenberg plugin.
+        add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+        // Disables the block editor from managing widgets.
+        add_filter( 'use_widgets_block_editor', '__return_false' );
+    }
+
+    /**
+     * disable gutenberg block editor for post and page
+     *
+     * @return void
+     */
+    public static function disable_block_editor(){
+        
+        // Disable the block editor (Gutenberg) for posts
+        add_filter('use_block_editor_for_post', '__return_false', 10);
+
+        // Disable the block editor (Gutenberg) for pages
+        add_filter('use_block_editor_for_page', '__return_false', 10);
+
+    }
+
+    /**
+     * create admin top bar menu
+     *
+     * @param [object] $menu_options
+     * @return void
+     */
+    public function admin_bar_menu( $menu_options ){
+        $args = [
+            'id'    => 'cc_admin_bar_top_menu_item',
+            'title' => __( 'Visit Website', CC_DOMAIN ),
+            'href'  => esc_url( get_home_url('/') ),
+            'meta'  => [ 'target' => '_blank' ]
+        ];
+        $menu_options->add_node( $args );
+    }
+
+    /**
+     * initiate the default functionality
+     *
+     * @return void
+     */
     public function initiate_theme(){
 
         // register textdomain for translation
@@ -82,6 +160,9 @@ final class Craft_Cart{
 				'navigation-widgets',
             ]
 		);
+
+        // add post thumbnail size
+        set_post_thumbnail_size( 500, 250, true );
     }
     
     /**
