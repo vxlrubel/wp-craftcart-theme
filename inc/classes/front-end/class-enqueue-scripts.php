@@ -61,6 +61,11 @@ class Register_Scripts{
                 CC_VERSION
             );
         }
+
+        // if comment is open of have comment and it's a single page
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
     }
 
     /**

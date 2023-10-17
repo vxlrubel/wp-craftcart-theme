@@ -64,3 +64,73 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
     border-color: var(--cc-color) !important;
     color: white;
 }
+
+.cc-comment-list img {
+    width: auto !important;
+}
+
+#commentform {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    background-color: #dfe6e9;
+    border-radius: 7px;
+}
+
+@media(min-width: 768px) {
+    #commentform {
+        padding: 50px;
+    }
+}
+
+#commentform .row {
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
+#commentform .textarea-parent {
+    order: 2;
+}
+
+#commentform .submit-parent {
+    order: 3;
+}
+
+#commentform textarea {
+    min-height: 130px;
+    max-height: 170px;
+}
+
+.form-submit-field input[type="submit"] {
+    float: inherit !important;
+    width: 200px !important;
+    background-color: var(--cc-color-primary);
+    border-color: var(--cc-color-primary);
+    color: white;
+}
+
+#reply-title {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+#reply-title small {
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+#reply-title small a {
+    color: var(--cc-color-primary) !important;
+}
+
+#reply-title small a:hover {
+
+    color: var(--cc-color) !important;
+}
+
+.form-submit-field input[type="submit"]:hover {
+    background-color: var(--cc-color);
+    border-color: var(--cc-color);
+}

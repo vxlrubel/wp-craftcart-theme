@@ -3,12 +3,43 @@
 // directly access denied
 defined('ABSPATH') || exit;
 
+
+/**
+ * create a custom print_r function
+ */
+if( ! function_exists('pre') ){
+    function pre( $object ){
+        echo '<pre>';
+        print_r( $object );
+        echo '</pre>';
+    }
+}
+
+/**
+ * create a custom var_dump function
+ */
+if( ! function_exists('dump') ){
+    function dump( $object ){
+        echo '<pre>';
+        var_dump( $object );
+        echo '</pre>';
+    }
+}
+
+/**
+ * create function it's throwing a fatal error
+ * @return error
+ */
 if( ! function_exists('cc_error') ){
     function cc_error( $error_message = 'critical error' ){
         throw new Exception( $error_message );
     }
 }
 
+/**
+ * create a capability function it's check is admin or editor
+ * @return true
+ */
 if( ! function_exists('cc_editor') ){
     function cc_editor(){
         if( is_user_logged_in() && current_user_can( 'edit_posts' ) )

@@ -5,6 +5,8 @@ defined('ABSPATH') || exit;
 
 require_once dirname(__FILE__) . '/template.php';
 
+require_once dirname(__FILE__) . '/add-filter-template.php';
+
 
 // require all the front-end class
 
