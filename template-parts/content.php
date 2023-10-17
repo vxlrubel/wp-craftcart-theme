@@ -1,6 +1,7 @@
 <?php while( have_posts() ): the_post(); ?>
     <div class="col-lg-6 PerBlogDIvCol">
         <div class="PerBlogDIv">
+
             <h2><?php echo get_cc_trim_post_title() . '...'; ?></h2>
 
             <div>
@@ -20,9 +21,7 @@
                     <li class="d-inline-flex align-items-center"> 
                         <i class="fa fa-comment"></i>
                         <span>
-                            <?php
-                                comments_number();
-                             ?>
+                            <?php comments_number(); ?>
                         </span>
                     </li>
                 </ul>
@@ -45,4 +44,4 @@
              ?>
         </div>
     </div>
-    <?php endwhile; ?>
+<?php endwhile; ?>

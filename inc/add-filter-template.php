@@ -2,6 +2,13 @@
 
 // directly access denied
 defined('ABSPATH') || exit;
+
+/**
+ * Customize comment fields
+ *
+ * @param [type] $fields
+ * @return $fields
+ */
 function cc_comment_fields( $fields ){
     $author = '
         <div class="row">
@@ -18,15 +25,24 @@ function cc_comment_fields( $fields ){
             </div>
         </div>
     ';
+
     $fields = [
         'author' => $author,
         'email'  => $email,
     ];
+
     return $fields;
 }
+
 add_filter('comment_form_default_fields', 'cc_comment_fields' );
 
 
+/**
+ * customize comment textarea field
+ *
+ * @param [type] $default
+ * @return $defauld
+ */
 function cc_comment_form( $default ){
     $form = '
         <div class="row textarea-parent">
@@ -44,6 +60,7 @@ function cc_comment_form( $default ){
             </div>
         </div>
     ';
+
     $default = [
         'comment_field' => $form,
         'submit_field'  => $submit_field

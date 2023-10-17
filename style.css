@@ -130,7 +130,16 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
     color: var(--cc-color) !important;
 }
 
+.comment-notes {
+    padding-left: 15px;
+}
+
 .form-submit-field input[type="submit"]:hover {
     background-color: var(--cc-color);
     border-color: var(--cc-color);
+}
+
+/* menu */
+.horizontal-menu .pagenav {
+    list-style: none;
 }

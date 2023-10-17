@@ -152,12 +152,6 @@
                                 
                                 <!-- <a href="./Login.html"> -->
                                     <div class="IconDiv UserImg">
-                                        <!-- <i class="fa-regular fa-user"></i>
-                                        <div>
-                                            <p>login</p>
-                                            <p>Register</p>
-                                        </div> -->
-
                                         <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
 
                                         <!-- switch acount start -->
@@ -340,12 +334,29 @@
                             </div>
         
                             <div class="horizontal-menu col-10">
-                                <ul>
-                                    <li ><a class="active" href="./index.html">Home</a></li>
-                                    <li><a href="./OderTrakingFrom.html">Order Track</a></li>
-                                    <li><a href="./Blog.html">Blog</a></li>
-                                    <li><a href="./AllProduct.html">Products</a></li>
-                                </ul>
+
+                                <?php 
+                                    if( has_nav_menu( 'primary_menu' ) ){
+                                        $args = [
+                                            'theme_location' => 'primary_menu'
+                                        ];
+                                        wp_nav_menu( $args );
+                                    }else{
+                                        if( cc_editor() ){
+                                            printf(
+                                                '<ul><li><a href="%s" target="_blank">%s</a></li></ul>',
+                                                esc_url( admin_url('nav-menus.php') ),
+                                                __( 'Create Menu', CC_DOMAIN )
+                                            );
+                                        }else{
+                                            wp_list_pages([
+                                                'title_li'=> ' '
+                                            ]);
+                                        }
+                                        
+                                    }
+                                    
+                                 ?>
                             </div>
                         </div>
                     </div>
@@ -527,17 +538,3 @@
             </div>
         </nav>
         <!-- Navber End -->
-
-        <div class="container">
-            <?php
-                $blog_page_id = get_option('page_for_posts');
-
-                if ($blog_page_id) {
-                    // $blog_page_id contains the ID of the blog page
-                    // You can use it for further operations
-                    echo 'done';
-                }else{
-                    echo 'failed';
-                }
-             ?>
-        </div>
