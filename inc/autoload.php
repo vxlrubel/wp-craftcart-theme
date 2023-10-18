@@ -25,3 +25,23 @@ foreach ( $frontend_classes as $class_file ) {
     // require the file
     require_once $files;
 }
+
+
+/**.
+ * require all the widgets item
+ * inside the foreach loop
+ */
+$widgets_item = [
+    'recent-blog'
+];
+
+foreach ( $widgets_item as $item ) {
+    // get the widget file name
+    $widget = dirname(__FILE__) . "/widgets/class-{$item}.php";
+
+    // prepare file to require
+    $widgets = file_exists( $widget ) ? $widget : cc_error("This file {$widget} not exists.");
+    
+    require_once $widgets;
+
+}

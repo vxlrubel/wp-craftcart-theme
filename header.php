@@ -334,29 +334,9 @@
                             </div>
         
                             <div class="horizontal-menu col-10">
+                                <!-- primary menu -->
+                                <?php cc_primary_menu(); ?>
 
-                                <?php 
-                                    if( has_nav_menu( 'primary_menu' ) ){
-                                        $args = [
-                                            'theme_location' => 'primary_menu'
-                                        ];
-                                        wp_nav_menu( $args );
-                                    }else{
-                                        if( cc_editor() ){
-                                            printf(
-                                                '<ul><li><a href="%s" target="_blank">%s</a></li></ul>',
-                                                esc_url( admin_url('nav-menus.php') ),
-                                                __( 'Create Menu', CC_DOMAIN )
-                                            );
-                                        }else{
-                                            wp_list_pages([
-                                                'title_li'=> ' '
-                                            ]);
-                                        }
-                                        
-                                    }
-                                    
-                                 ?>
                             </div>
                         </div>
                     </div>
@@ -527,14 +507,7 @@
                 </div>
 
                 <!-- mobile Bottom NavBer -->
-                <div class="MovboBottom">
-                    <div class="container">
-                        <a class="active" href="./index.html"><i class="fa-solid fa-house"></i></a>
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="./Wish.html"><i class="fa-regular fa-heart"></i></a>
-                        <a href="./Login.html"><i class="fa-regular fa-user"></i></a>
-                    </div>
-                </div>
+                <?php cc_app_menu(); ?>
             </div>
         </nav>
         <!-- Navber End -->

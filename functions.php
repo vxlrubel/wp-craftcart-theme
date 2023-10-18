@@ -11,6 +11,8 @@ define( 'CC_DIR', trailingslashit( get_template_directory() ) );
 define( 'CC_URI', trailingslashit( get_template_directory_uri() ) );
 define( 'CC_ASSETS', trailingslashit( CC_URI . 'assets' ) ); 
 define( 'CC_ASSETS_CSS', trailingslashit( CC_ASSETS .'css/min' ) ); 
+define( 'CC_ASSETS_ADMIN_CSS', trailingslashit( CC_ASSETS .'admin/css' ) ); 
+define( 'CC_ASSETS_ADMIN_JS', trailingslashit( CC_ASSETS .'admin/js' ) ); 
 define( 'CC_ASSETS_JS', trailingslashit( CC_ASSETS .'js' ) );
 
 
@@ -40,6 +42,20 @@ final class Craft_Cart{
 
         // register sidebar
         add_action( 'widgets_init', [ $this, 'register_sidebar' ] );
+
+        // register widgets items
+        add_action( 'widgets_init', [ $this, 'register_widgets_items' ] );
+    }
+
+    /**
+     * register widgets items using this function
+     * register_widget()
+     *
+     * @return void
+     */
+    public function register_widgets_items(){
+        // register recent blog post widget item
+        register_widget( 'CC\Widgets\Recent_Blog' );
     }
 
     /**
@@ -52,13 +68,38 @@ final class Craft_Cart{
             'name'           => esc_html__( 'Right Sidebar', CC_DOMAIN ),
             'id'             => 'truvik-right-sidebar',
             'description'    => esc_html__( 'Drag the widgets item from left to drag here', 'truvik'),
-            'before_widget'  => '<aside class="widget with-title">',
-            'after_widget'   => "</aside>\n",
-            'before_title'   => '<h3 class="widget-title">',
-            'after_title'    => "</h3>\n",
-            'show_in_rest'   => true,
+            'before_widget'  => '<div class="RightPerDiv">',
+            'after_widget'   => "</div>\n",
+            'before_title'   => '<h5>',
+            'after_title'    => "</h5>\n",
         ];
         register_sidebar( $args );
+
+        // footer widget args
+        $widgets_args = [
+            'before_widget'  => '<div class="footer-widgets-item">',
+            'after_widget'   => "</div>\n",
+            'before_title'   => '<h4>',
+            'after_title'    => "</h4>\n",
+        ];
+
+        
+        /**
+         * register footer widget using 
+         * register_sidebar()
+         * 
+         * @return void
+         */
+        for ($i=1; $i <= 4 ; $i++) { 
+            register_sidebar( array_merge(
+                $widgets_args,
+                [
+                    'id'          => "cc-footer-widgets-{$i}",
+                    'name'        => esc_html__( "Footer Widget {$i}", CC_DOMAIN ),
+                    'description' => esc_html__( 'Drop here the widgets item', CC_DOMAIN )
+                ]
+            ) );
+        }
     }
 
     /**

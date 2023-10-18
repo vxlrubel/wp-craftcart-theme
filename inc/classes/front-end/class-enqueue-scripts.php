@@ -18,6 +18,33 @@ class Register_Scripts{
 
         // enqueue all the scripts file 
         add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ] );
+
+        // admin enqueue style and script
+        add_action( 'admin_enqueue_scripts', [$this, 'register_admin_scrips'] );
+    }
+
+    /**
+     * enqueue admin style and scripts
+     *
+     * @return void
+     */
+    public function register_admin_scrips(){
+
+        // enqueue admin style
+        wp_enqueue_style( 
+            'cc-admin-style',
+            CC_ASSETS_ADMIN_CSS . 'admin-style.css',
+            '', 
+             CC_VERSION
+        );
+
+        wp_enqueue_script( 
+            'cc-admin-script',
+            CC_ASSETS_ADMIN_JS . 'admin-script.js',
+            ['jquery'],
+            CC_VERSION,
+            true
+        );
     }
 
     /**

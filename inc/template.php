@@ -75,3 +75,85 @@ if( ! function_exists('get_cc_trim_post_content') ){
         return $title;
     }
 }
+
+
+/**
+ * create custom primary menu
+ * theme location 'primary_menu'
+ * @return void
+ */
+if( ! function_exists('cc_primary_menu') ){
+    function cc_primary_menu() {
+        // if primary menu has created
+        if( has_nav_menu( 'primary_menu' ) ){
+            $args = [
+                'theme_location' => 'primary_menu'
+            ];
+            // defina primary menu
+            wp_nav_menu( $args );
+        }else{
+            // check condition if admin or editor
+            if( cc_editor() ){
+                printf(
+                    '<ul><li><a href="%s" target="_blank">%s</a></li></ul>',
+                    esc_url( admin_url('nav-menus.php') ),
+                    __( 'Create Menu', CC_DOMAIN )
+                );
+            }else{
+                wp_list_pages([
+                    'title_li'=> ' '
+                ]);
+            }
+            
+        }
+    }
+}
+
+/**
+ * create custom footer menu
+ * theme location 'footer_menu'
+ * @return void
+ */
+if( ! function_exists('cc_footer_menu') ){
+    function cc_footer_menu(){
+        // if footer menu has created
+        if( has_nav_menu( 'footer_menu' ) ){
+            $args = [
+                'theme_location' => 'footer_menu'
+            ];
+            // defina footer menu
+            echo "<div class=\"mb-4\">\n";
+                wp_nav_menu( $args );
+            echo "</div>\n";
+        }else{
+            if( cc_editor() ){
+                printf(
+                    '<div><ul class="mb-4"><li><a href="%s" target="_blank">%s</a></li></ul></div>',
+                    esc_url( admin_url('nav-menus.php?action=edit&menu=0') ),
+                    __( 'Create Menu', CC_DOMAIN )
+                );
+            }
+        }
+    }
+}
+
+
+/**
+ * create app menu for mobile version
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_app_menu') ){
+    function cc_app_menu(){
+        ?>
+            <div class="MovboBottom">
+                <div class="container">
+                    <a class="active" href="<?php echo home_url('/'); ?>"><i class="fa-solid fa-house"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="./Wish.html"><i class="fa-regular fa-heart"></i></a>
+                    <a href="./Login.html"><i class="fa-regular fa-user"></i></a>
+                </div>
+            </div>
+        <?php
+    }
+}

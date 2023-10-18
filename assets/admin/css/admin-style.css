@@ -1,0 +1,77 @@
+.d-flex {
+    display: flex !important;
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.my-3,
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.my-4,
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.my-3,
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.my-4,
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.cc-counter {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    border: 1px solid #dee2e6;
+}
+
+.cc-counter>* {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: #dfe6e9;
+    cursor: pointer;
+    border: none !important;
+    box-shadow: none !important;
+    outline: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1d2327 !important;
+    text-decoration: none !important;
+}
+
+.cc-counter>a:hover {
+    background-color: #b2bec3;
+}
+
+.cc-counter>input {
+    width: 40px;
+    background-color: white;
+    cursor: text;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    text-align: center;
+    font-size: 17px !important;
+}
