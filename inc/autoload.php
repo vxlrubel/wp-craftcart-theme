@@ -3,9 +3,14 @@
 // directly access denied
 defined('ABSPATH') || exit;
 
+// create custom function
 require_once dirname(__FILE__) . '/template.php';
 
-require_once dirname(__FILE__) . '/add-filter-template.php';
+// modify defaults filter hooks
+require_once dirname(__FILE__) . '/filter-hooks.php';
+
+// create custom action hook
+require_once dirname(__FILE__) . '/action-hooks.php';
 
 
 // require all the front-end class
