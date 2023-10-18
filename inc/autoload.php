@@ -13,8 +13,30 @@ require_once dirname(__FILE__) . '/filter-hooks.php';
 require_once dirname(__FILE__) . '/action-hooks.php';
 
 
-// require all the front-end class
+/**
+ * require all the core classes
+ * @return void
+ */
+$classes = [
+    'tgm-plugin-activation',
+    'example',
+];
 
+foreach ( $classes as $class ) {
+    // get all the file name
+    $file = dirname(__FILE__) . "/classes/class-{$class}.php";
+
+    // prepare file for include if exists
+    $files = ! file_exists( $file ) ? cc_error( "This file {$file} is not exists.") : $file;
+
+    // require the file
+    require_once $files;
+}
+
+/**
+ * require all the front-end class
+ * @return void
+ */
 $frontend_classes = [
     'enqueue-scripts',
 ];
@@ -32,9 +54,11 @@ foreach ( $frontend_classes as $class_file ) {
 }
 
 
-/**.
+/**
  * require all the widgets item
  * inside the foreach loop
+ * 
+ * @return void
  */
 $widgets_item = [
     'recent-blog'
