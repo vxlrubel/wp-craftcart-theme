@@ -80,3 +80,10 @@
     opacity: .7;
     width: 18px !important;
 }
+
+/* theme options */
+/* header logo image width */
+#image_cc-header-logo {
+    max-width: 200px !important;
+    height: auto;
+}

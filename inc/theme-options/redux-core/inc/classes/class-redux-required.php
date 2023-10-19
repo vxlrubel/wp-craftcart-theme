@@ -85,7 +85,7 @@ if ( ! class_exists( 'Redux_Required', false ) ) {
 
 					$core->required[ $data['parent'] ][ $field['id'] ][] = $data;
 
-					if ( false === array_search( $data['parent'], array_column( $core->required_child[ $field['id'] ], 'parent' ), true ) ) {
+					if ( ! in_array( $data['parent'], $core->required_child[ $field['id'] ], true ) ) {
 						$core->required_child[ $field['id'] ][] = $data;
 					}
 
@@ -242,8 +242,10 @@ if ( ! class_exists( 'Redux_Required', false ) ) {
 								$return = true;
 							}
 						}
-					} elseif ( strpos( $parent_value, (string) $check_value ) !== false ) {
-						$return = true;
+					} else {
+						if ( strpos( $parent_value, (string) $check_value ) !== false ) {
+							$return = true;
+						}
 					}
 
 					break;
@@ -259,8 +261,10 @@ if ( ! class_exists( 'Redux_Required', false ) ) {
 								$return = true;
 							}
 						}
-					} elseif ( strpos( $parent_value, (string) $check_value ) === false ) {
-						$return = true;
+					} else {
+						if ( strpos( $parent_value, (string) $check_value ) === false ) {
+							$return = true;
+						}
 					}
 
 					break;

@@ -476,7 +476,6 @@ if ( ! class_exists( 'Redux_Page_Render', false ) ) {
 				if ( ! file_exists( $core_path ) ) {
 					$core_path = Redux_Core::$dir . "inc/fields/{$field['type']}/field_{$field['type']}.php";
 				}
-
 				if ( Redux_Core::$pro_loaded ) {
 					$pro_path = '';
 
@@ -576,7 +575,6 @@ if ( ! class_exists( 'Redux_Page_Render', false ) ) {
 					$render = new $field_class( $field, $value, $core );
 
 					ob_start();
-
 					try {
 						$render->render();
 					} catch ( Error $e ) {
