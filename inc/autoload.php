@@ -12,14 +12,22 @@ require_once dirname(__FILE__) . '/filter-hooks.php';
 // create custom action hook
 require_once dirname(__FILE__) . '/action-hooks.php';
 
+// theme options redux framework
+require_once dirname(__FILE__) . '/theme-options/redux-core/framework.php';
+
+// theme options file
+// require_once dirname(__FILE__) . '/theme-options/sample/sample-config.php';
+
+require_once dirname(__FILE__) . '/options.php';
 
 /**
  * require all the core classes
+ * 
  * @return void
  */
 $classes = [
     'tgm-plugin-activation',
-    'example',
+    'activation',
 ];
 
 foreach ( $classes as $class ) {
@@ -35,6 +43,7 @@ foreach ( $classes as $class ) {
 
 /**
  * require all the front-end class
+ * 
  * @return void
  */
 $frontend_classes = [

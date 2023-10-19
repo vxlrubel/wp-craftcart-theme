@@ -1,0 +1,21 @@
+{
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"parser": "babel-eslint",
+	"rules": {
+		"quotes": [
+			2,
+			"single"
+		]
+	},
+	"plugins": [
+		"react"
+	],
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"sourceType": "script",
+		"esversion": 8
+	}
+}

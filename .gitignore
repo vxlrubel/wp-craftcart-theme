@@ -3,5 +3,6 @@
 
 # Ignore the "html" folder
 html/
+inc/theme-options/sample/
 test.html
 test.php

@@ -14,14 +14,14 @@ function cc_comment_fields( $fields ){
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <label for="author">Name: </label>
-                <input type="text" name="author" class="form-control" id="author">
+                <input type="text" name="author" class="form-control" id="author" required>
             </div>
     ';
 
     $email = '
             <div class="col-lg-6 mb-4">
                 <label for="email">Email: </label>
-                <input type="text" name="email" class="form-control" id="email">
+                <input type="text" name="email" class="form-control" id="email" required>
             </div>
         </div>
     ';
@@ -48,7 +48,7 @@ function cc_comment_form( $default ){
         <div class="row textarea-parent">
             <div class="col-12">
                 <label for="comment-form">Message:</label>
-                <textarea name="comment" class="form-control"></textarea>
+                <textarea name="comment" class="form-control" required ></textarea>
             </div>
         </div>
     ';

@@ -26,8 +26,12 @@ final class Craft_Cart{
 
 
     public function __construct(){
+
         // register all the scripts for frontend panel
         new CC\Frontend\Register_Scripts;
+
+        // recomended & required plugins activate
+        // new CC\Plugins\Activation;
 
         // initiate the default programms
         add_action( 'after_setup_theme', [ $this, 'initiate_theme'] );
