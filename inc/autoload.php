@@ -15,6 +15,11 @@ require_once dirname(__FILE__) . '/action-hooks.php';
 // theme options redux framework
 require_once dirname(__FILE__) . '/theme-options/redux-core/framework.php';
 
+
+if( class_exists('WooCommerce') ){
+    require_once dirname(__FILE__) . '/wc-hooks.php';
+}
+
 // theme options file
 // require_once dirname(__FILE__) . '/theme-options/sample/sample-config.php';
 

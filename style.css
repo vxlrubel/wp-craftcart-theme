@@ -151,3 +151,10 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
 .clearfix.page-top-margin {
     margin-top: 180px;
 }
+
+
+/* product page sorting */
+.CtagorisFilter p,
+.CtagorisFilter form {
+    margin: 0 !important;
+}

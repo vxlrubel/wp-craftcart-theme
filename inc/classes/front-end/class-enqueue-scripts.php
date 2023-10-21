@@ -89,6 +89,7 @@ class Register_Scripts{
             );
         }
 
+
         // if comment is open of have comment and it's a single page
         if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
             wp_enqueue_script( 'comment-reply' );
@@ -148,6 +149,12 @@ class Register_Scripts{
             ],
             'about-us'    => [
                 'src' => CC_ASSETS_CSS . 'about-us.css'
+            ],
+            'product-page'    => [
+                'src' => CC_ASSETS_CSS . 'product-page.css'
+            ],
+            'all-producte'    => [
+                'src' => CC_ASSETS_CSS . 'all-product.css'
             ],
             'craftcart'    => [
                 'src' => get_stylesheet_uri()
