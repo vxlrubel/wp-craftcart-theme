@@ -87,3 +87,7 @@
     max-width: 200px !important;
     height: auto;
 }
+
+#cc-cc_copyright_text_align .data-full {
+    display: flex;
+}

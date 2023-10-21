@@ -175,8 +175,22 @@ $args['share_icons'][] = array(
 	'icon'  => 'el el-linkedin',
 );
 
+// Panel Intro text -> before the form.
+if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] ) {
+	if ( ! empty( $args['global_variable'] ) ) {
+		$v = $args['global_variable'];
+	} else {
+		$v = str_replace( '-', '_', $args['opt_name'] );
+	}
+
+	// translators:  Panel opt_name.
+	$args['intro_text'] = '<p>' . sprintf( esc_html__( 'Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: $%1$s', 'your-textdomain-here' ), '<strong>' . $v . '</strong>' ) . '<p>';
+} else {
+	$args['intro_text'] = '<p>' . esc_html__( 'This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
+}
+
 // Add content after the form.
-// $args['footer_text'] = '<p>' . esc_html__( 'This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
+$args['footer_text'] = '<p>' . esc_html__( 'This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
 
 Redux::set_args( $opt_name, $args );
 

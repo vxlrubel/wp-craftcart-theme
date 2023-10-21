@@ -1,28 +1,4 @@
 <?php // phpcs:ignore Squiz.Commenting.FileComment.Missing
-/**
- * Redux, a simple, truly extensible and fully responsive option framework
- * for WordPress themes and plugins. Developed with WordPress coding
- * standards and PHP best practices in mind.
- *
- * Plugin Name:         Redux Framework
- * Plugin URI:          http://wordpress.org/plugins/redux-framework
- * GitHub URI:          reduxframework/redux-framework
- * Description:         Build better sites in WordPress fast!
- * Version:             4.4.7
- * Requires at least:   5.0
- * Requires PHP:        7.1
- * Author:              Team Redux
- * Author URI:          https://redux.io
- * License:             GPLv3 or later
- * License URI:         http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:         redux-framework
- * Provides:            ReduxFramework
- *
- * @package             ReduxFramework
- * @author              Team Redux
- * @license             GNU General Public License, version 3
- * @copyright           2012-2023 Redux.io
- */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;

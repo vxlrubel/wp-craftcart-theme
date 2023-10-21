@@ -19,7 +19,7 @@ Redux::set_section(
 				'subtitle' => esc_html__( 'You may enable or desable header option', CC_DOMAIN ),
 				'default'  => true,
 				'on'       => 'Enabled',
-				'off'      => 'Disabled',
+				'off'      => 'Disabled'
 			],
 			[
 				'id'   => 'devide-logo',
@@ -32,7 +32,6 @@ Redux::set_section(
 				'subtitle' => esc_html__( 'Upload Logo', CC_DOMAIN ),
 				'default'  => ['url' => CC_ASSETS . 'img/Jamidar.png'],
 				'url'      => false,
-				'validate' => 'url',
 				'required' => ['cc-header-enable', '=', true ]
 			],
 			[
@@ -58,7 +57,7 @@ Redux::set_section(
 				'subtitle' => esc_html__( 'Enable/Desable Woocommerce Option.', CC_DOMAIN ),
 				'default'  => true,
 				'required' => ['cc-header-enable', '=', true ]
-			],
+			]
 		]
 	]
 );
