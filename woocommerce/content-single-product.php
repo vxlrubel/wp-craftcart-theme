@@ -70,38 +70,32 @@ get_header(); ?>
                </div>
 
                      <!-- Buy Both Start -->
-                     <div class="BuyBoth">
-                        <h6 class="Bothtitle">You can also buy</h6>
+               <div class="BuyBoth">
+                  <h6 class="Bothtitle">You can also buy</h6>
 
-                        <div class="ProductInfo">
-                           <div class="ProductAndTitle">
-                                 <div class="PRoductImg">
-                                    <img src="./Images/Product/Light/llight1.jpg" alt="">
-                                 </div>
-
-                                 <div class="ProductTitle">
-                                    <h6>
-                                       BadRoom Light 
-                                    </h6>
-
-                                    <span>
-                                       Tk 0.00
-                                    </span> 
-                                 </div>
-                           </div>
-
-                           <div class="BothPriceAndBtn">
-                                 <div class="BothPrice">
-                                    <span>Total Price:</span>
-                                    <h6>Tk 54252</h6>
-                                 </div>
-
-                                 <div class="BothBtn">
-                                    <button>Buy Both</button>
-                                 </div>
-                           </div>
+                  <div class="ProductInfo">
+                     <div class="ProductAndTitle">
+                        <div class="PRoductImg">
+                           <img src="./Images/Product/Light/llight1.jpg" alt="">
+                        </div>
+                        <div class="ProductTitle">
+                           <h6> BadRoom Light </h6>
+                           <span>Tk 0.00 </span> 
                         </div>
                      </div>
+
+                     <div class="BothPriceAndBtn">
+                        <div class="BothPrice">
+                           <span>Total Price:</span>
+                           <h6>Tk 54252</h6>
+                        </div>
+
+                        <div class="BothBtn">
+                           <button>Buy Both</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
                      <!-- Buy Both End -->
             </div>
 
@@ -152,15 +146,6 @@ get_header(); ?>
                                  <div class="VarImg">
                                     <img src="./Images/Product/Product3.jpg" alt="">
                                  </div>
-                              <!--  <div class="VarImg">
-                                    <img src="./assets/images/Dairy-Bakery/Chips2.jpg" alt="">
-                                 </div> -->
-                                 <!-- <div class="VarImg">
-                                    <img src="./assets/images/Dairy-Bakery/Chips2.jpg" alt="">
-                                 </div>
-                                 <div class="VarImg">
-                                    <img src="./assets/images/Dairy-Bakery/Chips2.jpg" alt="">
-                                 </div> -->
                            </div>
 
                            <div class="VariantImgs">
@@ -301,7 +286,7 @@ get_header(); ?>
    </div>
 </section>
 <!-- Forduct view area end -->
-
+<?php woocommerce_output_product_data_tabs(); ?>
 <!-- PRODUCT REVIEW AND COMMENT START -->
 <section class="CommonpaddingSection">
    <div class="container">
@@ -316,30 +301,8 @@ get_header(); ?>
 
             <div class="tab-content b-3" id="nav-tabContent">
                <div class="tab-pane fade show active" id="nav-dscr" role="tabpanel" aria-labelledby="nav-dscr-tab" tabindex="0">
-                     <div class="product-dscr">
-                        <p>
-                           Shank porchetta anim ham in esse. Duis swine mollit incididunt, quis pork belly rump ut ball tip venison strip steak pancetta proident. Ground roun duis beef, eu sunt non dolor esse capicola shoulder
-                           strip steak. Ut fatback chuck minim exercitation kielbasa. Cupidatat nostrud prosciutto corned beefdgf meatball sausage lorem.Ground round jowl pig, short ribs turducken cillum labore aliqua bacon ea
-                           doner anim esse. Jerky laboris id, fatback ut gfjb Filet mignon corned beef laboris ipsum porchetta beef irure dolor fatback. Pariatur cupim occaecat short ribs
-                        </p>
-                        <p>
-                           consectetur, venison ipsum flank hamburger bacon tri-tip. Eu duis est cupidatat prosciutto alcatra, consectetur aute velit shoulder shankle ham ho Cillum deserunt velit dolor, beef ribs excepteur
-                           hamburger flank occaecat. Qui dolor flank picanha t-bone lorem
-                        </p>
-                        <div class="row">
-                           <div class="col-lg-8 col-md-6">
-                                 <p class="mt-0">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodt tempor incididunt ut labore et dolore magna aliqua. Quis ipsum vcdisse ultrices gravida. Risus commodo viverra maecenas
-                                    accumsan lacus Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                 </p>
-                                 <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                           </div>
-                        </div>
-                        <p>
-                           Shank porchetta anim ham in esse. Duis swine mollit incididunt, quis pork belly rump ut ball tip venison strip steak pancetta proident. Ground roun duis beef, eu sunt non dolor esse capicola shoulder
-                           strip steak. Ut fatback chuck minim exercitation kielbasa. Cupidatat nostrud prosciutto corned beefdgf meatball sausage lorem.Ground round jowl pig, short ribs turducken cillum labore aliqua bacon ea
-                           doner anim esse. Jerky laboris id, fatback ut gfjb Filet mignon corned beef laboris ipsum porchetta beef irure dolor fatback. Pariatur cupim occaecat short ribs
-                        </p>
+                     <div class="product-dscr">=
+                        <?php the_content(); ?>
                      </div>
                </div>
 
@@ -569,33 +532,17 @@ get_header(); ?>
 <!-- Banner2 after Service icon start -->
 <Section class="CommonpaddingSection productPhonemargin">
    <div class="container BannerSec">
-         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-               <a href="#">
-                     <img src="./Images/Banner/Banner-2.png" alt="">
-               </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-               <a href="#">
-                     <img src="./Images/Banner/Banner-3.png" alt="">
-               </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-               <a href="#">
-                     <img src="./Images/Banner/Banner.png" alt="">
-               </a>
-            </div>
-         </div>
+         
+         <img src="<?php echo get_template_directory_uri(). '/assets/img/banner-product-page-default.jpg'; ?>" alt="">
    </div>
 </Section>
 <!-- Banner2 after Service icon end -->
 
 <!-- Related Product start -->
-<?php woocommerce_output_related_products(); ?>
+<?php 
+   woocommerce_output_related_products();
+
+ ?>
 <!-- Related Product end -->
-
-
 
 <?php get_footer(); ?>

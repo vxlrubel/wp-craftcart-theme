@@ -26,3 +26,35 @@ function cc_wc_catalog_orderby( $items ){
    return $items;
 }
 add_filter( 'woocommerce_catalog_orderby', 'cc_wc_catalog_orderby' );
+
+
+function cc_wc_remove_actions(){
+   // remove woocommerce sidebar
+   remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+}
+
+add_action( 'init', 'cc_wc_remove_actions' );
+
+
+
+
+/**
+ * custom woocomerce tab add insite the single product
+ *
+ * @return void
+ */
+function _cb_cc_wc_tab_information(){
+   echo 'Information';
+}
+
+function cc_wc_add_custom_tab( array $items ){
+
+   $items['information'] = [
+      'title'    => 'Information',
+      'priority' => 15,
+      'callback' => '_cb_cc_wc_tab_information'
+   ];
+   return $items;
+}
+
+add_filter( 'woocommerce_product_tabs', 'cc_wc_add_custom_tab' );

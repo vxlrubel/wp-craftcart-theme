@@ -3,7 +3,9 @@
             <footer>
                 <!-- Frist Footer start -->
 
-                <?php get_sidebar( 'footer' ); ?>
+                <?php 
+                get_sidebar( 'footer' );
+                 ?>
                 
                 <!-- Frist Footer start -->
 

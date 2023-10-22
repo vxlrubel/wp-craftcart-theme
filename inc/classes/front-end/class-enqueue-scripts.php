@@ -116,6 +116,12 @@ class Register_Scripts{
                 CC_VERSION
             );
         }
+        wp_enqueue_style( 
+            'cc-stylesheet', 
+            get_stylesheet_uri(),
+            '', 
+            CC_VERSION
+        );
     }
 
 
@@ -178,9 +184,6 @@ class Register_Scripts{
             ],
             'all-producte'    => [
                 'src' => CC_ASSETS_CSS . 'all-product.css'
-            ],
-            'craftcart'    => [
-                'src' => get_stylesheet_uri()
             ]
         ];
 
