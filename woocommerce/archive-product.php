@@ -1,6 +1,8 @@
 <?php
 
-defined('ABSPATH') || exit; 
+defined('ABSPATH') || exit;
+
+global $cc;
 
 get_header(); ?>
    <!-- mid div start -->
@@ -71,6 +73,7 @@ get_header(); ?>
                          ?>
 
                      </div>
+                     
                      <?php if( $cc['cc-product-pagination'] == 1 ): ?>
                         <div class="wc-custom-pagination mt-3">
                            <?php woocommerce_pagination(); ?>

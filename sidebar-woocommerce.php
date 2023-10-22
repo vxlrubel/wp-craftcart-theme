@@ -1,7 +1,8 @@
 <div class="col-xl-2 col-lg-3 col-md-0 col-sm-0 Catagori">
 
+   <?php dynamic_sidebar( 'cc-woocommerce-sidebar' ); ?>
    
-   <div class="Catagori2">
+   <!-- <div class="Catagori2">
          <h5>FILTER PRODUCTS BY</h5>
          <div class="Catagori3">
             <span class="TaiterSpan">CATEGORY</span>
@@ -42,5 +43,5 @@
             <a href="#">Yes</a>
             <a href="#">No</a>
          </div>
-   </div>
+   </div> -->
 </div>

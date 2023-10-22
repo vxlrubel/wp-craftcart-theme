@@ -89,7 +89,7 @@ final class Craft_Cart{
                 'name'          => esc_html__( 'Woocommerce Sidebar', CC_DOMAIN ),
                 'description'   => esc_html__( 'Drag the widget items from leto to drag here.', CC_DOMAIN ),
                 'before_widget' => "<div class=\"Catagori2\">\n",
-                'after_widget'  => "<div>\n",
+                'after_widget'  => "</div>\n",
                 'before_title'  => "<h5>\n",
                 'after_title'   => "</h5>\n"
             ]

@@ -67,6 +67,24 @@ class Register_Scripts{
                 true
             );
         }
+        
+
+        // if comment is open of have comment and it's a single page
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }
+
+        // if is single page 
+        if( is_singular() ){
+            wp_enqueue_script( 
+                'magiczoomplus',
+                CC_ASSETS_JS . 'magiczoomplus.js',
+                ['jquery'],
+                CC_VERSION,
+                true
+            );
+        }
+
     }
 
     /**
@@ -90,11 +108,16 @@ class Register_Scripts{
         }
 
 
-        // if comment is open of have comment and it's a single page
-        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-            wp_enqueue_script( 'comment-reply' );
+        if( is_singular() ){
+            wp_enqueue_style( 
+                'magiczoomplus', 
+                CC_ASSETS_CSS . 'magiczoomplus.css', 
+                '', 
+                CC_VERSION
+            );
         }
     }
+
 
     /**
      * get all the scripts file
