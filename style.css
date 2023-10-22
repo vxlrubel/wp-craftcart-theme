@@ -65,6 +65,15 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
     color: white;
 }
 
+
+.trim-content-more {
+    font-size: 13px;
+    color: #4d4c4c;
+    letter-spacing: 2px;
+}
+
+
+/* comment */
 .cc-comment-list img {
     width: auto !important;
 }
@@ -157,4 +166,42 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
 .CtagorisFilter p,
 .CtagorisFilter form {
     margin: 0 !important;
+}
+
+.woocommerce nav.woocommerce-pagination {
+    position: inherit !important;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    background: var(--logoColor-2) !important;
+    color: white;
+}
+
+.woocommerce nav.woocommerce-pagination ul li>* {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.price ins .woocommerce-Price-amount.amount {
+    color: rgb(54, 54, 54) !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+
+.wc-custom-add-to-cart {
+    font-size: 14px !important;
+}
+
+.wc-custom-add-to-cart a.added_to_cart.wc-forward {
+    padding: 0 0 0 15px !important;
+}
+
+.AllProductImg {
+    height: auto !important;
+}
+
+.AllProductImg div {
+    border: none !important;
 }

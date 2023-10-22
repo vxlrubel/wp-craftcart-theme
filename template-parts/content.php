@@ -2,7 +2,7 @@
     <div class="col-lg-6 PerBlogDIvCol">
         <div class="PerBlogDIv">
 
-            <h2><?php echo get_cc_trim_post_title() . '...'; ?></h2>
+            <h2><?php echo get_cc_trim_post_title(); ?></h2>
 
             <div>
                 <ul class="d-flex flex-wrap">
@@ -32,7 +32,7 @@
             </div>
 
             <p>
-                <?php echo get_cc_trim_post_content(75) . '...'; ?>
+                <?php echo get_cc_trim_post_content(75); ?>
             </p>
 
             <?php 

@@ -56,9 +56,24 @@ if( ! function_exists('cc_editor') ){
  * @return $title;
  */
 if( ! function_exists('get_cc_trim_post_title') ){
-    function get_cc_trim_post_title( $string_width = 25 ){
+    function get_cc_trim_post_title( $string_width = 25, $more = true ){
         $title  = mb_strimwidth( get_the_title( get_the_ID() ), 0, $string_width );
-        return $title;
+
+        if( $more == true ){
+
+            $total_characters = strlen(get_the_title(get_the_id()));
+
+            if( $total_characters > $string_width ){
+                $get_title = "{$title}...";
+            }else{
+                $get_title = $title;
+            }
+
+        }else{
+            $get_title = $title;
+        }
+        
+        return $get_title;
     }
 }
 /**
@@ -70,9 +85,24 @@ if( ! function_exists('get_cc_trim_post_title') ){
  * @return $title;
  */
 if( ! function_exists('get_cc_trim_post_content') ){
-    function get_cc_trim_post_content( $string_width = 55 ){
-        $title  = mb_strimwidth( get_the_content( get_the_ID() ), 0, $string_width );
-        return $title;
+    function get_cc_trim_post_content( $string_width = 55, $more = true ){
+        $content  = mb_strimwidth( get_the_content( get_the_ID() ), 0, $string_width );
+
+        if( $more == true ){
+
+            $total_characters = strlen(get_the_content(get_the_id()));
+
+            if( $total_characters > $string_width ){
+                $get_content = "{$content} <span class=\"trim-content-more\">[...]</span>";
+            }else{
+                $get_content = $content;
+            }
+
+        }else{
+            $get_content = $content;
+        }
+        
+        return $get_content;
     }
 }
 

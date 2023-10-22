@@ -199,7 +199,15 @@ Redux::set_args( $opt_name, $args );
  * 
  * @return void
  */
-$extensions = [	'header', 'homepage', 'typography', 'editor','footer' ];
+$extensions = [	'header', 'homepage', 'typography', 'woocommerce', 'editor', 'footer' ];
+
+// $cc_commerce = ['woocommerce'];
+
+// $extensions = array_merge(
+// 	array_slice( $extensions, 0, 2),
+// 	$cc_commerce,
+// 	array_slice( $extensions, 2)
+// );
 
 foreach ( $extensions as $extension ) {
 

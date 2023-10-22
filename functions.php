@@ -10,6 +10,7 @@ define( 'CC_VERSION', '1.0' );
 define( 'CC_DIR', trailingslashit( get_template_directory() ) ); 
 define( 'CC_URI', trailingslashit( get_template_directory_uri() ) );
 define( 'CC_ASSETS', trailingslashit( CC_URI . 'assets' ) ); 
+define( 'CC_ASSETS_IMG', trailingslashit( CC_ASSETS . 'img' ) ); 
 define( 'CC_ASSETS_CSS', trailingslashit( CC_ASSETS .'css/min' ) ); 
 define( 'CC_ASSETS_ADMIN_CSS', trailingslashit( CC_ASSETS .'admin/css' ) ); 
 define( 'CC_ASSETS_ADMIN_JS', trailingslashit( CC_ASSETS .'admin/js' ) ); 
@@ -68,10 +69,12 @@ final class Craft_Cart{
      * @return void
      */
     public function register_sidebar(){
+
+        // blog sidebar
         $args = [
             'name'           => esc_html__( 'Right Sidebar', CC_DOMAIN ),
-            'id'             => 'truvik-right-sidebar',
-            'description'    => esc_html__( 'Drag the widgets item from left to drag here', 'truvik'),
+            'id'             => 'cc-right-sidebar',
+            'description'    => esc_html__( 'Drag the widgets item from left to drag here', CC_DOMAIN ),
             'before_widget'  => '<div class="RightPerDiv">',
             'after_widget'   => "</div>\n",
             'before_title'   => '<h5>',
@@ -79,6 +82,18 @@ final class Craft_Cart{
         ];
         register_sidebar( $args );
 
+        // woocommerce sidebar
+        register_sidebar(
+            [
+                'id'            => 'cc-woocommerce-sidebar',
+                'name'          => esc_html__( 'Woocommerce Sidebar', CC_DOMAIN ),
+                'description'   => esc_html__( 'Drag the widget items from leto to drag here.', CC_DOMAIN ),
+                'before_widget' => "<div class=\"Catagori2\">\n",
+                'after_widget'  => "<div>\n",
+                'before_title'  => "<h5>\n",
+                'after_title'   => "</h5>\n"
+            ]
+        );
         // footer widget args
         $widgets_args = [
             'before_widget'  => '<div class="footer-widgets-item">',
