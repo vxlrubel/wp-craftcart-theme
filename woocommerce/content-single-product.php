@@ -5,16 +5,8 @@ defined('ABSPATH') || exit;
 
 global $product;
 
-$attachment_ids = $product->get_gallery_image_ids();
-
 // include header functionality
 get_header(); ?>
-
-               <?php 
-                  // if( $attachment_ids && $product->get_image_id() ){
-                  //    pre( $attachment_ids );
-                  // }
-               ?>
 
 <!-- Forduct view area start -->
 <section class="CommonpaddingSection ProductViewArea">
@@ -34,104 +26,37 @@ get_header(); ?>
                         <?php the_post_thumbnail(); ?>
                      </a>
                </div>
-               
 
-               <div class="SmallImg d-flex">
-                     <div>
-                        <a href="https://st.hzcdn.com/simgs/d591866d01d3c164_9-8400/home-design.jpg"  
-                           data-zoom-id="jeans" 
-                           data-image="https://st.hzcdn.com/simgs/d591866d01d3c164_9-8400/home-design.jpg" 
-                           data-options="cssClass: mz-show-arrows;"
-                        >
-                           <img src="https://st.hzcdn.com/simgs/d591866d01d3c164_9-8400/home-design.jpg" alt="">
-                        </a>
-                     </div>
-                     
-                     <div>
-                        <a href="https://st.hzcdn.com/simgs/b951a46001d3c166_9-8400/home-design.jpg"  
-                           data-zoom-id="jeans" 
-                           data-image="https://st.hzcdn.com/simgs/b951a46001d3c166_9-8400/home-design.jpg" 
-                           data-options="cssClass: mz-show-arrows;"
-                        >
-                           <img src="https://st.hzcdn.com/simgs/b951a46001d3c166_9-8400/home-design.jpg" alt="">
-                        </a>
-                     </div>
-                     
-                     <div>
-                        <a href="https://st.hzcdn.com/simgs/87b1c6c601d3c167_9-8400/home-design.jpg"  
-                           data-zoom-id="jeans" 
-                           data-image="https://st.hzcdn.com/simgs/87b1c6c601d3c167_9-8400/home-design.jpg" 
-                           data-options="cssClass: mz-show-arrows;"
-                        >
-                           <img src="https://st.hzcdn.com/simgs/87b1c6c601d3c167_9-8400/home-design.jpg" alt="">
-                        </a>
-                     </div>
+               <?php 
+                  /**
+                   * Showing product gallary images
+                   */
+                  do_action( 'woocommerce_product_thumbnails' );
 
-                     <div>
-                        <a href="./Images/Product/Product.jpg"  
-                           data-zoom-id="jeans" 
-                           data-image="./Images/Product/Product.jpg" 
-                           data-options="cssClass: mz-show-arrows;"
-                        >
-                           <img src="./Images/Product/Product.jpg" alt="">
-                        </a>
-                     </div>
-               </div>
+                  /**
+                   * show one related product 
+                   */
+                  cc_show_1_related_product();
 
-                     <!-- Buy Both Start -->
-               <div class="BuyBoth">
-                  <h6 class="Bothtitle">You can also buy</h6>
+                ?>
 
-                  <div class="ProductInfo">
-                     <div class="ProductAndTitle">
-                        <div class="PRoductImg">
-                           <img src="./Images/Product/Light/llight1.jpg" alt="">
-                        </div>
-                        <div class="ProductTitle">
-                           <h6> BadRoom Light </h6>
-                           <span>Tk 0.00 </span> 
-                        </div>
-                     </div>
-
-                     <div class="BothPriceAndBtn">
-                        <div class="BothPrice">
-                           <span>Total Price:</span>
-                           <h6>Tk 54252</h6>
-                        </div>
-
-                        <div class="BothBtn">
-                           <button>Buy Both</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-                     <!-- Buy Both End -->
             </div>
 
             <div class="col-lg-4 col-md-7 col-sm-6 product-view-area">
                <div class="part-txt">
+               
                      <h2 class="main-product-title"><?php the_title(); ?></h2>
-                     <div class="review">
-                        <span class="star">
-                           <i class="fa-solid fa-star"></i>
-                           <i class="fa-solid fa-star"></i>
-                           <i class="fa-solid fa-star"></i>
-                           <i class="fa-solid fa-star"></i>
-                           <i class="fa-solid fa-star"></i>
-                        </span>
-                        <span class="rating-amount">3 Reviews</span>
-                     </div>
 
-                     <p class="price"><span>Tk 96.00</span> Tk 75.00</p>
+                     <?php cc_wc_product_rating_n_reviews_count(); ?>
+
+                     <p class="price"><span class="mr-2">Price: </span> <?php woocommerce_template_loop_price(); ?></p>
 
                      <ul class="short-details">
                         <li>Availability: <span>In stock</span></li>
                         <li>Product Code: <span>#4657</span></li>
                         <li>Tags: <span>Fashion, Hood, Classic</span></li>
                      </ul>
-                     <!-- <p class="dscr">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae rerum eveniet esse modi nemo mollitia. Vitae adipisci ab nulla sequi fuga saepe harum placeat voluptatibus ea quam, assumenda illum natus.
-                     </p> -->
+                     <?php woocommerce_template_single_excerpt(); ?>
 
                      <div class="VariantColor">
                         <div class="ProductColor">
@@ -199,10 +124,16 @@ get_header(); ?>
                         </div>
                      </form>
 
+                     
+                     <div class="mb-2">
+                        <?php woocommerce_template_single_meta(); ?>
+                     </div>
+                     
+                     <!-- will be sharing icon -->
+                     
+                     
                      <div class="btn-box">
-                        <button id="addToCart">
-                           <span><i class="fa fa-cart-shopping"></i></span> add to cart
-                        </button>
+                     <?php woocommerce_template_loop_add_to_cart(); ?>
                         <button id="addToWishList">
                            <span><i class="fa fa-heart"></i></span> add to wishlist
                         </button>

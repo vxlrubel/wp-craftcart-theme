@@ -21,6 +21,10 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
     --cc-color-deep: #db722b;
 }
 
+a:hover {
+    color: var(--cc-color-primary);
+}
+
 .cc-btn {
     background-color: var(--cc-color) !important;
     border-color: var(--cc-color) !important;
@@ -208,4 +212,54 @@ Tags: ecommerce, WooCommerce, artisan, crafts, handcrafted
 
 .cc-additional-list p {
     margin: 0 !important;
+}
+
+.BuyBoth .BothPriceAndBtn .BothBtn a {
+    text-decoration: none !important;
+    outline: 0;
+    background-color: var(--logoColor-2);
+    color: #fff;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 7px;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.product-view-area .part-txt .price span::after {
+    position: inherit !important;
+}
+
+.price ins .woocommerce-Price-amount.amount span,
+.price ins .woocommerce-Price-amount.amount {
+    color: rgb(255, 134, 63) !important;
+    font-weight: 600 !important;
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    display: inline-flex;
+    align-items: center;
+    background: var(--cc-color);
+    font-size: 14px;
+    min-width: 150px;
+    justify-content: center;
+    color: white;
+    border-radius: 9px;
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart:hover {
+    background: var(--cc-color-primary);
+}
+
+.added_to_cart.wc-forward {
+    display: inline-flex !important;
+    font-size: 14px;
+    padding: 0 !important;
+    justify-content: center;
+    align-items: center;
+    min-width: 85px;
+}
+
+.added_to_cart.wc-forward:hover {
+    color: var(--cc-color-primary);
 }

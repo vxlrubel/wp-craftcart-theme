@@ -187,3 +187,173 @@ if( ! function_exists('cc_app_menu') ){
         <?php
     }
 }
+
+
+/**
+ * this method only use insie the loop outerwise it's not working it will throwing error
+ * get 1 single related product
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_show_1_related_product') ){
+    function cc_show_1_related_product(){
+
+        // Get the current product ID
+        $current_product_id = get_the_ID();
+
+        // Get the product categories and tags for the current product
+        $categories = wp_get_post_terms($current_product_id, 'product_cat', array('fields' => 'ids'));
+        $tags = wp_get_post_terms($current_product_id, 'product_tag', array('fields' => 'ids'));
+
+        // Setup a query to find a related product
+        $args = [
+            'post_type'      => 'product',
+            'post_status'    => 'publish',
+            'posts_per_page' => 1,
+            'post__not_in'   => [ $current_product_id ],   // Exclude the current product
+            'tax_query'      => [
+                'relation' => 'OR',                        // Either in the same category or with the same tag
+                [
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'id',
+                    'terms'    => $categories
+                ],
+                [
+                    'taxonomy' => 'product_tag',
+                    'field'    => 'id',
+                    'terms'    => $tags
+                ]
+            ],
+            'orderby'        => 'rand',
+        ];
+
+        $related_products = new WP_Query( $args );
+
+        if ($related_products->have_posts()) {
+            while ($related_products->have_posts()) : $related_products->the_post();
+                $product = wc_get_product( get_the_ID() );
+             ?>
+                <div class="BuyBoth">
+                  <h6 class="Bothtitle">You can also buy</h6>
+
+                  <div class="ProductInfo">
+                     <div class="ProductAndTitle">
+                        <div class="PRoductImg">
+                           <?php the_post_thumbnail(); ?>
+                        </div>
+                        <div class="ProductTitle">
+                           <h6><?php the_title(); ?></h6>
+                           <span><?php echo wc_price( $product->get_price() ); ?></span> 
+                        </div>
+                     </div>
+
+                     <div class="BothPriceAndBtn">
+
+                        <?php
+
+                            printf(
+                                '<div class="BothPrice"><span>%s:</span><h6>%s</h6></div>',
+                                'Total Price',
+                                wc_price( $product->get_price() )
+                            );
+
+                            printf(
+                                '<div class="BothBtn"><a href="%s">%s</a></div>',
+                                esc_url( get_permalink( get_the_ID() ) ),
+                                esc_html('Buy Now')
+                            );
+                         ?>
+                     </div>
+                  </div>
+               </div>
+            
+            <?php endwhile;
+        }
+
+        wp_reset_postdata();
+        
+    }
+}
+
+/**
+ * count avarage review and reviews count
+ * 
+ * @return void
+ */
+if( ! function_exists( 'cc_wc_product_rating_n_reviews_count' ) ){
+    function cc_wc_product_rating_n_reviews_count(){
+        $product = wc_get_product( get_the_ID() );
+        $review_count = $product->get_review_count();
+        $average_rating = $product->get_average_rating();
+        // echo $average_rating;
+
+        if( $review_count < 1 ){
+            $count = 'No Review';
+        }
+        if( $review_count == 1 ){
+            $count = "{$review_count} review";
+        }
+        if( $review_count > 1 ){
+            $count = "{$review_count} reviews";
+        }
+
+        $number = number_format( $average_rating, 2 );
+
+        if( $number && $review_count ){
+            printf(
+               '<div class="d-flex mb-2">Ratting: %s out of %s</div>',
+               $number,
+               '5.0'
+            );
+        }
+        ?>
+        <div class="review">
+            <span class="star">
+
+                <?php 
+                    
+                    $star       = '<i class="fa-solid fa-star"></i>';
+                    $star_empty = '<i class="fa-regular fa-star"></i>';
+                    $star_half  = '<i class="fa-solid fa-star-half-stroke"></i>';
+                    if( $number && $review_count ){
+                        if( $average_rating == 1 ){
+                            $star_count = "{$star}{$star_empty}{$star_empty}{$star_empty}{$star_empty}";
+                        }
+                        if( $average_rating > 1 && $average_rating < 2 ){
+                            $star_count = "{$star}{$star_half}{$star_empty}{$star_empty}{$star_empty}";
+                        }
+                        if( $average_rating == 2 ){
+                            $star_count = "{$star}{$star}{$star_empty}{$star_empty}{$star_empty}";
+                        }
+                        if( $average_rating > 2 && $average_rating < 3 ){
+                            $star_count = "{$star}{$star}{$star_half}{$star_empty}{$star_empty}";
+                        }
+                        if( $average_rating == 3 ){
+                            $star_count = "{$star}{$star}{$star}{$star_empty}{$star_empty}";
+                        }
+                        if( $average_rating > 3 && $average_rating < 4 ){
+                            $star_count = "{$star}{$star}{$star}{$star_half}{$star_empty}";
+                        }
+                        if( $average_rating == 4 ){
+                            $star_count = "{$star}{$star}{$star}{$star}{$star_empty}";
+                        }
+                        if( $average_rating > 4 && $average_rating < 5 ){
+                            $star_count = "{$star}{$star}{$star}{$star}{$star_half}";
+                        }
+                        if( $average_rating == 5 ){
+                            $star_count = "{$star}{$star}{$star}{$star}{$star}";
+                        }
+                        echo $star_count;
+                    }else{
+                        echo "{$star_empty}{$star_empty}{$star_empty}{$star_empty}{$star_empty}";
+                    }
+                 ?>
+            </span>
+
+            <?php printf( '<span class="rating-amount">%s</span>', $count ); ?>
+            
+        </div>
+
+        <?php
+    }
+}
