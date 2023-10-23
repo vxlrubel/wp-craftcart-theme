@@ -3,10 +3,18 @@
 // derectly access denied
 defined('ABSPATH') || exit;
 
+global $product;
+
+$attachment_ids = $product->get_gallery_image_ids();
+
 // include header functionality
 get_header(); ?>
 
-
+               <?php 
+                  // if( $attachment_ids && $product->get_image_id() ){
+                  //    pre( $attachment_ids );
+                  // }
+               ?>
 
 <!-- Forduct view area start -->
 <section class="CommonpaddingSection ProductViewArea">
@@ -26,6 +34,7 @@ get_header(); ?>
                         <?php the_post_thumbnail(); ?>
                      </a>
                </div>
+               
 
                <div class="SmallImg d-flex">
                      <div>
@@ -288,251 +297,12 @@ get_header(); ?>
 <!-- Forduct view area end -->
 <?php woocommerce_output_product_data_tabs(); ?>
 <!-- PRODUCT REVIEW AND COMMENT START -->
-<section class="CommonpaddingSection">
-   <div class="container">
-         <div class="details-area">
-            <div class="row pl-1">
-               <div class="nav" id="nav-tab" role="tablist">
-                     <button class="nav-link active" id="nav-dscr-tab" data-bs-toggle="tab" data-bs-target="#nav-dscr" type="button" role="tab" aria-controls="nav-dscr" aria-selected="true">Description</button>
-                     <button class="nav-link" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="false">Information</button>
-                     <button class="nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Reviews</button>
-               </div>
-            </div>
 
-            <div class="tab-content b-3" id="nav-tabContent">
-               <div class="tab-pane fade show active" id="nav-dscr" role="tabpanel" aria-labelledby="nav-dscr-tab" tabindex="0">
-                     <div class="product-dscr">=
-                        <?php the_content(); ?>
-                     </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab" tabindex="0">
-                     <div class="product-information">
-                        <ul>
-                           <li><span>Brand Name:</span>KLGH</li>
-                           <li><span>Vocalism Principle:</span>Dynamic</li>
-                           <li><span>Style:</span>Over the Ear</li>
-                           <li><span>Origin:</span>Mainland China</li>
-                           <li><span>Control Button:</span>Yes</li>
-                           <li><span>Volume Control:</span>Yes</li>
-                           <li><span>Certification:</span>CE</li>
-                           <li><span>Number Of Drivers:</span>2</li>
-                           <li><span>Plug Type:</span>Line Type</li>
-                           <li><span>Range:</span>up to 32 Ω</li>
-                           <li><span>Material:</span>Fabric</li>
-                           <li><span>Memory Card:</span>Yes</li>
-                           <li><span>Waterproof:</span>No</li>
-                           <li><span>Magnet Type:</span>Other</li>
-                           <li><span>Wireless Type:</span>Bluetooth</li>
-                           <li><span>Codecs:</span>AAC</li>
-                        </ul>
-                     </div>
-               </div>
-                  
-               <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabindex="0">
-                     <div class="product-review">
-                        <div class="review-overview">
-                           <div class="left">
-                                 <h2>4.2 <span>/5</span></h2>
-                                 <p>251 Ratings</p>
-                           </div>
-                           <div class="right">
-                                 <ul>
-                                    <li>
-                                       <div class="stars">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i>
-                                             <i class="fa-solid fa-star-sharp rated"></i>
-                                       </div>
-                                       <div class="review-line">
-                                             <div class="progress"><div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 41%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                       </div>
-                                       <div class="percentage"><span>103</span></div>
-                                    </li>
-                                    <li>
-                                       <div class="stars">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </div>
-                                       <div class="review-line">
-                                             <div class="progress"><div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 29%;" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                       </div>
-                                       <div class="percentage"><span>73</span></div>
-                                    </li>
-                                    <li>
-                                       <div class="stars">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </div>
-                                       <div class="review-line">
-                                             <div class="progress"><div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 16%;" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                       </div>
-                                       <div class="percentage"><span>39</span></div>
-                                    </li>
-                                    <li>
-                                       <div class="stars">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp"></i> <i class="fa-solid fa-star-sharp"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </div>
-                                       <div class="review-line">
-                                             <div class="progress"><div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 11%;" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                       </div>
-                                       <div class="percentage"><span>27</span></div>
-                                    </li>
-                                    <li>
-                                       <div class="stars">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp"></i> <i class="fa-solid fa-star-sharp"></i> <i class="fa-solid fa-star-sharp"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </div>
-                                       <div class="review-line">
-                                             <div class="progress"><div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 3%;" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div></div>
-                                       </div>
-                                       <div class="percentage"><span>09</span></div>
-                                    </li>
-                                 </ul>
-                           </div>
-                        </div>
-
-                        <div class="review-title"><h3>Reviews</h3></div>
-                        <div class="review-wrap">
-                           <div class="single-review">
-                                 <div class="user">
-                                    <div class="part-img"><img src="./Images/users.jpg" alt="User" /></div>
-                                    <div class="txt">
-                                       <span class="name">Shaikh Dardah</span> <span class="date">17/08/2022</span>
-                                       <span class="star">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </span>
-                                    </div>
-                                 </div>
-
-                                 <div class="comment-area">
-                                    <p>
-                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos veniam aperiam autem sint beatae eveniet minima impedit, deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident.
-                                    </p>
-                                    <div class="bottom-wrap">
-                                       <div class="gallery-wrap">
-                                             <div class="img-gallery">
-                                                <button class="client-img"><img src="./Images/Product/Product5.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product5.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product5.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product5.jpg" alt="image" /></button>
-                                             </div>
-                                             <div class="view-panel">
-                                                <img class="client-product" src="assets/images/index.html" alt="image" /> <button class="clt-view-panel-close"><i class="fa-light fa-circle-xmark"></i></button>
-                                             </div>
-                                       </div>
-                                       <div class="reaction">
-                                             <div class="like">
-                                                <button><i class="fa-solid fa-thumbs-up"></i></button> <span>(2)</span>
-                                             </div>
-                                             <div class="dislike">
-                                                <button><i class="fa-solid fa-thumbs-down"></i></button> <span>(0)</span>
-                                             </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                           </div>
-
-                           <div class="single-review">
-                                 <div class="user">
-                                    <div class="part-img"><img src="./Images/users.jpg" alt="User" /></div>
-                                    <div class="txt">
-                                       <span class="name">Shaikh Dardah</span> <span class="date">17/08/2022</span>
-                                       <span class="star">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </span>
-                                    </div>
-                                 </div>
-
-                                 <div class="comment-area">
-                                    <p>
-                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos veniam aperiam autem sint beatae eveniet minima impedit, deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident.
-                                    </p>
-                                    <div class="bottom-wrap">
-                                       <div class="gallery-wrap">
-                                             <div class="img-gallery">
-                                                <button class="client-img"><img src="./Images/Product/Product3.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product3.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product3.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product3.jpg" alt="image" /></button>
-                                             </div>
-                                             <div class="view-panel">
-                                                <img class="client-product" src="assets/images/index.html" alt="image" /> <button class="clt-view-panel-close"><i class="fa-light fa-circle-xmark"></i></button>
-                                             </div>
-                                       </div>
-                                       <div class="reaction">
-                                             <div class="like">
-                                                <button><i class="fa-solid fa-thumbs-up"></i></button> <span>(2)</span>
-                                             </div>
-                                             <div class="dislike">
-                                                <button><i class="fa-solid fa-thumbs-down"></i></button> <span>(0)</span>
-                                             </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                           </div>
-
-                           <div class="single-review">
-                                 <div class="user">
-                                    <div class="part-img"><img src="./Images/users.jpg" alt="User" /></div>
-                                    <div class="txt">
-                                       <span class="name">Shaikh Dardah</span> <span class="date">17/08/2022</span>
-                                       <span class="star">
-                                             <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i> <i class="fa-solid fa-star-sharp rated"></i>
-                                             <i class="fa-solid fa-star-sharp"></i>
-                                       </span>
-                                    </div>
-                                 </div>
-
-                                 <div class="comment-area">
-                                    <p>
-                                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos veniam aperiam autem sint beatae eveniet minima impedit, deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus nulla repellendus quos provident deserunt magni harum aut ducimus explicabo, consectetur natus
-                                       nulla repellendus quos provident.
-                                    </p>
-
-                                    <div class="bottom-wrap">
-                                       <div class="gallery-wrap">
-                                             <div class="img-gallery">
-                                                <button class="client-img"><img src="./Images/Product/Product2.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product2.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product2.jpg" alt="image" /></button>
-                                                <button class="client-img"><img src="./Images/Product/Product2.jpg" alt="image" /></button>
-                                             </div>
-                                             <div class="view-panel">
-                                                <img class="client-product" src="assets/images/index.html" alt="image" /> <button class="clt-view-panel-close"><i class="fa-light fa-circle-xmark"></i></button>
-                                             </div>
-                                       </div>
-                                       <div class="reaction">
-                                             <div class="like">
-                                                <button><i class="fa-solid fa-thumbs-up"></i></button> <span>(2)</span>
-                                             </div>
-                                             <div class="dislike">
-                                                <button><i class="fa-solid fa-thumbs-down"></i></button> <span>(0)</span>
-                                             </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                           </div>
-                        </div>
-                     </div>
-               </div>
-            </div>
-         </div>
-   </div>
-</section>
 <!-- PRODUCT REVIEW AND COMMENT START -->
 
 <!-- Banner2 after Service icon start -->
 <Section class="CommonpaddingSection productPhonemargin">
    <div class="container BannerSec">
-         
          <img src="<?php echo get_template_directory_uri(). '/assets/img/banner-product-page-default.jpg'; ?>" alt="">
    </div>
 </Section>

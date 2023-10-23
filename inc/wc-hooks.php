@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * Modify woocommerce action hooks and filter hooks.
+ * 
+ * @package Craft_Cart
+ * @version 1.0
+ * @since 1.0
+ * @author Rubel Mahmud (Sujan)
+ * @link https://github.com/vxlrubel
+ */
+
 // directly access denied
 defined('ABSPATH') || exit;
 
@@ -39,7 +49,7 @@ add_action( 'init', 'cc_wc_remove_actions' );
 
 
 /**
- * custom woocomerce tab add insite the single product
+ * custom woocomerce tab add inside the single product page
  *
  * @return void
  */
