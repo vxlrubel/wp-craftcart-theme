@@ -276,3 +276,78 @@ a:hover {
 .cc-product-tag a:hover {
     color: var(--cc-color-primary) !important;
 }
+
+.cc-product-variable tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 15px 0 !important;
+}
+
+.quantity input {
+    width: 100% !important;
+    padding: 0 !important;
+    -moz-appearance: inherit !important;
+    margin-bottom: 15px !important;
+}
+
+.product-view-area .part-txt table label {
+    line-height: 28px !important;
+    margin: 0 15px 0 0 !important;
+    min-width: 70px !important;
+    padding: 5px 0;
+}
+
+.cc-product-variable select {
+    margin-right: 15px !important;
+    padding: 5px 15px !important;
+}
+
+.cc-product-variable .reset_variations {
+    display: inline-flex;
+    align-items: center;
+}
+
+.woocommerce-variation-add-to-cart.variations_button {
+    display: flex !important;
+}
+
+.woocommerce-variation-add-to-cart.variations_button .quantity {
+    width: 70px !important;
+    margin-right: 15px !important;
+}
+
+/* single button add to cart  */
+.product-view-area .part-txt form:not(.variations_form) {
+    display: flex !important;
+    align-items: center;
+}
+
+.product-view-area .part-txt form:not(.variations_form) .quantity {
+    width: 70px !important;
+    height: 45px !important;
+    margin-right: 15px;
+}
+
+
+.product-view-area .part-txt form:not(.variations_form) button {
+    font-size: 13px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 130px;
+    height: 45px;
+}
+
+/* woocommerce singe page end */
+
+/* cart page style start */
+
+
+
+
+/* cart page style end */

@@ -77,86 +77,29 @@ get_header(); ?>
                      </ul>
                      <?php woocommerce_template_single_excerpt(); ?>
 
-                     <div class="VariantColor">
-                        <div class="ProductColor">
-                           <span>Color:</span>
-                           <div class="BtnsDiv">
-                                 <button class="ColorBtn1"></button>
-                                 <button class="ColorBtn2"></button>
-                                 <button class="ColorBtn3"></button>
+                     <?php if( $product->is_type('variable') ): ?>
+                        <div class="VariantColor">
+                           <div class="cc-product-variable Variant">
+                              <?php
+                                 $variations = $product->get_available_variations();
+                                 if( $variations ){
+                                    woocommerce_variable_add_to_cart();
+                                 }
+                              ?>
                            </div>
                         </div>
-
-                        <div class="Variant">
-                           <span>Variant:</span>
-                           <div class="VariantImgs">
-                                 <div class="VarImg">
-                                    <img src="./Images/Product/Product1.jpg" alt="">
-                                 </div>
-                                 <div class="VarImg">
-                                    <img src="./Images/Product/Product2.jpg" alt="">
-                                 </div>
-                                 <div class="VarImg">
-                                    <img src="./Images/Product/Product3.jpg" alt="">
-                                 </div>
-                           </div>
-
-                           <div class="VariantImgs">
-                           <?php
-
-                              $get_terms = get_the_terms( get_the_ID(), 'product_cat' );  
-
-                              foreach ( $get_terms as $term ) {
-
-                                 printf(
-                                    '<div class="TextVariant"><a href="%s">%s</a></div>',
-                                    esc_url( get_term_link($term) ),
-                                    $term->name
-                                 );
-                              }
-                           
-                            ?>
-                           </div>
+                     <?php else: ?>
+                        <div class="btn-box">
+                           <?php woocommerce_template_single_add_to_cart(); ?>
+                           <button id="addToWishList">
+                              <span><i class="fa fa-heart"></i></span> add to wishlist
+                           </button>
                         </div>
-                     </div>
-
-
-                     <form>
-                        <div class="row g-xl-4 g-3">
-                           <div class="col-lg-8 col-md-12 col-sm-4">
-                                 <div class="quantity-wrap">
-                                    <label>QTY</label>
-                                    <div class="product-count">
-                                       <div class="quantity rapper-quantity">
-                                             <input type="number" min="1" max="100" step="1" value="1" readonly />
-                                             <div class="quantity-nav">
-                                                <div class="quantity-button quantity-down"><i class="fa-solid fa-minus"></i></div>
-                                                <div class="quantity-button quantity-up"><i class="fa-solid fa-plus"></i></div>
-                                             </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                           </div>
-                        </div>
-                     </form>
+                     <?php endif; ?>
                      
                      <!-- will be sharing icon -->
+                     <?php cc_wc_product_share_icon(); ?>
                      
-                     
-                     <div class="btn-box">
-                     <?php woocommerce_template_loop_add_to_cart(); ?>
-                        <button id="addToWishList">
-                           <span><i class="fa fa-heart"></i></span> add to wishlist
-                        </button>
-                     </div>
-
-                     <div class="product-share">
-                        <span>Share Link:</span>
-                        <div class="social">
-                           <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-twitter"></i></a> <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                           <a href="#"><i class="fa-solid fa-rss"></i></a>
-                        </div>
-                     </div>
                </div>
             </div>
 

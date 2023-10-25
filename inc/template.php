@@ -357,3 +357,35 @@ if( ! function_exists( 'cc_wc_product_rating_n_reviews_count' ) ){
         <?php
     }
 }
+
+if( ! function_exists('cc_wc_product_share_icon') ){
+    function cc_wc_product_share_icon(){
+        // Get the current product's permalink
+        $get_link = get_permalink();
+
+        // Generate share links
+        $share_facebook = 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode($get_link);
+        $share_twitter  = 'https://twitter.com/intent/tweet?url=' . urlencode($get_link);
+        $share_google   = 'https://plus.google.com/share?url=' . urlencode($get_link);
+        $share_rss_feed = get_bloginfo('rss2_url');
+
+        printf(
+            '
+            <div class="product-share">
+                <span>%s</span>
+                <div class="social">
+                    <a href="%s" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="%s" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="%s" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="%s" target="_blank"><i class="fa-solid fa-rss"></i></a>
+                </div>
+            </div>',
+            esc_html( 'Share Link:' ),
+            esc_url( $share_facebook ),
+            esc_url( $share_twitter ),
+            esc_url( $share_google ),
+            esc_url( $share_rss_feed )
+
+        );
+    }
+}
