@@ -25,6 +25,16 @@ Redux::set_section(
       'subsection' => true,
       'fields'     => [
          [
+            'id'       => 'cc-product-page-banner-visibility',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Breadcrumb', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable or desable breadcrumb', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change to enable to show the breadcrumb inside the product page.', CC_DOMAIN ),
+            'on'       => 'Enable',
+            'off'      => 'Disable',
+            'default'  => true,
+         ],
+         [
             'id'       => 'cc-product-banner-enable',
             'type'     => 'switch',
             'title'    => esc_html__( 'Banner', CC_DOMAIN ),
@@ -177,6 +187,49 @@ Redux::set_section(
          ],
          [
             'id'       => 'cc-commerce-share-link-single-text-divide',
+            'type'     => 'divide',
+         ],
+         [
+            'id'       => 'cc-commerce-cash-on-visibility',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Cash On Delivery', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable cash on delivery', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change to enable to show cash on delivery.', CC_DOMAIN ),
+            'default'  => true,
+            'on'       => 'Enable',
+            'off'      => 'Disable'
+         ],
+         [
+            'id'       => 'cc-commerce-return-n-warranty-visibility',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Return & Warranty', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable return and warranty.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change to enable to show this section side of the product single page.', CC_DOMAIN ),
+            'default'  => true,
+            'on'       => 'Enable',
+            'off'      => 'Disable'
+         ],
+         [
+            'id'       => 'cc-commerce-return-n-warranty-title',
+            'type'     => 'text',
+            'title'    => esc_html__( 'Title', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Set the title.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Set the title to show in front-end.', CC_DOMAIN ),
+            'default'  => 'Return & Warranty',
+            'validate' => 'no_html',
+            'required' => [ 'cc-commerce-return-n-warranty-visibility', '=', true ]
+         ],
+         [
+            'id'       => 'cc-commerce-return-n-warranty',
+            'type'     => 'multi_text',
+            'title'    => esc_html__( 'Add Policy', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Add return & warranty policy.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Add Return and Warranty Policy inside the product details page.', CC_DOMAIN ),
+            'validate' => 'no_html',
+            'default'  => [ '7 Days Returns Change of mind is not applicable', 'Warranty not available' ]
+         ],
+         [
+            'id'       => 'cc-commerce-return-n-warranty-divide',
             'type'     => 'divide',
          ],
          [

@@ -412,3 +412,44 @@ if( ! function_exists('cc_wc_product_share_icon') ){
         );
     }
 }
+
+
+/**
+ * create privacy policy and warranty inside the product single page
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_warranty_n_privacy_in_product_page') ){
+    function cc_warranty_n_privacy_in_product_page(){
+        global $cc;
+
+        if( is_enable_options( 'cc-commerce-return-n-warranty-visibility' ) ):
+
+            echo "<div>\n";
+            printf(
+                '<h5><i class="fa-solid fa-person-walking-arrow-loop-left"></i>%s</h5>',
+                $cc['cc-commerce-return-n-warranty-title']
+            );
+             
+            $warn_policy = $cc['cc-commerce-return-n-warranty'];
+
+            if( empty( $warn_policy ) ){
+                echo ' ';
+            }else{
+                if( count( $warn_policy ) >= 1 && ! empty( $warn_policy ) ){
+                    echo "<ul>\n";
+                        foreach ($warn_policy as $policy ) {
+                            printf(
+                                '<li><i class="fa-solid fa-shield-halved"></i> %s</li>',
+                                $policy
+                            );
+                        }
+                    echo "</ul>\n";
+                }
+            }
+            
+            echo "</div>\n";
+
+        endif;
+    }
+}

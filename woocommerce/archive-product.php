@@ -8,10 +8,19 @@ get_header(); ?>
    <!-- mid div start -->
    <Section class="CommonpaddingSection TitleBorderBottom productPhonemargin ProductViewArea CatagorisPage" >
       <div class="container">
-            <!-- show the file decrection -->
-            <div class="ShowCatagoritStapes">
-               <?php woocommerce_breadcrumb(); ?>
-            </div>
+
+            <?php
+            /**
+             * woocommerce breadcrumb 
+             * 
+             */
+            if( is_enable_options('cc-product-page-banner-visibility') ){
+               echo "<div class=\"ShowCatagoritStapes\">\n";
+                  woocommerce_breadcrumb();
+               echo "</div>\n";
+            }
+            
+            ?>
             <?php if( woocommerce_product_loop() ): ?>
                <div class="row">
 

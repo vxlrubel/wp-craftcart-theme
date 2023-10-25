@@ -129,41 +129,54 @@ get_header(); ?>
             <div class="col-lg-3 col-md-0 col-sm-0">
                <div class="delivary">
                      <div>
-                        <h5><i class="fa-solid fa-truck"></i> Delivery Charge: </h5>
-                        <ul>
-                           <li>
-                                 <i class="fa fa-location-dot"></i> 
-                                 Inside Dhaka : Taka 60 (1-5 Days)
-                           </li>
-                           <li>
-                                 <i class="fa-solid fa-location-arrow"></i>
-                                 Outside Dhaka : Taka 150 (1-7 Days)
-                           </li>
-                           <li>
-                                 <i class="fa fa-hand-holding"></i>
-                                 Cash on Delivery available
-                           </li>
-                        </ul>
+
+                        <?php
+
+                        // Get the custom field value
+                        $inside_location  = get_post_meta($product->get_id(), '_cc_custom_delivary_inside_location', true);
+                        $inside_charge    = get_post_meta($product->get_id(), '_cc_custom_delivary_charge', true);
+                        $outside_location = get_post_meta($product->get_id(), '_cc_custom_delivary_outside_location', true);
+                        $outside_charge   = get_post_meta($product->get_id(), '_cc_custom_delivary_charge_outside', true);
+
+                        if (! empty($inside_location) ): ?>
+                           <h5><i class="fa-solid fa-truck"></i> Delivery Charge: </h5>
+                           <ul>
+
+                              <?php
+                                 if( ! empty( $inside_location ) ){
+                                    printf(
+                                       '<li><i class="fa fa-location-dot"></i> Inside %s: %s</li>',
+                                       $inside_location,
+                                       $inside_charge
+                                    );
+                                 }
+                                 if( ! empty( $outside_location ) ){
+                                    printf(
+                                       '<li><i class="fa-solid fa-location-arrow"></i> Outside %s: %s</li>',
+                                       $outside_location,
+                                       $outside_charge
+                                    );
+                                 }
+
+                                 printf('<li><i class="fa fa-hand-holding"></i>%s</li>', 'Cash on Delivery available');
+                               ?>
+                           
+                           </ul>
+                        <?php endif; ?>
                      </div>
 
-                     <div>
-                        <h5><i class="fa-solid fa-person-walking-arrow-loop-left"></i> Return & Warranty: </h5>
-                        <ul>
-                           <li>
-                                 <!-- <i class="fa-solid fa-hand"></i> -->
-                                 <i class="fa fa-lock"></i>
-                                 7 Days Returns Change of mind is not applicable
-                           </li>
-                           <li>
-                                 <i class="fa-solid fa-shield-halved"></i>
-                                 Warranty not available
-                           </li>
-                           <li>
-                                 <i class="fa fa-hand-holding"></i>
-                                 Cash on Delivery available
-                           </li>
-                        </ul>
-                     </div>
+
+                     <?php
+
+                        /**
+                         * warranty and privacy policy section
+                         * 
+                         * @return void
+                         */
+                        cc_warranty_n_privacy_in_product_page();
+
+                      ?>
+
                </div>
                
                <div class="delivary delivary2">
@@ -189,24 +202,41 @@ get_header(); ?>
                </div>
 
                <div class="ChargeDiv mt-3">
-                     <h5 class="title">Payment Method</h5>
-
-                        <div class="panel-body">
-                           <img src="./Images/Amex.jpg" alt="">
-                           <img src="./Images/Visa.jpg" alt="">
-                           <img src="./Images/Master-card.jpg" alt="">
-                           <img src="./Images/paypal.png" alt="">
-                        </div>
+                  <h5 class="title">Payment Method</h5>
+                  <div class="panel-body">
+                     <img src="./Images/Amex.jpg" alt="">
+                     <img src="./Images/Visa.jpg" alt="">
+                     <img src="./Images/Master-card.jpg" alt="">
+                     <img src="./Images/paypal.png" alt="">
+                  </div>
                </div>
             </div>
          </div>
    </div>
 </section>
 <!-- Forduct view area end -->
-<?php woocommerce_output_product_data_tabs(); ?>
-<!-- PRODUCT REVIEW AND COMMENT START -->
 
-<!-- PRODUCT REVIEW AND COMMENT START -->
+<?php 
+   /**
+    * woocommerce product data tabs it's an accordion
+    * 
+    * @return void
+    */
+   woocommerce_output_product_data_tabs();
+
+
+   /**
+    * woocommerce banner for single page
+    *
+    * @return void
+    */
+
+
+   //  will be execute...the below code
+
+
+
+ ?>
 
 <!-- Banner2 after Service icon start -->
 
