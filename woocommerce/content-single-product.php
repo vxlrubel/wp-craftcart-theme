@@ -3,7 +3,7 @@
 // derectly access denied
 defined('ABSPATH') || exit;
 
-global $product;
+global $product, $cc;
 
 // include header functionality
 get_header(); ?>
@@ -12,12 +12,28 @@ get_header(); ?>
 <section class="CommonpaddingSection ProductViewArea">
    <div class="container">
 
-         <?php woocommerce_output_all_notices(); ?>
+         <?php 
 
-         <!-- show file direction  -->
-         <div class="ShowCatagoritStapes">
-               <?php woocommerce_breadcrumb(); ?>
-         </div>
+            /**
+             * woocommerce notice while add the product via click the add to cart button
+             * 
+             */
+            if( is_enable_options('cc-commerce-notice-visibility') ){
+               woocommerce_output_all_notices();
+            }
+
+
+            /**
+             * woocommerce breadcrumb 
+             * 
+             */
+            if( is_enable_options('cc-commerce-banner-single-page-visibility') ){
+               echo "<div class=\"ShowCatagoritStapes\">\n";
+                  woocommerce_breadcrumb();
+               echo "</div>\n";
+            }
+            
+          ?>
 
          <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5">
@@ -36,8 +52,10 @@ get_header(); ?>
                   /**
                    * show one related product 
                    */
-                  cc_show_1_related_product();
 
+                  if( is_enable_options('cc-commerce-buy-one-visibility') ){
+                     cc_show_1_related_product();
+                  }
                 ?>
 
             </div>
@@ -98,8 +116,13 @@ get_header(); ?>
                      <?php endif; ?>
                      
                      <!-- will be sharing icon -->
-                     <?php cc_wc_product_share_icon(); ?>
-                     
+                     <?php 
+                        if( is_enable_options('cc-commerce-share-link-single-visibility') ){
+                           cc_wc_product_share_icon();
+                        }
+                        
+                      ?>
+
                </div>
             </div>
 
@@ -186,16 +209,23 @@ get_header(); ?>
 <!-- PRODUCT REVIEW AND COMMENT START -->
 
 <!-- Banner2 after Service icon start -->
-<Section class="CommonpaddingSection productPhonemargin">
-   <div class="container BannerSec">
-         <img src="<?php echo get_template_directory_uri(). '/assets/img/banner-product-page-default.jpg'; ?>" alt="">
-   </div>
-</Section>
+
+<?php if( is_enable_options('cc-commerce-banner-single-visibility') ): ?>
+   <Section class="CommonpaddingSection productPhonemargin">
+      <div class="container BannerSec">
+            <img src="<?php echo esc_url( $cc['cc-commerce-banner-single-thumb']['url'] ); ?>" >
+      </div>
+   </Section>
+<?php endif; ?>
+ ?>
+
 <!-- Banner2 after Service icon end -->
 
 <!-- Related Product start -->
 <?php 
-   woocommerce_output_related_products();
+   if( is_enable_options('cc-commerce-related-product-single-visibility') ){
+      woocommerce_output_related_products();
+   }
 
  ?>
 <!-- Related Product end -->

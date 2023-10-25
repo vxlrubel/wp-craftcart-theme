@@ -47,6 +47,19 @@ if( ! function_exists('cc_editor') ){
     }
 }
 
+if( ! function_exists('is_enable_options') ){
+    function is_enable_options( $options ){
+
+        // enable theme options 
+        global $cc;
+
+        if( $cc[$options] == 1 )
+            return true;
+
+        return false;
+    }
+}
+
 /**
  * get the post title
  * get_cc_trim_post_title() this function working inside the loop
@@ -197,7 +210,7 @@ if( ! function_exists('cc_app_menu') ){
  */
 if( ! function_exists('cc_show_1_related_product') ){
     function cc_show_1_related_product(){
-
+        global $cc;
         // Get the current product ID
         $current_product_id = get_the_ID();
 
@@ -234,8 +247,10 @@ if( ! function_exists('cc_show_1_related_product') ){
                 $product = wc_get_product( get_the_ID() );
              ?>
                 <div class="BuyBoth">
-                  <h6 class="Bothtitle">You can also buy</h6>
-
+                  <h6 class="Bothtitle">
+                    <?php echo esc_html( $cc['cc-commerce-buy-one-text'] ); ?>
+                  </h6>
+                  
                   <div class="ProductInfo">
                      <div class="ProductAndTitle">
                         <div class="PRoductImg">
@@ -358,8 +373,16 @@ if( ! function_exists( 'cc_wc_product_rating_n_reviews_count' ) ){
     }
 }
 
+
+/**
+ * it's showing social incon inside the single product page.
+ * 
+ * @return void
+ */
 if( ! function_exists('cc_wc_product_share_icon') ){
     function cc_wc_product_share_icon(){
+
+        global $cc;
         // Get the current product's permalink
         $get_link = get_permalink();
 
@@ -380,7 +403,7 @@ if( ! function_exists('cc_wc_product_share_icon') ){
                     <a href="%s" target="_blank"><i class="fa-solid fa-rss"></i></a>
                 </div>
             </div>',
-            esc_html( 'Share Link:' ),
+            esc_html( $cc['cc-commerce-share-link-single-text'] ),
             esc_url( $share_facebook ),
             esc_url( $share_twitter ),
             esc_url( $share_google ),

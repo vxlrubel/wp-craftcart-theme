@@ -3,6 +3,7 @@
 // directly access denied
 defined('ABSPATH') || exit;
 
+global $cc;
 
 if( $related_products ): ?>
 
@@ -12,7 +13,7 @@ if( $related_products ): ?>
          <div class="Titelh42 row RowPadingError RowMarginError">
             <div class="col-8 RowPadingError RowMarginError">
                   <?php 
-                     $related_title = apply_filters( 'cc_related_product_title', 'Related Products' );
+                     $related_title = apply_filters( 'cc_related_product_title', $cc['cc-commerce-related-product-single-title'] );
                      echo "<h4>{$related_title}</h4>\n";
                    ?>
             </div>
