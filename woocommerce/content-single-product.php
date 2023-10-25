@@ -52,9 +52,28 @@ get_header(); ?>
                      <p class="price"><span class="mr-2">Price: </span> <?php woocommerce_template_loop_price(); ?></p>
 
                      <ul class="short-details">
-                        <li>Availability: <span>In stock</span></li>
-                        <li>Product Code: <span>#4657</span></li>
-                        <li>Tags: <span>Fashion, Hood, Classic</span></li>
+
+                        <?php
+                           if( $product->is_in_stock() ){
+                              printf('<li>Availability: <span>%s</span></li>', 'In stock');
+                           }else{
+                              printf('<li>Availability: <span>%s</span></li>', 'Out of stock');
+                           }
+                         ?>
+                        <li class="cc-product-tag">
+                           <?php
+                              echo apply_filters( 'cc_product_tag_before', 'Categories:
+                                 ' );
+                              the_terms( get_the_ID(), 'product_cat', '<span>', ', ', '</span>' );
+                           ?>
+                        </li>
+                        <li class="cc-product-tag">
+                           <?php
+                              echo apply_filters( 'cc_product_tag_before', 'Tags:
+                                 ' );
+                              the_terms( get_the_ID(), 'product_tag', '<span>', ', ', '</span>' );
+                           ?>
+                        </li>
                      </ul>
                      <?php woocommerce_template_single_excerpt(); ?>
 
@@ -83,27 +102,24 @@ get_header(); ?>
                            </div>
 
                            <div class="VariantImgs">
-                                 <div class="TextVariant">
-                                    <span>Variant1</span>
-                                 </div>
-                                 <div class="TextVariant">
-                                    <span>Variant2</span>
-                                 </div>
-                                 <div class="TextVariant">
-                                    <span>Variant3</span>
-                                 </div>
-                                 <div class="TextVariant">
-                                    <span>Variant1</span>
-                                 </div>
-                                 <div class="TextVariant">
-                                    <span>Variant2</span>
-                                 </div>
-                                 <div class="TextVariant">
-                                    <span>Variant3</span>
-                                 </div>
+                           <?php
+
+                              $get_terms = get_the_terms( get_the_ID(), 'product_cat' );  
+
+                              foreach ( $get_terms as $term ) {
+
+                                 printf(
+                                    '<div class="TextVariant"><a href="%s">%s</a></div>',
+                                    esc_url( get_term_link($term) ),
+                                    $term->name
+                                 );
+                              }
+                           
+                            ?>
                            </div>
                         </div>
                      </div>
+
 
                      <form>
                         <div class="row g-xl-4 g-3">
@@ -123,11 +139,6 @@ get_header(); ?>
                            </div>
                         </div>
                      </form>
-
-                     
-                     <div class="mb-2">
-                        <?php woocommerce_template_single_meta(); ?>
-                     </div>
                      
                      <!-- will be sharing icon -->
                      

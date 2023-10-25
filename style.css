@@ -263,3 +263,16 @@ a:hover {
 .added_to_cart.wc-forward:hover {
     color: var(--cc-color-primary);
 }
+
+.star-rating {
+    float: inherit !important;
+    margin-bottom: 15px !important;
+}
+
+.cc-product-tag a {
+    color: var(--cc-color) !important;
+}
+
+.cc-product-tag a:hover {
+    color: var(--cc-color-primary) !important;
+}
