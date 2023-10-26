@@ -184,6 +184,9 @@ class Register_Scripts{
             ],
             'all-producte'    => [
                 'src' => CC_ASSETS_CSS . 'all-product.css'
+            ],
+            'cart-style'    => [
+                'src' => CC_ASSETS_CSS . 'cart.css'
             ]
         ];
 

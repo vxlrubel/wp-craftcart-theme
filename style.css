@@ -343,10 +343,141 @@ tr {
     height: 45px;
 }
 
+.panel-body img {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+
+
+/* woocommer comment form */
+
+.single-product form#commentform.comment-form p.comment-notes {
+    width: 100% !important;
+}
+
+.single-product form#commentform.comment-form .comment-form-comment {
+    width: 100%;
+}
+
+.single-product form#commentform.comment-form .comment-form-email,
+.single-product form#commentform.comment-form .comment-form-author {
+    width: 100% !important;
+}
+
+@media(min-width: 992px) {
+
+    .single-product form#commentform.comment-form .comment-form-email,
+    .single-product form#commentform.comment-form .comment-form-author {
+        width: calc(50% - 15px) !important;
+    }
+
+    .single-product form#commentform.comment-form .comment-form-email {
+        margin-left: 30px !important;
+    }
+}
+
+.single-product form#commentform.comment-form .comment-form-email input[type="email"],
+.single-product form#commentform.comment-form .comment-form-author input[type="text"] {
+    width: 100% !important;
+}
+
+.single-product form#commentform.comment-form .comment-notes {
+    padding-left: 0 !important;
+}
+
+.single-product form#commentform.comment-form .comment-form-cookies-consent {
+    display: flex !important;
+    align-items: center;
+}
+
+.single-product form#commentform.comment-form .comment-form-cookies-consent input[type="checkbox"] {
+    width: auto !important;
+    margin-right: 3px !important;
+}
+
+.single-product form#commentform.comment-form .comment-form-cookies-consent label {
+    cursor: pointer;
+}
+
+
+.single-product form#commentform.comment-form .row.submit-parent {
+    padding: 0 !important;
+}
+
+.single-product form#commentform.comment-form .row.submit-parent [class*="col-"] {
+    padding: 0 !important;
+}
+
+.single-product form#commentform.comment-form .row.submit-parent input[type="submit"] {
+    background-color: var(--cc-color-primary) !important;
+    color: #fff !important;
+}
+
+.single-product form#commentform.comment-form .row.submit-parent input[type="submit"]:hover {
+    background-color: var(--cc-color-deep) !important;
+}
+
 /* woocommerce singe page end */
 
 /* cart page style start */
 
+
+
+/* style quantity button */
+.quantity.cc-item-quantity {
+    display: flex !important;
+    align-items: center;
+    width: auto !important;
+    border: none !important;
+}
+
+.quantity.cc-item-quantity a,
+.quantity.cc-item-quantity input[type="number"] {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #dfe6e9 !important;
+    background-color: #dfe6e9;
+    color: var(--bs-body-color) !important;
+}
+
+.quantity.cc-item-quantity a:hover {
+    background-color: #b2bec3 !important;
+    border-color: #b2bec3 !important;
+}
+
+/* Hide the arrow icon for number input */
+.quantity.cc-item-quantity input[type="number"] {
+    width: 50px !important;
+    background-color: #fff;
+    font-size: 16px;
+    -moz-appearance: textfield !important;
+    appearance: textfield !important;
+}
+
+/* Hide the spin buttons for number input in WebKit (Chrome, Safari) */
+.quantity.cc-item-quantity input[type="number"]::-webkit-inner-spin-button,
+.quantity.cc-item-quantity input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+/* Hide the spin buttons for number input in Edge */
+.quantity.cc-item-quantity input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+/* Hide the spin buttons for number input in Internet Explorer */
+.quantity.cc-item-quantity input[type="number"]::-ms-inner-spin-button {
+    appearance: none;
+}
 
 
 

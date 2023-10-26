@@ -453,3 +453,35 @@ if( ! function_exists('cc_warranty_n_privacy_in_product_page') ){
         endif;
     }
 }
+
+
+if( ! function_exists('cc_commerce_banner_single_page') ){
+    function cc_commerce_banner_single_page(){
+        global $cc;
+        if( is_enable_options('cc-commerce-banner-single-visibility') ){
+            printf(
+                '<section class="CommonpaddingSection productPhonemargin"><div class="container BannerSec"><img src="%s"></div></section>',
+                esc_url( $cc['cc-commerce-banner-single-thumb']['url'] )
+            );
+        }
+    }
+}
+
+if( ! function_exists('cc_payment_method_image_integration') ){
+    function cc_payment_method_image_integration(){
+        global $cc;
+        if( is_enable_options('cc-commerce-payment-method-visibility') ) : 
+            echo "<div class=\"ChargeDiv mt-3\">\n";
+            printf(
+                '<h5 class="title">%s</h5>', 
+                $cc['cc-commerce-payment-method-title']
+            );
+
+            printf(
+                '<div class="panel-body"><img src="%s"></div>',
+                $cc['cc-commerce-payment-method-image']['url']
+            );
+            echo "</div>\n";
+        endif;
+    }
+}

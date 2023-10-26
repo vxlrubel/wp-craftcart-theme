@@ -2,6 +2,7 @@
     class CRAFTCART {
         init() {
             this.carousel();
+            this.counter();
         }
         carousel() {
             // brand carousel
@@ -45,6 +46,24 @@
                         items: 10,
                         loop: true
                     }
+                }
+            });
+        }
+        counter() {
+
+            $(document).on('click', '.quantity-plus', function () {
+                var $input = $(this).closest('.cc-item-quantity').find('input[type="number"]');
+                var currentValue = parseInt($input.val());
+                if (currentValue < parseInt($input.attr('max'))) {
+                    $input.val(currentValue + 1);
+                }
+            });
+
+            $(document).on('click', '.quantity-minus', function () {
+                var $input = $(this).closest('.cc-item-quantity').find('input[type="number"]');
+                var currentValue = parseInt($input.val());
+                if (currentValue > parseInt($input.attr('min'))) {
+                    $input.val(currentValue - 1);
                 }
             });
         }

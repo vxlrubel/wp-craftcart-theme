@@ -178,38 +178,17 @@ get_header(); ?>
                       ?>
 
                </div>
-               
-               <div class="delivary delivary2">
-                     <div>
-                        <span>Sold by</span>
-                        <h5>FRESHED Fashion</h5>
-                     </div>
-                     
-                     <div class="PdpSellerInfoPc">
-                        <div>
-                           <span>Positive Seller Ratings</span>
-                           <h5>92%</h5>
-                        </div>
-                        <div>
-                           <span>Ship on Time</span>
-                           <h5>100%</h5>
-                        </div>
-                        <div>
-                           <span>Chat Response Rate</span>
-                           <h5>80%</h5>
-                        </div>
-                     </div>
-               </div>
 
-               <div class="ChargeDiv mt-3">
-                  <h5 class="title">Payment Method</h5>
-                  <div class="panel-body">
-                     <img src="./Images/Amex.jpg" alt="">
-                     <img src="./Images/Visa.jpg" alt="">
-                     <img src="./Images/Master-card.jpg" alt="">
-                     <img src="./Images/paypal.png" alt="">
-                  </div>
-               </div>
+               <?php
+                  /**
+                   * payment method image integration
+                   * 
+                   * @return void
+                   */
+                  cc_payment_method_image_integration();
+
+                ?>
+
             </div>
          </div>
    </div>
@@ -230,34 +209,19 @@ get_header(); ?>
     *
     * @return void
     */
+    cc_commerce_banner_single_page();
 
 
-   //  will be execute...the below code
-
-
-
- ?>
-
-<!-- Banner2 after Service icon start -->
-
-<?php if( is_enable_options('cc-commerce-banner-single-visibility') ): ?>
-   <Section class="CommonpaddingSection productPhonemargin">
-      <div class="container BannerSec">
-            <img src="<?php echo esc_url( $cc['cc-commerce-banner-single-thumb']['url'] ); ?>" >
-      </div>
-   </Section>
-<?php endif; ?>
- ?>
-
-<!-- Banner2 after Service icon end -->
-
-<!-- Related Product start -->
-<?php 
-   if( is_enable_options('cc-commerce-related-product-single-visibility') ){
+    /**
+     * woocommerce related product
+     * 
+     * @return void
+     */
+    if( is_enable_options('cc-commerce-related-product-single-visibility') ){
       woocommerce_output_related_products();
-   }
+    }
 
- ?>
-<!-- Related Product end -->
-
-<?php get_footer(); ?>
+    /**
+     * include the footer part in entire website
+     */
+    get_footer();

@@ -226,10 +226,45 @@ Redux::set_section(
             'subtitle' => esc_html__( 'Add return & warranty policy.', CC_DOMAIN ),
             'desc'     => esc_html__( 'Add Return and Warranty Policy inside the product details page.', CC_DOMAIN ),
             'validate' => 'no_html',
-            'default'  => [ '7 Days Returns Change of mind is not applicable', 'Warranty not available' ]
+            'default'  => [ '7 Days Returns Change of mind is not applicable', 'Warranty not available' ],
+            'required' => [ 'cc-commerce-return-n-warranty-visibility', '=', true ]
          ],
          [
             'id'       => 'cc-commerce-return-n-warranty-divide',
+            'type'     => 'divide',
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-visibility',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Payment', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable payment section.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Enable to show the payment method image.', CC_DOMAIN ),
+            'default'  => true,
+            'on'       => 'Enable',
+            'off'      => 'Disable'
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-title',
+            'type'     => 'text',
+            'title'    => esc_html__( 'Title', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the title.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change the title to show in front-end.', CC_DOMAIN ),
+            'default'  => 'Payment Method',
+            'validate' => 'no_html',
+            'required' => [ 'cc-commerce-payment-method-visibility', '=', true ]
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-image',
+            'type'     => 'media',
+            'title'    => esc_html__( 'Image', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the payment image.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change the image to show in front-end.', CC_DOMAIN ),
+            'default'  => [ 'url'=> CC_ASSETS_IMG . 'payment-method-default.jpg' ],
+            'url'      => false,
+            'required'=> [ 'cc-commerce-payment-method-visibility', '=', true ]
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-visibility-divide',
             'type'     => 'divide',
          ],
          [
