@@ -31,17 +31,16 @@ do_action( 'woocommerce_before_cart' ); ?>
 									<form class="table-responsive woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 										<table class="table table-borderless">
 											<thead>
-												<tr>
-														<th>Image</th>
-														<th>Product Name</th>
-														<th>Price</th>
-														<th>Quantity</th>
-														<th>Total</th>
-														<th>Action</th>
+												<tr class="w-100 cc-cart-table-row">
+														<th class="thumb">Image</th>
+														<th class="product-name">Product Name</th>
+														<th class="price">Price</th>
+														<th class="quantity">Quantity</th>
+														<th class="total" style="justify-content: center">Total</th>
+														<th class="action" style="justify-content: center">Action</th>
 												</tr>
 											</thead>
 											<tbody>
-
 												<?php
 													foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 														$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
@@ -60,11 +59,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 														if( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ):
 															$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key ); ?>
 
-															<tr>
+															<tr class="cc-cart-table-row">
 																<!-- product thumbnail -->
-																<td>
+																<td class="w-120">
 																	<?php
-																		$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+																		$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image('woocommerce_thumbnail', ['class' => 'cart-image-thumb']), $cart_item, $cart_item_key );
 
 																		if ( ! $product_permalink ) {
 																			echo $thumbnail;
@@ -76,7 +75,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 																<!-- proudct name -->
 
-																<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+																<td class="product-name width-product" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
 																	<?php
 																		if ( ! $product_permalink ) {
 																			echo wp_kses_post( $product_name . '&nbsp;' );
@@ -102,14 +101,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 																</td>
 																
 																<!-- product price -->	
-																<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+																<td class="product-price w-120" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 																	<?php
 																		echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 																	?>
 																</td>
 																
 																<!-- product quantity -->
-																<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
+																<td class="product-quantity w-120" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
 																	<?php
 																		if ( $_product->is_sold_individually() ) {
 																			$min_quantity = 1;
@@ -135,7 +134,33 @@ do_action( 'woocommerce_before_cart' ); ?>
 																	?>
 																</td>
 
-																
+																<!-- subtotal -->
+																<td class="product-subtotal w-120" data-title="<?php esc_attr_e( 'Total', CC_DOMAIN ); ?>" style="justify-content: center" >
+																	<?php
+																		echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+																	?>
+																</td>
+
+
+																<!-- product remove -->
+																<td class="product-remove w-120" style="justify-content: center;">
+																	<?php
+																		echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+																			'woocommerce_cart_item_remove_link',
+																			sprintf(
+																				'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+																				esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+																				/* translators: %s is the product name */
+																				esc_attr( sprintf( __( 'Remove %s from cart', 'woocommerce' ), wp_strip_all_tags( $product_name ) ) ),
+																				esc_attr( $product_id ),
+																				esc_attr( $_product->get_sku() )
+																			),
+																			$cart_item_key
+																		);
+																	?>
+																</td>
+
+
 															</tr>
 
 														<?php endif;
