@@ -606,3 +606,79 @@ tr {
     width: 25px;
     margin-right: 5px !important;
 }
+
+.cc-dashboard-sidebar-link {
+    display: block;
+    width: 100%;
+}
+
+.cc-dashboard-sidebar-link a {
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: none;
+    width: 220px;
+    margin-bottom: 5px !important;
+}
+
+.cc-dashboard-sidebar-link.is-active a,
+.cc-dashboard-sidebar-link a:hover {
+    background-color: var(--cc-color-deep);
+    color: white !important;
+    padding: 5px 10px;
+}
+
+.cc-dashboard-sidebar-link:not(.is-active) a:hover {
+    background-color: var(--cc-color-primary) !important;
+}
+
+/* register form */
+.cc-form-center {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+}
+
+.cc-form-center h2 {
+    padding: 0 20px !important;
+    text-align: center;
+}
+
+.checkbox-width-auto {
+    width: auto !important;
+    margin-right: 5px !important;
+}
+
+.button-theme {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--cc-color-primary) !important;
+    text-decoration: none;
+    color: white !important;
+    transition: background-color 0.15s ease-in-out;
+    min-width: 120px !important;
+}
+
+.button-theme:hover {
+    background-color: var(--cc-color-deep) !important;
+}
+
+.p-20 {
+    padding: 20px !important;
+}
+
+.px-20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.py-20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.wc-border {
+    border: 1px solid #cfc8d8 !important;
+}
