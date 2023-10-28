@@ -194,7 +194,7 @@ if( ! function_exists('cc_app_menu') ){
                     <a class="active" href="<?php echo home_url('/'); ?>"><i class="fa-solid fa-house"></i></a>
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="./Wish.html"><i class="fa-regular fa-heart"></i></a>
-                    <a href="./Login.html"><i class="fa-regular fa-user"></i></a>
+                    <a href="<?php cc_profile_page_url(); ?>"><i class="fa-regular fa-user"></i></a>
                 </div>
             </div>
         <?php
@@ -500,5 +500,24 @@ if( ! function_exists('cc_logo') ){
 
         printf('<a href="%s"><img src="%s" alt=""></a>', $site_url, $logo_url);
 
+    }
+}
+
+
+/**
+ * get cart page url
+ */
+if( ! function_exists('cc_cart_page_url') ){
+    function cc_cart_page_url(){
+        echo get_permalink(wc_get_page_id('cart'));
+    }
+}
+
+/**
+ * get profile page url
+ */
+if( ! function_exists('cc_profile_page_url') ){
+    function cc_profile_page_url(){
+        echo get_permalink(wc_get_page_id('myaccount'));
     }
 }

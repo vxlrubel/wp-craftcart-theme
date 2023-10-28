@@ -69,7 +69,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="logo col-2">
-                                <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?> /assets/img/Jamidar.png" alt=""></a>
+                               <?php cc_logo(); ?>
                             </div>
 
                             <div class="Serchber col-7">
@@ -85,7 +85,7 @@
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         <div>
                                             <p class="Count">0</p>
-                                            <a href="./ShopingCart.html">
+                                            <a href="<?php cc_cart_page_url(); ?>">
                                             <p>My Cart</p></a>
                                         </div>
 
@@ -131,7 +131,7 @@
                                             </div>
 
                                             <div class="CartNabBtn CartNabBtn1">
-                                                <a href="./ShopingCart.html">
+                                                <a href="<?php cc_cart_page_url(); ?>">
                                                     View and Edit Cart 
                                                 </a>
                                             </div>
@@ -500,7 +500,7 @@
                             </div>
                             
                             <div class="col-4 CartTabe">
-                                <a href="./ShopingCart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <a href="<?php cc_cart_page_url(); ?>"><i class="fa-solid fa-cart-shopping"></i></a>
                             </div>
                         </div>
                     </div>

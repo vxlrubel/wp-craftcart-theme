@@ -29,7 +29,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                      -30%
                </div>
                <div class="ProductLove">
-                     <i class="fa-regular fa-heart"></i>
+                     <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
                </div>
             </div>
 
