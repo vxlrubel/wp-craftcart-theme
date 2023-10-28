@@ -194,7 +194,6 @@ get_header(); ?>
    </div>
 </section>
 <!-- Forduct view area end -->
-
 <?php 
    /**
     * woocommerce product data tabs it's an accordion

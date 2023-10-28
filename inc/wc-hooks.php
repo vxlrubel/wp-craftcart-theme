@@ -28,52 +28,74 @@ function cc_wc_breadcrumb( $args ){
    return $args;
 }
 
+// modify woocommerce breadcrumb
 add_filter( 'woocommerce_breadcrumb_defaults', 'cc_wc_breadcrumb' );
 
+
+/**
+ * modify filter section from product page.
+ *
+ * @param [type] $items
+ * @return $items
+ */
 function cc_wc_catalog_orderby( $items ){
 
    $items['name'] = 'Name';
    return $items;
 }
+
+// modify filter section from product page
 add_filter( 'woocommerce_catalog_orderby', 'cc_wc_catalog_orderby' );
 
 
+/**
+ * remove default woocommerce sidebar
+ *
+ * @return void
+ */
 function cc_wc_remove_actions(){
    // remove woocommerce sidebar
    remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 
+// remove default woocommerce sidebar from product single page
 add_action( 'init', 'cc_wc_remove_actions' );
 
 
-
-
 /**
- * custom woocomerce tab add inside the single product page
+ * modify addicitonal template label and stucture
  *
  * @return void
  */
-// function _cb_cc_wc_tab_information( $urwna ){
+function cc_modify_descriptions(){
+   // include additional template 
+   wc_get_template('single-product/tabs/additional-information.php');
+}
 
-//    pre( $urwna );
-   
-// }
-
-// function cc_wc_add_custom_tab( array $default ){
-
-//    $default['information'] = [
-//       'title'    => 'Information',
-//       'priority' => 15,
-//       'callback' => '_cb_cc_wc_tab_information'
-//    ];
-
-//    return $default;
-// }
-
-// add_filter( 'woocommerce_product_tabs', 'cc_wc_add_custom_tab' );
 
 /**
- * add custom field for custom delivery charge.
+ * modify the additional informations title
+ *
+ * @param [type] $args
+ * @return $args
+ */
+function cc_additional_description( $args ){
+   
+   $args['additional_information'] = [
+      'title'    => 'Description',
+      'priority' => 20,
+      'callback' => 'cc_modify_descriptions'
+   ];
+
+   return $args;
+}
+
+// modify additional tabs content
+add_filter('woocommerce_product_tabs', 'cc_additional_description');
+
+
+/**
+ * add custom field inside the product in dashboard
  *
  * @return void
  */
@@ -111,7 +133,7 @@ add_action('woocommerce_product_options_general_product_data', 'cc_custom_delive
 
 
 /**
- * save the custom data
+ * save the custom meta and update
  *
  * @param [type] $post_id
  * @return void
@@ -136,4 +158,6 @@ function cc_save_custom_delivery_charge($post_id) {
    update_post_meta($post_id, '_cc_custom_delivary_charge_outside', sanitize_text_field($outside_charge));
 
 }
-add_action('woocommerce_process_product_meta', 'cc_save_custom_delivery_charge');
+
+// update custom product meta
+add_action( 'woocommerce_process_product_meta', 'cc_save_custom_delivery_charge' );
