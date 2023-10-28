@@ -53,24 +53,24 @@ add_action( 'init', 'cc_wc_remove_actions' );
  *
  * @return void
  */
-function _cb_cc_wc_tab_information( $urwna ){
+// function _cb_cc_wc_tab_information( $urwna ){
 
-   pre( $urwna );
+//    pre( $urwna );
    
-}
+// }
 
-function cc_wc_add_custom_tab( array $default ){
+// function cc_wc_add_custom_tab( array $default ){
 
-   $default['information'] = [
-      'title'    => 'Information',
-      'priority' => 15,
-      'callback' => '_cb_cc_wc_tab_information'
-   ];
+//    $default['information'] = [
+//       'title'    => 'Information',
+//       'priority' => 15,
+//       'callback' => '_cb_cc_wc_tab_information'
+//    ];
 
-   return $default;
-}
+//    return $default;
+// }
 
-add_filter( 'woocommerce_product_tabs', 'cc_wc_add_custom_tab' );
+// add_filter( 'woocommerce_product_tabs', 'cc_wc_add_custom_tab' );
 
 /**
  * add custom field for custom delivery charge.
