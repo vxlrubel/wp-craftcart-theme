@@ -3,7 +3,11 @@
 
 # Ignore the "html" folder
 html/
+
+# Ignore the sample config for theme options
 inc/theme-options/sample/
+
+# Ignore all the test file
 test.html
 test.php
 test.css

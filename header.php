@@ -496,7 +496,7 @@
                             <!-- navber menu -->   
 
                             <div class="col-4 LogoTabe">
-                                <a href="./index.html"><img src="<?php echo get_template_directory_uri(); ?> /assets/img/Jamidar.png" alt=""></a>
+                                <?php cc_logo(); ?>
                             </div>
                             
                             <div class="col-4 CartTabe">

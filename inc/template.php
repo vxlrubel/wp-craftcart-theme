@@ -485,3 +485,20 @@ if( ! function_exists('cc_payment_method_image_integration') ){
         endif;
     }
 }
+
+
+/**
+ * website logo image with link
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_logo') ){
+    function cc_logo(){
+        global $cc;
+        $site_url = esc_url( get_home_url('/') );
+        $logo_url = $cc['cc-header-logo']['url'];
+
+        printf('<a href="%s"><img src="%s" alt=""></a>', $site_url, $logo_url);
+
+    }
+}

@@ -40,11 +40,13 @@ Redux::set_section(
 			],
 			[
 				'id'       => 'cc-header-search',
-				'type'     => 'checkbox',
+				'type'     => 'switch',
 				'title'    => esc_html__( 'Search', CC_DOMAIN ),
 				'subtitle' => esc_html__( 'Enable/Desable Search Option.', CC_DOMAIN ),
 				'default'  => true,
-				'required' => ['cc-header-enable', '=', true ]
+				'required' => ['cc-header-enable', '=', true ],
+				'on'       => 'Enable',
+				'off'      => 'Disable',
 			],
 			[
 				'id'   => 'devide-woocommerce-menu',
@@ -52,11 +54,13 @@ Redux::set_section(
 			],
 			[
 				'id'       => 'cc-header-woocommerce',
-				'type'     => 'checkbox',
+				'type'     => 'switch',
 				'title'    => esc_html__( 'Woocommerce Menu', CC_DOMAIN ),
 				'subtitle' => esc_html__( 'Enable/Desable Woocommerce Option.', CC_DOMAIN ),
 				'default'  => true,
-				'required' => ['cc-header-enable', '=', true ]
+				'required' => ['cc-header-enable', '=', true ],
+				'on'       => 'Enable',
+				'off'      => 'Disable',
 			]
 		]
 	]
