@@ -58,6 +58,7 @@
                 if (currentValue > parseInt($input.attr('min'))) {
                     $input.val(currentValue - 1);
                 }
+                $('.updateable-cart').removeAttr('disabled');
             });
 
             // increment the count
@@ -67,6 +68,7 @@
                 // if (currentValue < parseInt($input.attr('max'))) {
                 $input.val(currentValue + 1);
                 // }
+                $('.updateable-cart').removeAttr('disabled');
             });
         }
     }
