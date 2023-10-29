@@ -328,7 +328,7 @@ tr {
 }
 
 .product-view-area .part-txt form:not(.variations_form) .quantity {
-    width: 70px !important;
+    width: auto !important;
     height: 45px !important;
     margin-right: 15px;
 }
@@ -682,3 +682,105 @@ tr {
 .wc-border {
     border: 1px solid #cfc8d8 !important;
 }
+
+
+/* wishlist button */
+.cc-wishlist {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--cc-color-deep);
+    border-radius: 50%;
+}
+
+.cc-wishlist .add_to_wishlist.single_add_to_wishlist.button.alt {
+    background: transparent !important;
+    color: var(--cc-color-deep);
+}
+
+.cc-wishlist .yith-wcwl-add-to-wishlist.add-to-wishlist-80.exists.wishlist-fragment.on-first-load {
+    color: red !important;
+}
+
+.cc-wishlist .feedback {
+    color: green !important;
+}
+
+.cc-wishlist * {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.yith_wcwl_wishlist_footer .yith-wcwl-share {
+    display: none !important;
+}
+
+.cc-single-page-wishlish-parent form {
+    margin-bottom: 0 !important;
+}
+
+.cc-single-page-wishlish {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border: 1px solid var(--cc-color-primary);
+    border-radius: 10px !important;
+}
+
+.cc-single-page-wishlish * {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+}
+
+.cc-single-page-wishlish .yith-wcwl-icon.fa.fa-heart {
+    color: var(--cc-color-primary);
+}
+
+.cc-single-page-wishlish .yith-wcwl-wishlistexistsbrowse .yith-wcwl-icon.fa.fa-heart {
+    color: var(--cc-color-deep);
+}
+
+
+/* block popup message */
+#yith-wcwl-popup-message {
+    display: none !important;
+}
+
+
+/* wishlist end */
+
+
+/* flash sale */
+.cc-flast-sale {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px;
+    left: 3px;
+    height: 30px;
+    width: 50px;
+    margin: 0;
+}
+
+.cc-flast-sale * {
+    position: inherit !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    top: inherit !important;
+    left: inherit !important;
+    margin: 0 !important;
+    0 5 padding: 0 !important;
+    0 5

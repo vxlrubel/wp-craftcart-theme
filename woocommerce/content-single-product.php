@@ -107,11 +107,12 @@ get_header(); ?>
                            </div>
                         </div>
                      <?php else: ?>
-                        <div class="btn-box">
+                        <div class="btn-box align-items-center cc-single-page-wishlish-parent">
                            <?php woocommerce_template_single_add_to_cart(); ?>
-                           <button id="addToWishList">
-                              <span><i class="fa fa-heart"></i></span> add to wishlist
-                           </button>
+
+                           <div class="cc-single-page-wishlish">
+                              <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
+                           </div>
                         </div>
                      <?php endif; ?>
                      

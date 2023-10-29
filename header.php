@@ -140,11 +140,11 @@
                                     </div>
                                 <!-- </a> -->
 
-                                <a href="./Wish.html" class="LoveHideLaptop">
+                                <a href="<?php echo get_wishlist_page_url(); ?>" class="LoveHideLaptop">
                                     <div class="IconDiv">
                                         <i class="fa-regular fa-heart"></i>
                                         <div>
-                                            <p class="Count">0</p>
+                                            <p class="Count"><?php echo get_wishlist_item_count(); ?></p>
                                             <p>Wishlist</p>
                                         </div>
                                     </div>

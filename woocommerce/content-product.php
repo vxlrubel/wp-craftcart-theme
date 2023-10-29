@@ -14,7 +14,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 <div class="DuleProduct col-xl-3 col-lg-4 col-md-4 col-sm-6 Mobile50">
    <div class="PerProductDiv">
          <a href="<?php the_permalink(); ?>">
-            <div class="ProductImgage">
+            <div class="ProductImgage position-relative">
 
                <?php if( has_post_thumbnail( get_the_ID() )){
 
@@ -25,12 +25,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                   );
 
                } ?>
-               <div class="DiscountPersentese">
-                     -30%
+               <div class="cc-flast-sale">
+                  <?php woocommerce_show_product_loop_sale_flash(); ?>
                </div>
-               <div class="ProductLove">
-                     <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
+               <div class="cc-wishlist">
+                  <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
                </div>
+               
             </div>
 
             <div class="PrductText">

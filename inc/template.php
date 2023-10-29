@@ -521,3 +521,39 @@ if( ! function_exists('cc_profile_page_url') ){
         echo get_permalink(wc_get_page_id('myaccount'));
     }
 }
+
+/**
+ * get wishlist page url
+ * 
+ * @return url
+ */
+if( ! function_exists('get_wishlist_page_url') ){
+    function get_wishlist_page_url(){
+        global $wpdb;
+        $page_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = 'wishlist' AND post_type = 'page'");
+        if ($page_id) {
+            return get_permalink($page_id);
+        } else {
+            return ''; // Wishlist page not found
+        }
+       
+    }
+}
+
+
+/**
+ * Get the count of wishlist items
+ * 
+ * @return $count
+ */
+if( ! function_exists('get_wishlist_item_count') ){
+    function get_wishlist_item_count() {
+        if (class_exists('YITH_WCWL')) {
+            $wishlist = YITH_WCWL();
+            $count = $wishlist->count_products();
+            return $count;
+        } else {
+            return 0;
+        }
+    }
+}
