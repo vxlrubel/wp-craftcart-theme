@@ -199,7 +199,7 @@ Redux::set_args( $opt_name, $args );
  * 
  * @return void
  */
-$extensions = [	'header', 'homepage', 'typography', 'woocommerce', 'editor', 'footer' ];
+$extensions = [	'header', 'homepage', 'typography', 'woocommerce', 'editor', 'footer', 'documentation' ];
 
 // $cc_commerce = ['woocommerce'];
 

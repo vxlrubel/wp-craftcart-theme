@@ -3,6 +3,25 @@
 // directly access denied
 defined('ABSPATH') || exit;
 
+
+// $wisshlist_content
+
+
+$wisshlist_content = '';
+
+if( file_exists( dirname(__FILE__) . '/doc/wishlist-doc.html' ) ){
+
+   global $wp_filesystem;
+
+   $cc_file_system = Redux_Filesystem::get_instance();
+
+   $wisshlist_content = $wp_filesystem->get_contents( dirname(__FILE__) . '/doc/wishlist-doc.html' );
+}
+
+
+/**
+ * Woocommerce Section
+ */
 Redux::set_section(
 	$opt_name,
 	[
@@ -308,4 +327,49 @@ Redux::set_section(
          ]
       ]
 	]
+);
+
+
+// product single page content
+Redux::set_section(
+	$opt_name,
+	[
+      'id'         => 'cc-commerce-wishlist',
+      'title'      => esc_html__( 'Wishlist', CC_DOMAIN ),
+      'subtitle'   => esc_html__( 'Change the Wishlist options here.', CC_DOMAIN ),
+      'desc'       => esc_html__( 'Here are the details of how to use. First of all, install and active the "YITH WooCommerce Wishlist" plugin and then goto setting of this plugin remove the field value from "Add to wishlist" section.', CC_DOMAIN ),
+      'subsection' => true,
+      'fields'     => [
+         [
+            'id'       => 'cc-commerce-wishlist-documentation',
+            'type'     => 'raw',
+            'title'    => esc_html__( 'Documentation', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'See the documentation how to use', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Describe the details of the wishlist how to use it.', CC_DOMAIN ),
+            'content'  => $wisshlist_content
+         ],
+         [
+            'id'       => 'cc-commerce-wishlist-visibility-shop',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Wishlist (Shop Page)', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Enable to show the favourite icon inside the product page.', CC_DOMAIN ),
+            'default'  => true,
+            'on'       => 'Enable',
+            'off'      => 'Disable',
+         ],
+         [
+            'id'       => 'cc-commerce-wishlist-visibility-product-single',
+            'type'     => 'switch',
+            'title'    => esc_html__( 'Wishlist (Product Single)', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Enable to show the favourite icon inside the product details page.', CC_DOMAIN ),
+            'default'  => true,
+            'on'       => 'Enable',
+            'off'      => 'Disable',
+         ]
+
+      ]
+
+   ]
 );
