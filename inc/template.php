@@ -594,7 +594,9 @@ if( ! function_exists('cc_home_slider') ){
     }
 }
 
-
+/**
+ * get top banner section inside the home page
+ */
 if( ! function_exists('cc_home_top_side_banner') ){
     function cc_home_top_side_banner(){
         global $cc;
@@ -608,6 +610,157 @@ if( ! function_exists('cc_home_top_side_banner') ){
             $url = esc_url( $banner_image );
             printf( '<div><a href="%s" target="_blank"><img src="%s" /></a></div>', $url, $url );
         }
+
+    }
+}
+
+
+/**
+ * service list items set for home page.
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_service_list_items') ){
+    function cc_service_list_items(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-service-list-visibility') ) return; ?>
+
+        <section class="CommonpaddingSection">
+            <div class="container">
+                <div class="row ServicesIconMainDIV">
+                    <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
+                        <div class="ServicesImg Freeshoping">
+                            <a href="javascript:void(0)">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="ServicesText">
+
+                            <?php
+                                // print shipping title
+                                printf(
+                                    '<div class="servicesTitel"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-shipping']
+                                );
+
+                                // print shipping subtitle
+                                printf(
+                                    '<div class="servicesP"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-shipping-subtitle']
+                                );
+                            
+                            ?>
+                        </div>
+                    </div>
+                    
+                    <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
+                        <div class="ServicesImg Policy">
+                            <a href="javascript:void(0)">
+                                <img src="<?php echo CC_ASSETS_IMG . 'service/exchange-policy-default.png' ?>" alt="exchange policy">
+                            </a>
+                        </div>
+                        
+                        <div class="ServicesText">
+                            <?php
+                                // print exchange title
+                                printf(
+                                    '<div class="servicesTitel"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-exchange']
+                                );
+
+                                // print exchange subtitle
+                                printf(
+                                    '<div class="servicesP"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-exchange-subtitle']
+                                );
+                            
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
+                        <div class="ServicesImg Support">
+                            <a href="#">
+                                <i class="fa-solid fa-headset"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="ServicesText">
+                            <?php
+                                // print online support title
+                                printf(
+                                    '<div class="servicesTitel"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-support']
+                                );
+
+                                // print online support subtitle
+                                printf(
+                                    '<div class="servicesP"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-support-subtitle']
+                                );
+                            
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
+                        <div class="ServicesImg Points">
+                            <a href="#">
+                                <i class="fa fa-trophy"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="ServicesText">
+                            <?php
+                                // print reqard title
+                                printf(
+                                    '<div class="servicesTitel"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-reward']
+                                );
+
+                                // print reqard subtitle
+                                printf(
+                                    '<div class="servicesP"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-reward-subtitle']
+                                );
+                            
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="W20 col-md-4 col-sm-4 d-flex PerServocesDiv">
+                        <div class="ServicesImg payment">
+                            <a href="#">
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Serivices/Services-icon-5.png" alt=""> -->
+                                <i class="fa-sharp fa-solid fa-sack-dollar"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="ServicesText">
+
+                            <?php
+                                // print payment title
+                                printf(
+                                    '<div class="servicesTitel"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-payment']
+                                );
+
+                                // print payment subtitle
+                                printf(
+                                    '<div class="servicesP"><a href="javascript:void(0)">%s</a></div>',
+                                    $cc['cc-homepage-service-list-payment-subtitle']
+                                );
+                            
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <?php
 
     }
 }
