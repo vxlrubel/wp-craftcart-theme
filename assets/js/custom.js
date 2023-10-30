@@ -83,7 +83,8 @@
         $(".home-carousel-slider").owlCarousel({
             items: 1,
             nav: true,
-            smartSpeed: 1500
+            smartSpeed: 1500,
+            loop: true
         });
     });
 })(jQuery);

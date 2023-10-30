@@ -764,3 +764,155 @@ if( ! function_exists('cc_service_list_items') ){
 
     }
 }
+
+
+/**
+ * get the banner image for home page or any others page
+ *
+ * @param string $banner_number
+ * @return void
+ */
+if( ! function_exists('cc_banner_image') ){
+
+    function cc_banner_image( $banner_number = '' ){
+        if( $banner_number == '' || empty( $banner_number ) ) return;
+
+        // get first banner
+        if( $banner_number == 1 ){
+            cc_banner_first();
+        }
+        if( $banner_number == 2 ){
+            cc_banner_second();
+        }
+        if( $banner_number == 3 ){
+            cc_banner_third();
+        }
+        
+    }
+}
+
+// get first banner
+if( ! function_exists('cc_banner_first')){
+    function cc_banner_first(){
+        global $cc;
+        if( ! is_enable_options('cc-homepage-banner1-visibility') ) return;
+
+        printf(
+            '<Section class="CommonpaddingSection"><div class="container BannerSec"><div class="row"><div class="col-12 BannerDiv"><img src="%s" /></div></div></div></Section>',
+            esc_url( $cc['cc-homepage-banner1']['url'] )
+        );
+        
+    }
+}
+
+// get second banner
+if( ! function_exists('cc_banner_second')){
+    function cc_banner_second(){
+        global $cc;
+        if( ! is_enable_options('cc-homepage-banner2-visibility') ) return;
+
+        printf(
+            '<Section class="CommonpaddingSection"><div class="container BannerSec"><div class="row"><div class="col-12 BannerDiv"><img src="%s" /></div></div></div></Section>',
+            esc_url( $cc['cc-homepage-banner2']['url'] )
+        );
+    }
+}
+
+// get third banner
+if( ! function_exists('cc_banner_third')){
+    function cc_banner_third(){
+        global $cc;
+        if( ! is_enable_options('cc-homepage-banner3-visibility') ) return;
+
+        printf(
+            '<Section class="CommonpaddingSection"><div class="container BannerSec"><div class="row"><div class="col-12 BannerDiv"><img src="%s" /></div></div></div></Section>',
+            esc_url( $cc['cc-homepage-banner3']['url'] )
+        );
+
+    }
+}
+
+
+/**
+ * get feature brand
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_feature_brand') ){
+    function cc_feature_brand(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-feature-brand-visibility') ) return;
+
+        $feature_brand = $cc['cc-homepage-feature-brand-image'];
+
+        if( ! is_array( $feature_brand ) ) return;
+
+
+        ?>
+            <section class="CommonpaddingSection">
+                <div class="container">
+                    <div class="row Brandsection">
+                        <div class="Titelh4">
+                            <h4><?php echo $cc['cc-homepage-feature-brand-title']; ?></h4>
+                        </div>
+
+                        <div class="owl-carousel BrandCrosul owl-theme">
+                            <?php
+                                foreach( $feature_brand as $image_url ){
+                                    printf(
+                                        '<div class="item"><img src="%s" /></div>',
+                                        esc_url( $image_url['url'] )
+                                    );
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php
+    }
+}
+
+
+
+/**
+ * partners section
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_partners') ){
+    function cc_partners(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-partners-visibility') ) return;
+
+        $partners = $cc['cc-homepage-partners-image'];
+
+        if( ! is_array( $partners ) ) return;
+
+
+        ?>
+            <section class="CommonpaddingSection">
+                <div class="container">
+                    <div class="row Brandsection">
+                        <div class="Titelh4">
+                            <h4><?php echo $cc['cc-homepage-partners-title']; ?></h4>
+                        </div>
+
+                        <div class="owl-carousel BrandCrosul owl-theme">
+                            <?php
+                                foreach( $partners as $image_url ){
+                                    printf(
+                                        '<div class="item"><img src="%s" /></div>',
+                                        esc_url( $image_url['url'] )
+                                    );
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php
+    }
+}

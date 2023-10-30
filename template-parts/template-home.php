@@ -161,72 +161,18 @@
 <!-- services-list end -->
 
 <!-- Banner1 after Service icon start -->
-<Section class="CommonpaddingSection">
-    <div class="container BannerSec">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</Section>
-<!-- Banner1 after Service icon end -->
 
+<?php 
+
+/**
+ * first banner section
+ * 
+ * @return void
+ */
+cc_banner_image(1); 
+?>
+<?php cc_feature_brand(); ?>
 <!-- FEATURED BRAND start -->
-<Section class="CommonpaddingSection">
-    <div class="container">
-        <div class="row Brandsection">
-            <div class="Titelh4">
-                <h4>Featured Brand</h4>
-            </div>
-
-            <div class="owl-carousel BrandCrosul owl-theme">
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/LafargeHolcim_logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Basundhara logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/premier-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/CrownCement-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/cement-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/akij-loog.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Shah cemetn.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</Section>
-<!-- FEATURED end -->
 
 <!-- Catagoris start -->
 <Section class="CommonpaddingSection">
@@ -2390,29 +2336,15 @@
 <!-- Furniture section  end -->
 
 <!-- Banner2 after Service icon start -->
-<Section class="CommonpaddingSection">
-    <div class="container BannerSec">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</Section>
+<?php
+/**
+ * first banner section
+ * 
+ * @return void
+ */
+cc_banner_image(2); 
+?>
+
 <!-- Banner2 after Service icon end -->
 
 <!-- Light section start -->
@@ -5732,29 +5664,14 @@
 <!-- New1 Catagori section  end -->
 
 <!-- Banner3 after Service icon start -->
-<Section class="CommonpaddingSection">
-    <div class="container BannerSec">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-2.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner-3.png" alt="">
-                </a>
-            </div>
-            
-            <div class="col-lg-4 col-md-4 col-sm-4 BannerDiv">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Banner/Banner.png" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-</Section>
+<?php
+/**
+ * third banner section
+ * 
+ * @return void
+ */
+cc_banner_image(3); 
+?>
 <!-- Banner3 after Service icon end --> 
 
 <!-- New2 Catagori section start -->
@@ -9073,45 +8990,7 @@
 </Section>
 <!-- New Catagori3 section  end -->
 
-<!-- oure partners start -->
-<Section class="CommonpaddingSection">
-    <div class="container">
-        <div class="row Brandsection">
-            <div class="Titelh4">
-                <h4>Oure Partners</h4>
-            </div>
 
-            <div class="owl-carousel BrandCrosul owl-theme">
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/LafargeHolcim_logo.png" alt="">
-                </div>
+<?php cc_partners(); ?>
 
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Basundhara logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/premier-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/CrownCement-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/cement-logo.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/akij-loog.png" alt="">
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/BrandLogo/Shah cemetn.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</Section>
-<!-- oure partners end -->
 <?php get_footer() ?>
