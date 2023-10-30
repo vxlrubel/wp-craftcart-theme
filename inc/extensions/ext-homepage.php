@@ -3,6 +3,7 @@
 // directly access denied
 defined('ABSPATH') || exit;
 
+
 Redux::set_section(
 	$opt_name,
 	[
@@ -41,4 +42,46 @@ Redux::set_section(
                         ]
                 ]
 	]
+);
+
+Redux::set_section(
+	$opt_name,
+	[
+                'id'         => 'cc-homepage-content',
+                'title'      => esc_html__( 'Content', CC_DOMAIN ),
+                'subtitle'   => esc_html__( 'Change all the homepage content from here', CC_DOMAIN ),
+                'desc'       => esc_html__( 'Change all the things of homepage.', CC_DOMAIN ),
+                'subsection' => true,
+                'fields'     => [
+                        [
+                                'id'       => 'cc-categories-visibility',
+                                'type'     => 'switch',
+                                'title'    => esc_html__( 'Category Menu', CC_DOMAIN ),
+                                'subtitle' => esc_html__( 'Enable/Disable Category Menu.', CC_DOMAIN ),
+                                'desc'     => esc_html__( 'Enable to show the category menu in the homepage.', CC_DOMAIN ),
+                                'default'  => true,
+                                'on'       => 'Enable',
+                                'off'      => 'Disable'
+                        ],
+                        [
+                                'id'       => 'cc-homeslider-visibility',
+                                'type'     => 'switch',
+                                'title'    => esc_html__( 'Home Slider', CC_DOMAIN ),
+                                'subtitle' => esc_html__( 'Enable/Disable Home Slider.', CC_DOMAIN ),
+                                'desc'     => esc_html__( 'Enable to show the Homeslider in hero section.', CC_DOMAIN ),
+                                'default'  => true,
+                                'on'       => 'Enable',
+                                'off'      => 'Disable'
+                        ],
+                        [
+                                'id'              => 'cc-homeslider-gallery',
+                                'type'            => 'multi_media',
+                                'title'           => esc_html__( 'Slider Image', CC_DOMAIN ),
+                                'subtitle'        => esc_html__( 'Upload slider images.', CC_DOMAIN ),
+                                'desc'            => esc_html__( 'Upload multiple image to slide.', CC_DOMAIN ),
+                                'required'        => [ 'cc-homeslider-visibility', '=', true ],
+                                'max_file_upload' => 20
+                        ],
+                ]
+        ]
 );

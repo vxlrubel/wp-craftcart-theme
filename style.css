@@ -782,5 +782,33 @@ tr {
     top: inherit !important;
     left: inherit !important;
     margin: 0 !important;
-    0 5 padding: 0 !important;
-    0 5
+    padding: 0 !important;
+}
+
+
+/**********************************************************
+ **********************  Home Page ************************
+ **********************************************************/
+
+.HerosCarosul .owl-nav {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HerosCarosul .owl-nav [class*="owl-"] {
+    font-size: 25px !important;
+    color: white;
+    height: 40px;
+    width: 40px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.HerosCarosul .owl-nav [class*="owl-"]:hover {
+    background: rgba(0, 0, 0, .6) !important;
+
+}

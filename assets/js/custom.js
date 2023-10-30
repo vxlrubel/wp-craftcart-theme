@@ -48,6 +48,8 @@
                     }
                 }
             });
+
+
         }
         increaseNDecrease() {
 
@@ -76,5 +78,12 @@
     $(document).ready(function () {
         const cc = new CRAFTCART();
         cc.init();
+
+        // active class first child
+        $(".home-carousel-slider").owlCarousel({
+            items: 1,
+            nav: true,
+            smartSpeed: 1500
+        });
     });
 })(jQuery);

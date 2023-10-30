@@ -557,3 +557,39 @@ if( ! function_exists('get_wishlist_item_count') ){
         }
     }
 }
+
+
+/**
+ * home slider items set
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_home_slider') ){
+    function cc_home_slider(){
+        global $cc;
+        $slider_images = $cc['cc-homeslider-gallery'];
+        if( ! is_array( $slider_images) ) return;
+
+        if( ! is_enable_options('cc-homeslider-visibility') ) return;
+
+        ?>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+            <div class="carousel-inners home-carousel-slider owl-carousel">
+
+                <?php 
+                    foreach ( $slider_images as $image ) {
+                        # code...
+                        printf( '<div><img src="%s" class="d-block w-100" /></div>', $image );
+                        
+                    }
+                ?>
+            </div>
+        </div>
+
+
+        <?php
+        
+    }
+}
