@@ -593,3 +593,21 @@ if( ! function_exists('cc_home_slider') ){
         
     }
 }
+
+
+if( ! function_exists('cc_home_top_side_banner') ){
+    function cc_home_top_side_banner(){
+        global $cc;
+        $banner_images = $cc['cc-home-hero-banner-items'];
+        
+        // return
+        if( ! is_enable_options('cc-home-hero-banner-visibility') ) return;
+        if( ! is_array( $banner_images ) ) return;
+
+        foreach ( $banner_images as $banner_image ) {
+            $url = esc_url( $banner_image );
+            printf( '<div><a href="%s" target="_blank"><img src="%s" /></a></div>', $url, $url );
+        }
+
+    }
+}

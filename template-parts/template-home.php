@@ -149,23 +149,7 @@
             </div>
 
             <div class="col-3 hideOnPhone HerosRightSide">
-                <div>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-1.webp" alt="">
-                    </a>
-                </div>
-                
-                <div>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-2.webp" alt="">
-                    </a>
-                </div>
-                
-                <div>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Heros/heros-right-3.webp" alt="">
-                    </a>
-                </div>
+                <?php cc_home_top_side_banner(); ?>
             </div>
         </div>
     </div>
