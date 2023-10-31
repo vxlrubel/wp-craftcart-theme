@@ -86,5 +86,6 @@
             smartSpeed: 1500,
             loop: true
         });
+
     });
 })(jQuery);

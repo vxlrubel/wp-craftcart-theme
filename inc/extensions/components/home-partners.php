@@ -22,7 +22,7 @@ Redux::set_section(
             'id'       => 'cc-homepage-partners-visibility',
             'type'     => 'switch',
             'title'    => esc_html__( 'Visibility', CC_DOMAIN ),
-            'subtitle' => esc_html__( 'Enable/Disable Partners Ares.', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Enable/Disable Partners Area.', CC_DOMAIN ),
             'desc'     => esc_html__( 'Enable to show the pertners area.', CC_DOMAIN ),
             'default'  => true,
             'on'       => 'Enable',

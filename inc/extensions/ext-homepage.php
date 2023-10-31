@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
  * @version 1.0
  */
 
-$components = [	'main', 'hero', 'service-list', 'banner', 'feature-brand', 'partners', 'popular-categories' ];
+$components = [	'main', 'hero', 'service-list', 'banner', 'feature-brand', 'partners', 'popular-categories', 'flash-sale' ];
 
 foreach ( $components as $component ) {
     // get file name

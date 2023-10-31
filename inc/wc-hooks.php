@@ -161,3 +161,37 @@ function cc_save_custom_delivery_charge($post_id) {
 
 // update custom product meta
 add_action( 'woocommerce_process_product_meta', 'cc_save_custom_delivery_charge' );
+
+
+// Add a custom checkbox field to WooCommerce product edit screen
+function add_flash_sale_checkbox() {
+   add_meta_box(
+       'flash_sale_checkbox',
+       'Flash Sale',
+       'display_flash_sale_checkbox',
+       'product',
+       'side',
+       'default'
+   );
+}
+
+function display_flash_sale_checkbox($post) {
+   $flash_sale = get_post_meta($post->ID, '_is_flash_sale', true);
+   ?>
+   <label for="flash_sale">
+       <input type="checkbox" name="flash_sale" id="flash_sale" value="yes" <?php checked($flash_sale, 'yes'); ?>>
+       This product is part of a flash sale
+   </label>
+   <?php
+}
+
+function save_flash_sale_checkbox($post_id) {
+   if (isset($_POST['flash_sale'])) {
+       update_post_meta($post_id, '_is_flash_sale', 'yes');
+   } else {
+       delete_post_meta($post_id, '_is_flash_sale');
+   }
+}
+
+add_action('add_meta_boxes', 'add_flash_sale_checkbox');
+add_action('save_post', 'save_flash_sale_checkbox');

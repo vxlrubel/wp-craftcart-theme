@@ -990,54 +990,156 @@ endif;
 if( ! function_exists('cc_flash_sale_product') ):
 
     function cc_flash_sale_product(){
-        // Your custom query to retrieve flash sale products
-        $args = array(
-            'post_type'      => 'product',
-            'posts_per_page' => -1,
-            'meta_query'     => array(
-                'relation'    => 'AND',
-                array(
-                    'key'       => '_sale_price',
-                    'value'     => 0,
-                    'compare'   => '>',
-                    'type'      => 'NUMERIC',
-                ),
-                array(
-                    'key'       => '_sale_price_dates_from',
-                    'value'     => current_time('timestamp', true),
-                    'compare'   => '<=',
-                    'type'      => 'NUMERIC',
-                ),
-                array(
-                    'key'       => '_sale_price_dates_to',
-                    'value'     => current_time('timestamp', true),
-                    'compare'   => '>=',
-                    'type'      => 'NUMERIC',
-                ),
-            ),
-        );
 
-        $query = new WP_Query($args);
+        global $cc;
+        ?>
 
-        if ($query->have_posts()) {
-            while ($query->have_posts()) {
-                $query->the_post();
-                // Display flash sale product information here
-                the_title();
-                echo '<br />';
-                // Add more details as needed
-            }
-        }else{
-            echo "no product found";
-        }
-        wp_reset_postdata();
 
-        
-        
-        
-        
-        
-        
+
+        <section class="CommonpaddingSection">
+            <div class="container">
+                <div class="row Brandsection">
+
+                    <!-- title area -->
+                    <div class="Titelh4 row RowPadingError">
+
+                        <div class="col-lg-6 col-ms-6 col-sm-6 RowPadingError RowMarginError">
+                            <h4>
+                                <span><?php echo esc_html($cc['cc-homepage-flash-sale-title']); ?></span>
+                                <i class="fa-solid fa-bolt FlashIcon"></i>
+                            </h4>
+                        </div>
+
+                        <div class="col-lg-6 col-ms-6 col-sm-6 row TitleCntent RowPadingError RowMarginError">
+
+                            <!-- count down -->
+                            <div class="col-6 TimeCounting">
+                                <span>02</span> :
+                                <span>12</span> :
+                                <span>35</span>
+                            </div>
+
+                            <!-- product page link -->
+                            <div class="col-6 SeeAlSpan">
+                                <?php
+                                    $flash_sale_page_url = get_permalink(wc_get_page_id('shop')) . '?flash_sale=true';
+                                    printf('<a href="%s">%s</a>', esc_url( $flash_sale_page_url ), 'View All');
+                                ?>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- title area end -->
+
+
+                    <!-- content area -->
+                    <div class="tab-content FlashPaddingTop">
+                        <div class="row">
+                            
+                            <?php cc_get_flash_sale_product(); ?>
+
+                        </div>
+                    </div>
+                    <!-- content area end -->
+
+                </div>
+            </div>
+        </Section>
+        <?php
     }
     
 endif;
+
+
+
+if( ! function_exists('cc_get_flash_sale_product')){
+    function cc_get_flash_sale_product(){
+        $meta_query = [
+            'relation'    => 'AND',
+            [
+                'key'     => '_sale_price',
+                'value'   => 0,
+                'compare' => '>',
+                'type'    => 'NUMERIC'
+            ],
+            [
+                'key'     => '_sale_price_dates_from',
+                'value'   => current_time('timestamp', true),
+                'compare' => '<=',
+                'type'    => 'NUMERIC'
+            ],
+            [
+                'key'     => '_sale_price_dates_to',
+                'value'   => current_time('timestamp', true),
+                'compare' => '>=',
+                'type'    => 'NUMERIC'
+            ]
+        ];
+        
+        $args = [
+            'post_type'      => 'product',
+            'posts_per_page' => -1,
+            'meta_query'     => $meta_query
+        ];
+        
+        $flash_sale = new WP_Query( $args );
+
+        ?>
+
+        <?php if( $flash_sale->have_posts() ) : ?>
+            <?php while( $flash_sale->have_posts() ): $flash_sale->the_post(); ?>
+                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+
+                    <div class="PerProductDiv">
+                        <!-- product link -->
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="ProductImgage">
+                            <!-- product thumb -->
+                                <?php 
+                                    if( has_post_thumbnail( get_the_ID() )){
+                                        printf(
+                                        '<img src="%s" alt="%s">',
+                                        esc_url( get_the_post_thumbnail_url() ),
+                                        esc_html( get_the_title() )
+                                        );
+                                    }
+                                    ?>
+                                <!-- discount  -->
+                                <div class="DiscountPersentese">
+                                    <?php woocommerce_show_product_loop_sale_flash(); ?>
+                                </div>
+
+                                <!-- wishlist -->
+                                <div class="cc-wishlist">
+                                    <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
+                                </div>
+                            </div>
+
+                            <div class="PrductText">
+                                <!-- product title -->
+                                <p class="ProductTitle"><?php echo get_cc_trim_post_title(25); ?></p>
+                                <!-- product price -->
+                                <p><span class="Price"> <?php woocommerce_template_loop_price(); ?> </span></p>
+
+                                <!-- product review -->
+                                <ul class="StartList">
+                                    <?php woocommerce_template_loop_rating(); ?>
+                                </ul>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+
+            <h2>No Product Found.</h2>
+
+        <?php endif; ?>
+        <!-- reset post data -->
+        <?php wp_reset_postdata(); ?>
+
+        <?php
+    }
+}
