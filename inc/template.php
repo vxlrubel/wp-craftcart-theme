@@ -979,3 +979,65 @@ if( ! function_exists('cc_popular_categories') ):
     }
 
 endif;
+
+
+
+/**
+ * Retrive flash sale product
+ *
+ * @return void
+ */
+if( ! function_exists('cc_flash_sale_product') ):
+
+    function cc_flash_sale_product(){
+        // Your custom query to retrieve flash sale products
+        $args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => -1,
+            'meta_query'     => array(
+                'relation'    => 'AND',
+                array(
+                    'key'       => '_sale_price',
+                    'value'     => 0,
+                    'compare'   => '>',
+                    'type'      => 'NUMERIC',
+                ),
+                array(
+                    'key'       => '_sale_price_dates_from',
+                    'value'     => current_time('timestamp', true),
+                    'compare'   => '<=',
+                    'type'      => 'NUMERIC',
+                ),
+                array(
+                    'key'       => '_sale_price_dates_to',
+                    'value'     => current_time('timestamp', true),
+                    'compare'   => '>=',
+                    'type'      => 'NUMERIC',
+                ),
+            ),
+        );
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                // Display flash sale product information here
+                the_title();
+                echo '<br />';
+                // Add more details as needed
+            }
+        }else{
+            echo "no product found";
+        }
+        wp_reset_postdata();
+
+        
+        
+        
+        
+        
+        
+    }
+    
+endif;

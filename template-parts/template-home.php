@@ -179,6 +179,9 @@ cc_banner_image(1);
 <!-- Catagoris end -->
 
 <!-- Flash Sale start -->
+
+<?php cc_flash_sale_product(); ?>
+
 <Section class="CommonpaddingSection">
     <div class="container">
         <div class="row Brandsection">
@@ -193,7 +196,7 @@ cc_banner_image(1);
                 </div>
 
                 <div class="col-lg-6 col-ms-6 col-sm-6 row TitleCntent RowPadingError RowMarginError">
-                    <div class="col-6 TimeCounting ">
+                    <div class="col-6 TimeCounting">
                         <span>02</span> : 
                         <span>12</span> : 
                         <span>35</span>
@@ -655,39 +658,7 @@ cc_banner_image(1);
 
             <!-- Filter on phone  start-->
             <div class="FilterSubcatagorisInPhone ProductDropdown showInphone">
-                <!-- <select class="nav nav-tab">
-                    <option value="1" class="nav nav-tab">
-                        <li class="active">
-                            <a class="nav-link" data-bs-toggle="tab" href="#Dining">
-                                Bed
-                            </a>
-                        </li>
-                    </option>
-
-                    <option value="2" class="nav nav-tab">
-                        <li >
-                            <a class="nav-link" data-bs-toggle="tab" href="#Bath">
-                                Bath
-                            </a>
-                        </li>
-                    </option>
-
-                    <option value="3" class="nav nav-tab">
-                        <li>
-                            <a class="nav-link" data-bs-toggle="tab" href="#kitchen">
-                                kitchen
-                            </a>
-                        </li>
-                    </option>
-
-                    <option value="4" class="nav nav-tab">
-                        <li>
-                            <a class="nav-link" data-bs-toggle="tab" href="#Dining">
-                                Dining
-                            </a>
-                        </li>
-                    </option>
-                </select> -->
+               
                 <ul class="nav nav-tab">
                     <li class="active">
                         <a class="nav-link active" data-bs-toggle="tab" href="#Dining">
@@ -7179,7 +7150,7 @@ cc_banner_image(3);
 <!-- New2 Catagori section  end -->
 
 <!-- New 3Catagori section start -->
-<Section class="CommonpaddingSection TitleBorderBottom">      
+<section class="CommonpaddingSection TitleBorderBottom">
     <div class="container">
         <div class="row Brandsection ">
             <div class="Titelh42 row RowPadingError RowMarginError">
