@@ -875,7 +875,6 @@ if( ! function_exists('cc_feature_brand') ){
 }
 
 
-
 /**
  * partners section
  * 
@@ -916,3 +915,67 @@ if( ! function_exists('cc_partners') ){
         <?php
     }
 }
+
+
+/**
+ * set popular categories
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_popular_categories') ):
+    function cc_popular_categories(){
+
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-popular-categories-visibility') ) return;
+
+        $categories_images = $cc['cc-homepage-popular-categorie-image'];
+        $categories_url   = $cc['cc-homepage-popular-categorie-url'];
+        
+        
+        ?>
+        <section class="CommonpaddingSection">
+            <div class="container">
+                <div class="row Brandsection">
+                    <div class="Titelh4">
+                        <h4>Popular Categories</h4>
+                    </div>
+
+                    <div class="owl-carousel CatagorisCrosul owl-theme">
+                        <?php
+                            foreach( $categories_images as $images ){
+
+                                // merge array
+                                $categories = array_merge( $categories_url, $images );
+
+                                // remove duplicate values from array
+                                $unique_array = array_unique( $categories );
+
+                                // remove key from array which has empty value
+                                $remove_emplty_value = array_filter( $unique_array );
+
+                                // set new key inside array
+                                $array_processed = [
+                                    'link'  => $remove_emplty_value[0],
+                                    'thumb' => $remove_emplty_value['url'],
+                                ];
+
+                                printf(
+                                    '<div class="item"><div class="Catagoris2Div"><div><a href="%s"><img src="%s" /></a></div></div></div>',
+                                    $array_processed['link'],
+                                    $array_processed['thumb']
+                                );
+
+                            }
+
+                        ?>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <?php
+    }
+
+endif;

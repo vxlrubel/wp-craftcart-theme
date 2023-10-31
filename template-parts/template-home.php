@@ -175,161 +175,7 @@ cc_banner_image(1);
 <!-- FEATURED BRAND start -->
 
 <!-- Catagoris start -->
-<Section class="CommonpaddingSection">
-    <div class="container">
-        <div class="row Brandsection">
-            <div class="Titelh4">
-                <h4>Popular Categories</h4>
-            </div>
-
-            <div class="owl-carousel CatagorisCrosul owl-theme">
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/furniture.png" alt="">
-                                <span>Furniture</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/furniture.png" alt="">
-                                <span>Furniture</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/LightIcon.png" alt="">
-                                <span>Light</span>
-                            </a>
-                        </div>
-                        
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/LightIcon.png" alt="">
-                                <span>Light</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/kitchen.png" alt="">
-                                <span>kitchen</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/kitchen.png" alt="">
-                                <span>kitchen</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/tabletop.png" alt="">
-                                <span>Tabletop</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/tabletop.png" alt="">
-                                <span>Tabletop</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/Bath-icon.jpg" alt="">
-                                <span>Bath</span>
-                            </a>
-                        </div>
-                        
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/Bath-icon.jpg" alt="">
-                                <span>Bath</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/double-bed.png" alt="">
-                                <span>BedRoom</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/double-bed.png" alt="">
-                                <span>BedRoom</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div >
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/pet-food.png" alt="">
-                                <span>Pet Supplies</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/pet-food.png" alt="">
-                                <span>Pet Supplies</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="Catagoris2Div">
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/playtime.png" alt="">
-                                <span>Kids</span>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="./AllProduct.html">
-                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Catagoris/playtime.png" alt="">
-                                <span>Kids</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</Section>
+<?php cc_popular_categories(); ?>
 <!-- Catagoris end -->
 
 <!-- Flash Sale start -->
@@ -8990,7 +8836,17 @@ cc_banner_image(3);
 </Section>
 <!-- New Catagori3 section  end -->
 
+<?php
+/**
+ * include partners section
+ * 
+ * @return void
+ */
+cc_partners();
 
-<?php cc_partners(); ?>
-
-<?php get_footer() ?>
+/**
+ * include footer section
+ * 
+ * @return void
+ */
+get_footer();
