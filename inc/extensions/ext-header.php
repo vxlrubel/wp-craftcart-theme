@@ -11,6 +11,38 @@ Redux::set_section(
 		'subtitle' => esc_html__( 'Header Setting Options', CC_DOMAIN ),
 		'desc'     => esc_html__( 'Change all the things of header section.', CC_DOMAIN ),
 		'icon'     => 'el el-view-mode',
+	]
+);
+
+/**
+ * header top section 
+ * 
+ * @return void
+ */
+Redux::set_section(
+	$opt_name,
+	[
+		'id'         => 'cc-header-top-section',
+		'title'      => esc_html__( 'Top Section', CC_DOMAIN ),
+		'subtitle'   => esc_html__( 'Header top Setting Options', CC_DOMAIN ),
+		'desc'       => esc_html__( 'Change all the things of header top section.', CC_DOMAIN ),
+		'subsection' => true
+	]
+);
+
+/**
+ * header middle section 
+ * 
+ * @return void
+ */
+Redux::set_section(
+	$opt_name,
+	[
+		'id'         => 'cc-header-middle-section',
+		'title'      => esc_html__( 'Middle Section', CC_DOMAIN ),
+		'subtitle'   => esc_html__( 'Header middle Setting Options', CC_DOMAIN ),
+		'desc'       => esc_html__( 'Change all the things of header middle section.', CC_DOMAIN ),
+		'subsection' => true,
 		'fields'   => [
 			[
 				'id'       => 'cc-header-enable',
@@ -63,5 +95,21 @@ Redux::set_section(
 				'off'      => 'Disable',
 			]
 		]
+	]
+);
+
+/**
+ * header end section 
+ * 
+ * @return void
+ */
+Redux::set_section(
+	$opt_name,
+	[
+		'id'         => 'cc-header-end-section',
+		'title'      => esc_html__( 'Bottom Section', CC_DOMAIN ),
+		'subtitle'   => esc_html__( 'Header bottom Setting Options', CC_DOMAIN ),
+		'desc'       => esc_html__( 'Change all the things of header bottom section.', CC_DOMAIN ),
+		'subsection' => true
 	]
 );
