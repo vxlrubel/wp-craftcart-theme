@@ -163,7 +163,12 @@ function cc_save_custom_delivery_charge($post_id) {
 add_action( 'woocommerce_process_product_meta', 'cc_save_custom_delivery_charge' );
 
 
-// Add a custom checkbox field to WooCommerce product edit screen
+
+/**
+ * add flash sale checkbox inside product type
+ *
+ * @return void
+ */
 function add_flash_sale_checkbox() {
    add_meta_box(
        'flash_sale_checkbox',
@@ -175,6 +180,13 @@ function add_flash_sale_checkbox() {
    );
 }
 
+
+/**
+ * display flashsale checkbox
+ *
+ * @param [type] $post
+ * @return void
+ */
 function display_flash_sale_checkbox($post) {
    $flash_sale = get_post_meta($post->ID, '_is_flash_sale', true);
    ?>
@@ -185,6 +197,12 @@ function display_flash_sale_checkbox($post) {
    <?php
 }
 
+/**
+ * save flash sale value in the database
+ *
+ * @param [type] $post_id
+ * @return void
+ */
 function save_flash_sale_checkbox($post_id) {
    if (isset($_POST['flash_sale'])) {
        update_post_meta($post_id, '_is_flash_sale', 'yes');
@@ -197,13 +215,27 @@ add_action('add_meta_boxes', 'add_flash_sale_checkbox');
 add_action('save_post', 'save_flash_sale_checkbox');
 
 
+/**
+ * incress the mini cart item using AJAX
+ * 
+ * @return void;
+ */
 
-// Mini Cart update with AJAX
-// Mini Cart update with AJAX
-// add_filter('woocommerce_add_to_cart_fragments', 'cc_wc_minicart_fragments' );
+function update_mini_cart() {
+   ob_start();
+   woocommerce_mini_cart();
+   $mini_cart = ob_get_clean();
 
-// function cc_wc_minicart_fragments($fragments) {
-//     $fragments['div.cc-wc-update-count'] = '<p class="Count">' . WC()->cart->get_cart_contents_count() . '</p';
+   $response = array(
+       'fragments' => apply_filters('woocommerce_add_to_cart_fragments', array(
+           'div.cc-wc-update-count' => $mini_cart,
+           'mini_cart_count' => WC()->cart->get_cart_contents_count(),
+       )),
+   );
 
-//     return $fragments;
-// }
+   echo wp_json_encode($response);
+   wp_die();
+}
+
+add_action('wp_ajax_update_mini_cart', 'update_mini_cart');
+add_action('wp_ajax_nopriv_update_mini_cart', 'update_mini_cart');

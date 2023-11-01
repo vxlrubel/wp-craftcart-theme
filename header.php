@@ -94,51 +94,12 @@
                                         </div>
 
                                         <!-- Hover show chart summery start -->
+
                                         <div class="CartSummaryNav">
-                                            <div class="row CartUpperSummary">
-                                                <div class="upperLeft col-6">
-                                                    <span>1 </span>Item in Cart
-                                                </div>
-
-                                                <div class="upperRight col-6">
-                                                    <span>Cart Subtotal:</span>
-                                                    <p class="Price">Tk<span>100</span></p>
-                                                </div>
+                                            <div class="widget_shopping_cart_content">
+                                                <?php woocommerce_mini_cart(); ?>
                                             </div>
-
-                                            <div class="CartNabBtn">
-                                                <a href="./ShopingCart.html">
-                                                    Proceed To heckout
-                                                </a>
-                                            </div>
-
-                                            <div class="CartSummaryProduct row">
-                                                <div class="col-3">
-                                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Light/llight1.jpg" alt="">
-                                                </div>
-                                                
-                                                <div class="col-9">
-                                                    <span class="CartProductTitle"> Mi343 Model Chines Light Chines Light Chines Light</span>
-                                                    <form class="CartNavForm">
-                                                        <div class="CartProductQuantity">
-                                                            <label >Qty: </label>
-                                                            <input type="text" value="5">
-                                                        </div>
-
-                                                        <div class="CartProductQuantity">
-                                                            <button>
-                                                                <i class="fa-solid fa-delete-left"></i>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-
-                                            <div class="CartNabBtn CartNabBtn1">
-                                                <a href="<?php cc_cart_page_url(); ?>">
-                                                    View and Edit Cart 
-                                                </a>
-                                            </div>
+                                            
                                         </div>
                                         <!-- Hover show chart summery end -->
                                     </div>

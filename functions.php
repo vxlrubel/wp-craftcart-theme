@@ -247,22 +247,24 @@ craft_cart();
 
 
 
+function custom_add_to_cart() {
+    if (isset($_POST['product_id'])) {
+        $product_id = intval($_POST['product_id']);
+        $quantity = intval($_POST['quantity']);
 
-function update_mini_cart() {
-    ob_start();
-    woocommerce_mini_cart();
-    $mini_cart = ob_get_clean();
+        // Add the product to the cart
+        WC()->cart->add_to_cart($product_id, $quantity);
 
-    $response = array(
-        'fragments' => apply_filters('woocommerce_add_to_cart_fragments', array(
-            'div.cc-wc-update-count' => $mini_cart,
-            'mini_cart_count' => WC()->cart->get_cart_contents_count(),
-        )),
-    );
+        // Get the updated mini cart HTML
+        ob_start();
+        woocommerce_mini_cart();
+        $mini_cart = ob_get_clean();
 
-    echo wp_json_encode($response);
-    wp_die();
+        // Return the updated mini cart HTML
+        wp_send_json($mini_cart);
+    }
 }
+add_action('wp_ajax_add_to_cart', 'custom_add_to_cart');
+add_action('wp_ajax_nopriv_add_to_cart', 'custom_add_to_cart');
 
-add_action('wp_ajax_update_mini_cart', 'update_mini_cart');
-add_action('wp_ajax_nopriv_update_mini_cart', 'update_mini_cart');
+

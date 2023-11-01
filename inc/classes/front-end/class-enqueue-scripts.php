@@ -85,6 +85,11 @@ class Register_Scripts{
             );
         }
 
+        wp_localize_script('customjs', 'cc', [
+            'ajax_url' => admin_url('admin-ajax.php'),
+        ]);
+        
+
     }
 
     /**

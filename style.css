@@ -812,3 +812,30 @@ tr {
     background: rgba(0, 0, 0, .6) !important;
 
 }
+
+
+/**********************************************************
+ **********************  MINI CART ************************
+ **********************************************************/
+.cc-mini-cart-item-count #cc-wc-update-count {
+    display: flex !important;
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+}
+
+.hover-color-white:hover>a {
+    color: white !important;
+}
+
+.CartSummaryNav {
+    max-height: 350px !important;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cc-color) #fff;
+}
+
+.CartSummaryNav::-webkit-scrollbar {
+    width: 0px;
+}

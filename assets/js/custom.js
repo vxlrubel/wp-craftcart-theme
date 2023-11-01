@@ -88,8 +88,38 @@
         });
 
 
-    });
+        // add cart items inside the mini cart
+        // Add to Cart button click event
+        $('.add_to_cart_button').on('click', function (e) {
+            e.preventDefault();
 
+            var product_id = $(this).data('product_id');
+            var quantity = 1; // You can customize this based on your needs
+
+            // Make an AJAX request to update the cart
+            $.ajax({
+                type: 'POST',
+                url: wc_add_to_cart_params.ajax_url,
+                data: {
+                    action: 'add_to_cart',
+                    product_id: product_id,
+                    quantity: quantity
+                },
+                success: function (response) {
+                    // Update the mini cart content
+                    if (response) {
+                        $('.widget_shopping_cart_content').html(response);
+                    }
+                }
+            });
+        });
+
+
+
+
+
+
+    });
 
     // add to cart items count
     $(document.body).on('added_to_cart', function () {
