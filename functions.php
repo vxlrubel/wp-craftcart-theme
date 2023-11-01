@@ -244,3 +244,25 @@ if( ! function_exists('craft_cart') ){
     }
 }
 craft_cart();
+
+
+
+
+function update_mini_cart() {
+    ob_start();
+    woocommerce_mini_cart();
+    $mini_cart = ob_get_clean();
+
+    $response = array(
+        'fragments' => apply_filters('woocommerce_add_to_cart_fragments', array(
+            'div.cc-wc-update-count' => $mini_cart,
+            'mini_cart_count' => WC()->cart->get_cart_contents_count(),
+        )),
+    );
+
+    echo wp_json_encode($response);
+    wp_die();
+}
+
+add_action('wp_ajax_update_mini_cart', 'update_mini_cart');
+add_action('wp_ajax_nopriv_update_mini_cart', 'update_mini_cart');

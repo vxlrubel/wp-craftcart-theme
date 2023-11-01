@@ -195,3 +195,15 @@ function save_flash_sale_checkbox($post_id) {
 
 add_action('add_meta_boxes', 'add_flash_sale_checkbox');
 add_action('save_post', 'save_flash_sale_checkbox');
+
+
+
+// Mini Cart update with AJAX
+// Mini Cart update with AJAX
+// add_filter('woocommerce_add_to_cart_fragments', 'cc_wc_minicart_fragments' );
+
+// function cc_wc_minicart_fragments($fragments) {
+//     $fragments['div.cc-wc-update-count'] = '<p class="Count">' . WC()->cart->get_cart_contents_count() . '</p';
+
+//     return $fragments;
+// }

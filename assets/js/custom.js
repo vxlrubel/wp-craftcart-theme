@@ -87,5 +87,31 @@
             loop: true
         });
 
+
     });
+
+
+    // add to cart items count
+    $(document.body).on('added_to_cart', function () {
+        // Use AJAX to update the mini cart
+        $.ajax({
+            type: 'GET',
+            url: wc_add_to_cart_params.ajax_url,
+            dataType: 'json',
+            data: { action: 'update_mini_cart' },
+            success: function (response) {
+                // Update the mini cart count
+                if (response && response.fragments) {
+                    $.each(response.fragments, function (key, value) {
+                        if (key.startsWith('mini_cart_count')) {
+                            $('#cc-wc-update-count').html(value);
+                        }
+                    });
+                }
+            }
+        });
+    });
+
+
+
 })(jQuery);

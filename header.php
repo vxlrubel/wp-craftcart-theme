@@ -84,7 +84,11 @@
                                     <div class="IconDiv NavCart">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         <div>
-                                            <p class="Count">0</p>
+                                            <div class="cc-wc-update-count">
+                                                <p class="Count" id="cc-wc-update-count">
+                                                    <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                                </p>
+                                            </div>
                                             <a href="<?php cc_cart_page_url(); ?>">
                                             <p>My Cart</p></a>
                                         </div>
