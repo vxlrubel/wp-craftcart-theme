@@ -509,7 +509,9 @@ if( ! function_exists('cc_logo') ){
  */
 if( ! function_exists('cc_cart_page_url') ){
     function cc_cart_page_url(){
-        echo get_permalink(wc_get_page_id('cart'));
+        if( class_exists('WooCommerce') ){
+            echo get_permalink(wc_get_page_id('cart'));
+        }
     }
 }
 
@@ -518,7 +520,10 @@ if( ! function_exists('cc_cart_page_url') ){
  */
 if( ! function_exists('cc_profile_page_url') ){
     function cc_profile_page_url(){
-        echo get_permalink(wc_get_page_id('myaccount'));
+        if( class_exists('WooCommerce') ){
+            echo get_permalink(wc_get_page_id('myaccount'));
+        }
+        
     }
 }
 
@@ -576,7 +581,7 @@ if( ! function_exists('cc_home_slider') ){
 
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
-            <div class="carousel-inners home-carousel-slider owl-carousel">
+            <div class="carousel-inners home-carousel-slider owl-carousel pt-0">
 
                 <?php 
                     foreach ( $slider_images as $image ) {
@@ -1022,8 +1027,11 @@ if( ! function_exists('cc_flash_sale_product') ):
                             <!-- product page link -->
                             <div class="col-6 SeeAlSpan">
                                 <?php
-                                    $flash_sale_page_url = get_permalink(wc_get_page_id('shop')) . '?flash_sale=true';
-                                    printf('<a href="%s">%s</a>', esc_url( $flash_sale_page_url ), 'View All');
+                                    if( class_exists('WooCommerce')){
+                                        $flash_sale_page_url = get_permalink(wc_get_page_id('shop')) . '?flash_sale=true';
+                                        printf('<a href="%s">%s</a>', esc_url( $flash_sale_page_url ), 'View All');
+                                    }
+                                    
                                 ?>
                             </div>
 
@@ -1211,7 +1219,12 @@ if( ! function_exists('cc_header_middle_area') ){
                                     <div>
                                         <div class="cc-wc-update-count">
                                             <p class="Count" id="cc-wc-update-count">
-                                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+
+                                                <?php
+                                                    if( class_exists('WooCommerce') ){
+                                                        echo WC()->cart->get_cart_contents_count();
+                                                    }
+                                                 ?>
                                             </p>
                                         </div>
                                         <a href="<?php cc_cart_page_url(); ?>">
@@ -1223,7 +1236,12 @@ if( ! function_exists('cc_header_middle_area') ){
                                     <div class="CartSummaryNav">
                                         
                                         <div class="widget_shopping_cart_content">
-                                            <?php woocommerce_mini_cart(); ?>
+                                            <?php 
+                                                if( class_exists('WooCommerce') ){
+                                                    woocommerce_mini_cart();
+                                                }
+                                                
+                                            ?>
                                         </div>
                                         
                                     </div>
@@ -1294,7 +1312,7 @@ if( ! function_exists('cc_wc_profile') ){
         if( ! class_exists('WooCommerce') ) return;?>
 
             <div class="IconDiv UserImg">
-                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/userImg1.png" alt="" id="switchAccount">
 
                 <!-- switch acount start -->
                 <div class="WtitchDiv">

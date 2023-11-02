@@ -3,6 +3,7 @@
  * Template Name: Frontpage
  */
  get_header();
+ 
  ?>
 
 <!-- Heros start -->
