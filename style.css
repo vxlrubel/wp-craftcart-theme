@@ -844,3 +844,18 @@ tr {
     color: white !important;
     background: transparent !important;
 }
+
+.cc-login-logout-url {
+    display: inline-block !important;
+    padding: 6px 20px;
+    border: none;
+    outline: 0;
+    color: #fff !important;
+    border-radius: 7px;
+    margin-top: 15px;
+    background-color: var(--cc-color);
+}
+
+.cc-login-logout-url:hover {
+    background: var(--cc-color-primary);
+}

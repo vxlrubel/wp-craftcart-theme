@@ -1241,42 +1241,7 @@ if( ! function_exists('cc_header_middle_area') ){
                                 </div>
                             </a>
 
-                            
-                            
-                            <!-- <a href="./Login.html"> -->
-                                <div class="IconDiv UserImg">
-                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
-
-                                    <!-- switch acount start -->
-                                    <div class="WtitchDiv">
-                                        <div>
-                                            <a href="#">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/BuyAndSell.png" alt="">
-                                                Buy & Sell
-                                            </a>
-                                        </div>
-
-                                        <div>
-                                            <a href="#">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/document.png" alt="">
-                                                Document Processing
-                                            </a>
-                                        </div>
-
-                                        <div>
-                                            <a href="#">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/RealstatMarkatinh.png" alt="">
-                                                Real Estate Marketing
-                                            </a>
-                                        </div>
-
-                                        <a href="<?php echo cc_signout_url(); ?>">Sing Out</a>
-                                    </div>
-                                    <!-- switch acount end -->
-                                </div>
-                            <!-- </a> -->
-
-
+                            <?php cc_wc_profile(); ?>
 
                         </div>
                     </div>
@@ -1314,5 +1279,94 @@ if( ! function_exists('cc_signout_url') ){
     function cc_signout_url(){
         if( ! is_user_logged_in() ) return;
         return wp_logout_url( home_url( '/' ) );
+    }
+}
+
+
+/**
+ * create woocommer profile.
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_wc_profile') ){
+    function cc_wc_profile(){
+
+        if( ! class_exists('WooCommerce') ) return;?>
+
+            <div class="IconDiv UserImg">
+                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
+
+                <!-- switch acount start -->
+                <div class="WtitchDiv">
+                    
+                    <?php
+                        /**
+                         * get dashboard page
+                         * 
+                         * @return void
+                         */
+                        if( is_user_logged_in() ){
+                            printf(
+                                '<div><a href="%s"><img src="%s" alt="">%s</a></div>',
+                                esc_url(wc_get_page_permalink('myaccount')),
+                                esc_url(get_template_directory_uri() . '/assets/img/switch-account/BuyAndSell.png'),
+                                esc_html('Dashboard')
+
+                            );
+                        }
+                        
+                        /**
+                         * get edit profile link
+                         * 
+                         * @return void
+                         */
+                        if( is_user_logged_in() ){
+                            printf(
+                                '<div><a href="%s"><img src="%s" />%s</a></div>',
+                                esc_url(wc_get_endpoint_url('orders')),
+                                esc_url( get_template_directory_uri() . '/assets/img/switch-account/RealstatMarkatinh.png'),
+                                esc_html('Orders')
+                            );
+                        }
+
+                        /**
+                         * get edit profile link
+                         * 
+                         * @return void
+                         */
+                        if( is_user_logged_in() ){
+                            printf(
+                                '<div><a href="%s"><img src="%s" />%s</a></div>',
+                                esc_url( wc_customer_edit_account_url() ),
+                                esc_url( get_template_directory_uri() . '/assets/img/switch-account/document.png'),
+                                esc_html('Edit Profile')
+                            );
+                        }
+
+                        /**
+                         * login and logout script
+                         * 
+                         * @return void
+                         */
+                        if( is_user_logged_in() ){
+                            printf(
+                                '<a href="%s" class="cc-login-logout-url">%s</a>',
+                                esc_url( wp_logout_url( get_home_url('/') ) ),
+                                esc_html('Signout')
+                            );
+                        }else{
+                            printf(
+                                '<a href="%s" class="cc-login-logout-url">%s</a>',
+                                esc_url( wc_get_page_permalink('myaccount') ),
+                                esc_html('Login')
+                            );
+                        }
+
+                    ?>
+                </div>
+                <!-- switch acount end -->
+            </div>
+
+        <?php
     }
 }

@@ -239,3 +239,30 @@ function update_mini_cart() {
 
 add_action('wp_ajax_update_mini_cart', 'update_mini_cart');
 add_action('wp_ajax_nopriv_update_mini_cart', 'update_mini_cart');
+
+
+
+/**
+ * custom add to cart fragments
+ *
+ * @return void
+ */
+function custom_add_to_cart() {
+   if (isset($_POST['product_id'])) {
+       $product_id = intval($_POST['product_id']);
+       $quantity = intval($_POST['quantity']);
+
+       // Add the product to the cart
+       WC()->cart->add_to_cart($product_id, $quantity);
+
+       // Get the updated mini cart HTML
+       ob_start();
+       woocommerce_mini_cart();
+       $mini_cart = ob_get_clean();
+
+       // Return the updated mini cart HTML
+       wp_send_json($mini_cart);
+   }
+}
+add_action('wp_ajax_add_to_cart', 'custom_add_to_cart');
+add_action('wp_ajax_nopriv_add_to_cart', 'custom_add_to_cart');

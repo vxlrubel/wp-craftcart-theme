@@ -52,7 +52,6 @@
 
         }
         increaseNDecrease() {
-
             // decrement the count
             $(document).on('click', '.quantity-minus', function () {
                 var $input = $(this).closest('.cc-item-quantity').find('input[type="number"]');
