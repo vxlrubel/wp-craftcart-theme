@@ -43,24 +43,6 @@
                             <div class="ContactDiv col-5">
                                 <div class="SocialIocn float-right">
                                     <?php cc_get_social_share(); ?>
-                                    
-                                    <ul>
-                                        <li> 
-                                            <a href="#" class="facbookNav"><i class="fa-brands fa-facebook-f"></i></a>
-                                        </li> 
-                                        <li>
-                                            <a href="#" class="tuitterNav"><i class="fa-brands fa-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                                        </li> 
-                                        <li>
-                                            <a href="#" class="Youtube"><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="facbookNav"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -99,6 +81,7 @@
                                         <!-- Hover show chart summery start -->
 
                                         <div class="CartSummaryNav">
+                                            
                                             <div class="widget_shopping_cart_content">
                                                 <?php woocommerce_mini_cart(); ?>
                                             </div>

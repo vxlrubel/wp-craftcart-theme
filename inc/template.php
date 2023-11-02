@@ -1147,7 +1147,10 @@ if( ! function_exists('cc_get_flash_sale_product')){
 if( ! function_exists('cc_get_social_share') ){
     function cc_get_social_share(){
         global $cc;
+        // get social icon forawesome name
         $icon_name = $cc['social-share-class-name'];
+
+        // get social link
         $icon_link = $cc['social-share-class-link'];
 
 
@@ -1157,11 +1160,17 @@ if( ! function_exists('cc_get_social_share') ){
         // return if link is not icon
         if( ! is_array( $icon_link ) ) return;
 
-        // will proceed
-        
+        // if array count is not equal then return
+        if( count( $icon_name ) !== count( $icon_link ) ) return;
 
-
-        echo count( $icon_name );
-        pre( $merge_array );
+        echo "<ul>\n";
+        foreach ($icon_name as $key => $value) {
+            printf(
+                '<li><a href="%s" class="facbookNav"><i class="%s"></i></a></li>',
+                esc_url( $icon_link[$key] ),
+                esc_attr( $icon_name[$key] )
+            );
+        }
+        echo "</ul>\n";
     }
 }
