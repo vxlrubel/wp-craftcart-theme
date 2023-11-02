@@ -839,3 +839,8 @@ tr {
 .CartSummaryNav::-webkit-scrollbar {
     width: 0px;
 }
+
+.cc-search-bar-icon {
+    color: white !important;
+    background: transparent !important;
+}

@@ -1144,6 +1144,11 @@ if( ! function_exists('cc_get_flash_sale_product')){
     }
 }
 
+/**
+ * get social media icon with link
+ * 
+ * @return void
+ */
 if( ! function_exists('cc_get_social_share') ){
     function cc_get_social_share(){
         global $cc;
@@ -1172,5 +1177,142 @@ if( ! function_exists('cc_get_social_share') ){
             );
         }
         echo "</ul>\n";
+    }
+}
+
+
+/**
+ * create header middle menu bar
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_header_middle_area') ){
+    function cc_header_middle_area(){
+
+        if( ! is_enable_options('cc-header-enable') ) return; ?>
+
+            <div class="MidNev">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo col-2">
+                            <?php cc_logo(); ?>
+                        </div>
+
+                        <div class="Serchber col-7">
+
+                            <?php cc_search_form(); ?>
+                            
+                        </div>
+
+                        <div class="SelectedIocn col-3">
+                            <!-- <a href="./ShopingCart.html"> -->
+                                <div class="IconDiv NavCart">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <div>
+                                        <div class="cc-wc-update-count">
+                                            <p class="Count" id="cc-wc-update-count">
+                                                <?php echo WC()->cart->get_cart_contents_count(); ?>
+                                            </p>
+                                        </div>
+                                        <a href="<?php cc_cart_page_url(); ?>">
+                                        <p>My Cart</p></a>
+                                    </div>
+
+                                    <!-- Hover show chart summery start -->
+
+                                    <div class="CartSummaryNav">
+                                        
+                                        <div class="widget_shopping_cart_content">
+                                            <?php woocommerce_mini_cart(); ?>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- Hover show chart summery end -->
+                                </div>
+                            <!-- </a> -->
+
+                            <a href="<?php echo get_wishlist_page_url(); ?>" class="LoveHideLaptop">
+                                <div class="IconDiv">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <div>
+                                        <p class="Count"><?php echo get_wishlist_item_count(); ?></p>
+                                        <p>Wishlist</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+                            
+                            <!-- <a href="./Login.html"> -->
+                                <div class="IconDiv UserImg">
+                                    <img src="<?php echo get_template_directory_uri(); ?> /assets/img/userImg1.png" alt="" id="switchAccount">
+
+                                    <!-- switch acount start -->
+                                    <div class="WtitchDiv">
+                                        <div>
+                                            <a href="#">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/BuyAndSell.png" alt="">
+                                                Buy & Sell
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/document.png" alt="">
+                                                Document Processing
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            <a href="#">
+                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/switch-account/RealstatMarkatinh.png" alt="">
+                                                Real Estate Marketing
+                                            </a>
+                                        </div>
+
+                                        <a href="<?php echo cc_signout_url(); ?>">Sing Out</a>
+                                    </div>
+                                    <!-- switch acount end -->
+                                </div>
+                            <!-- </a> -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <?php
+
+    }
+}
+
+
+/**
+ * create search form for woocommerce and blog post
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_search_form') ){
+
+    function cc_search_form(){
+
+        // if search is not enable the return here
+        if( ! is_enable_options('cc-header-search') ) return;
+
+        // get the search form 
+        printf(
+            '<form action="%s"><input type="text" name="s" placeholder="Search Your Product....."><label ><button type="submit" class="border-0 cc-search-bar-icon"><i class="fa-solid fa-magnifying-glass"></i></button></label></form>',
+            esc_url( get_home_url('/'))
+        );
+    }
+    
+}
+
+if( ! function_exists('cc_signout_url') ){
+    function cc_signout_url(){
+        if( ! is_user_logged_in() ) return;
+        return wp_logout_url( home_url( '/' ) );
     }
 }
