@@ -1,3 +1,4 @@
+<?php global $cc; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
@@ -34,13 +35,15 @@
                         <div class="row">
                             <div class="col-7">
                                 <ul>
-                                    <li><i class="fa-regular fa-envelope icon"></i> Email: gossaryshop@gmail.com</li>
-                                    <li><i class="fa-solid fa-phone icon"></i> Phone: 01824655443</li>
+                                    <li><i class="fa-regular fa-envelope icon"></i> <?php echo $cc['cc-header-top-section-email']; ?></li>
+                                    <li><i class="fa-solid fa-phone icon"></i> <?php echo $cc['cc-header-top-section-phone']; ?></li>
                                 </ul>
                             </div>
         
                             <div class="ContactDiv col-5">
                                 <div class="SocialIocn float-right">
+                                    <?php cc_get_social_share(); ?>
+                                    
                                     <ul>
                                         <li> 
                                             <a href="#" class="facbookNav"><i class="fa-brands fa-facebook-f"></i></a>

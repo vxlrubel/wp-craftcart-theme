@@ -1143,3 +1143,25 @@ if( ! function_exists('cc_get_flash_sale_product')){
         <?php
     }
 }
+
+if( ! function_exists('cc_get_social_share') ){
+    function cc_get_social_share(){
+        global $cc;
+        $icon_name = $cc['social-share-class-name'];
+        $icon_link = $cc['social-share-class-link'];
+
+
+        // return if icon name is not exists/
+        if( ! is_array( $icon_name ) ) return;
+
+        // return if link is not icon
+        if( ! is_array( $icon_link ) ) return;
+
+        // will proceed
+        
+
+
+        echo count( $icon_name );
+        pre( $merge_array );
+    }
+}

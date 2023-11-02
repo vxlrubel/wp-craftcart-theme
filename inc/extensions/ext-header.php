@@ -26,7 +26,61 @@ Redux::set_section(
 		'title'      => esc_html__( 'Top Section', CC_DOMAIN ),
 		'subtitle'   => esc_html__( 'Header top Setting Options', CC_DOMAIN ),
 		'desc'       => esc_html__( 'Change all the things of header top section.', CC_DOMAIN ),
-		'subsection' => true
+		'subsection' => true,
+		'fields'     => [
+			[
+				'id'       => 'cc-header-top-section-email',
+				'type'     => 'text',
+				'title'    => esc_html__( 'Email', CC_DOMAIN ),
+				'subtitle' => esc_html__( 'Set the email', CC_DOMAIN ),
+				'desc'     => esc_html__( 'Chnage the email', CC_DOMAIN ),
+				'validate' => 'email',
+				'default'  => 'example@domain.com'
+			],
+			[
+				'id'       => 'cc-header-top-section-phone',
+				'type'     => 'text',
+				'title'    => esc_html__( 'Phone', CC_DOMAIN ),
+				'subtitle' => esc_html__( 'Set the phone number.', CC_DOMAIN ),
+				'desc'     => esc_html__( 'Chnage the phone number.', CC_DOMAIN ),
+				'validate' => 'numeric',
+				'default'  => '123456789'
+			],
+			[
+				'id'          => 'cc-header-top-section-social',
+				'type'        => 'repeater',
+				'title'       => esc_html__( 'Social Links', CC_DOMAIN ),
+				'subtitle'    => esc_html__( 'Set the social link into the top bar.', CC_DOMAIN ),
+				'desc'        => esc_html__( 'Change the social links from here.', CC_DOMAIN ),
+				'item_name'   => 'Add New',
+				'sortable'    => true,
+				'active'      => false,
+				'collapsible' => false,
+				'fields'      => [
+					[
+						'id'       => 'social-share-item-name',
+						'type'     => 'text',
+						'title'    => esc_html__( 'item name to remember.', CC_DOMAIN ),
+						'validate' => 'not_empty',
+						'default'  => 'Facebook'
+					],
+					[
+						'id'       => 'social-share-class-name',
+						'type'     => 'text',
+						'title'    => esc_html__( 'Set Font-Awesome Class Name', CC_DOMAIN ),
+						'validate' => 'not_empty',
+						'default'  => 'fa-brands fa-facebook-f'
+					],
+					[
+						'id'       => 'social-share-class-link',
+						'type'     => 'text',
+						'title'    => esc_html__( 'Set the social link.', CC_DOMAIN ),
+						'validate' => 'url',
+						'default'  => 'https://www.facebook.com/'
+					],
+				]
+			],
+		]
 	]
 );
 
