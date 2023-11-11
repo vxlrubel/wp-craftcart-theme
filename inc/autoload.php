@@ -33,7 +33,6 @@ require_once dirname(__FILE__) . '/options.php';
 $classes = [
     'tgm-plugin-activation',
     'activation',
-    'nav-walker'
 ];
 
 foreach ( $classes as $class ) {
@@ -87,5 +86,27 @@ foreach ( $widgets_item as $item ) {
     $widgets = file_exists( $widget ) ? $widget : cc_error("This file {$widget} not exists.");
     
     require_once $widgets;
+
+}
+
+
+/**
+ * nav walker setup
+ * 
+ * @return void
+ */
+$walker_items = [
+    'cc-menu-fields',
+    'cc-nav-walker'
+];
+
+foreach ( $walker_items as $item ) {
+    // get the widget file name
+    $file = dirname(__FILE__) . "/walker/class-{$item}.php";
+
+    // prepare file to require
+    $files = file_exists( $file ) ? $file : cc_error("This file {$file} not exists.");
+    
+    require_once $files;
 
 }
