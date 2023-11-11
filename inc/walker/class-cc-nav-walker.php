@@ -1,370 +1,182 @@
 <?php
 /**
- * Custom wp_nav_menu walker.
+ * Nav Menu API: Walker_Nav_Menu class
  *
- * @package OceanWP WordPress theme
+ * @package WordPress
+ * @subpackage Nav_Menus
+ * @since 4.6.0
  */
 
+/**
+ * Core class used to implement an HTML list of nav menu items.
+ *
+ * @since 3.0.0
+ *
+ * @see Walker
+ */
 
 class CC_Nav_Walker extends Walker_Nav_Menu {
-   /**
-    * Middle logo menu breaking point
-    *
-    * @access  private
-    * @var init
-    */
-   private $break_point = null;
+	
+	public function start_lvl( &$output, $depth = 0, $args = null ) {
 
-   /**
-    * Middle logo menu number of top level items displayed
-    *
-    * @access  private
-    * @var init
-    */
-   private $displayed = 0;
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$indent = str_repeat( $t, $depth );
 
-   /**
-    * Starts the list before the elements are added.
-    *
-    * @since 3.0.0
-    *
-    * @see Walker::start_lvl()
-    *
-    * @param string   $output Used to append additional content (passed by reference).
-    * @param int      $depth  Depth of menu item. Used for padding.
-    * @param stdClass $args   An object of wp_nav_menu() arguments.
-    */
-   public function start_lvl( &$output, $depth = 0, $args = null ) {
-      $indent = str_repeat( "\t", $depth );
+		// Default class.
+		$classes = array( 'sub-menu' );
 
-      // Megamenu columns
-      $col = ! empty( $this->megamenu_col ) ? ( 'col-' . $this->megamenu_col . '' ) : 'col-2';
 
-      if ( $depth === 0 && $this->megamenu != '' ) {
-         $output .= "\n$indent<div class=\"category-sub-menu bg-1 TabletopSubMenu\"> <div class=\"row g-4\ {$col}\">\n";
-      } else {
-         $output .= "\n$indent<ul class=\"sub-menu\">\n";
-      }
-   }
+		$class_names = implode( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
 
-   /**
-    * Starts the element output.
-    *
-    * @since 3.0.0
-    * @since 4.4.0 The {@see 'nav_menu_item_args'} filter was added.
-    *
-    * @see Walker::start_el()
-    *
-    * @param string   $output Used to append additional content (passed by reference).
-    * @param WP_Post  $item   Menu item data object.
-    * @param int      $depth  Depth of menu item. Used for padding.
-    * @param stdClass $args   An object of wp_nav_menu() arguments.
-    * @param int      $id     Current item ID.
-    */
-   public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-      $args = (object) $args;
+		$atts          = array();
+		$atts['class'] = ! empty( $class_names ) ? $class_names : '';
 
-      global $wp_query;
-      $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+	
+		$atts       = apply_filters( 'nav_menu_submenu_attributes', $atts, $args, $depth );
+		$attributes = $this->build_atts( $atts );
 
-      // Set some vars
-      if ( $depth === 0 ) {
-         $this->megamenu            = get_post_meta( $item->ID, '_menu_item_megamenu', true );
-         $this->megamenu_col        = get_post_meta( $item->ID, '_menu_item_megamenu_col', true );
+		// $output .= "{$n}{$indent}<ul{$attributes}>{$n}";
+
+      $output .= "<div class=\"category-sub-menu bg-1 TabletopSubMenu\"><div class=\"row g-4\">\n";
+	}
+
+	public function end_lvl( &$output, $depth = 0, $args = null ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		// $indent  = str_repeat( $t, $depth );
+		$output .= "</div></div>\n";
+	}
+
+	public function start_el( &$output, $data_object, $depth = 0, $args = null, $current_object_id = 0 ) {
+
+      if( $depth === 0 ){
+         $this->megamenu = get_post_meta( $data_object->ID, '_menu_item_megamenu', true );
+         $this->megamenu_col = get_post_meta( $data_object->ID, '_menu_item_megamenu_col', true );
       }
 
-      // Set up empty variable.
-      $class_names = '';
+      echo $depth;
+      
+		// Restores the more descriptive, specific name for use within this method.
+		$menu_item = $data_object;
 
-      $classes   = empty( $item->classes ) ? array() : (array) $item->classes;
-      $classes[] = 'menu-item-' . $item->ID;
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
-      // Mega menu and Hide headings
-      if ( $depth === 0 && $this->has_children ) {
-         if ( $this->megamenu != '' && $this->megamenu_auto_width == '' ) {
-            $classes[] = 'megamenu-li full-mega';
-         } elseif ( $this->megamenu != '' && $this->megamenu_auto_width != '' ) {
-            $classes[] = 'megamenu-li auto-mega';
-         }
+		$classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
+		$classes[] = 'menu-item-' . $menu_item->ID;
 
-         if ( $this->megamenu != '' && $this->megamenu_heading != '' ) {
-            $classes[] = 'hide-headings';
-         }
+
+		$args = apply_filters( 'nav_menu_item_args', $args, $menu_item, $depth );
+
+
+		$class_names = implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $menu_item, $args, $depth ) );
+
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $menu_item->ID, $menu_item, $args, $depth );
+
+		$li_atts          = array();
+		$li_atts['id']    = ! empty( $id ) ? $id : '';
+		$li_atts['class'] = ! empty( $class_names ) ? $class_names : '';
+
+
+		$li_atts       = apply_filters( 'nav_menu_item_attributes', $li_atts, $menu_item, $args, $depth );
+		$li_attributes = $this->build_atts( $li_atts );
+
+		// $output .= $indent . '<li' . $li_attributes . '>';
+		// $output .= $indent . '<li class="nav-item NavSubBranceHover" >';
+
+      if( $depth === 0 ){
+         $output .= '<li class="nav-item" >';
+      }
+      else{
+         $output .= '<li>';
       }
 
-      // Latest post for menu item categories
-      if ( $item->category_post != '' && $item->object == 'category' ) {
-         $classes[] = 'menu-item-has-children megamenu-li full-mega mega-cat';
+		$atts           = array();
+		$atts['title']  = ! empty( $menu_item->attr_title ) ? $menu_item->attr_title : '';
+		$atts['target'] = ! empty( $menu_item->target ) ? $menu_item->target : '';
+		if ( '_blank' === $menu_item->target && empty( $menu_item->xfn ) ) {
+			$atts['rel'] = 'noopener';
+		} else {
+			$atts['rel'] = $menu_item->xfn;
+		}
+
+		if ( ! empty( $menu_item->url ) ) {
+			if ( get_privacy_policy_url() === $menu_item->url ) {
+				$atts['rel'] = empty( $atts['rel'] ) ? 'privacy-policy' : $atts['rel'] . ' privacy-policy';
+			}
+
+			$atts['href'] = $menu_item->url;
+		} else {
+			$atts['href'] = '';
+		}
+
+		$atts['aria-current'] = $menu_item->current ? 'page' : '';
+
+
+		$atts       = apply_filters( 'nav_menu_link_attributes', $atts, $menu_item, $args, $depth );
+		$attributes = $this->build_atts( $atts );
+
+		/** This filter is documented in wp-includes/post-template.php */
+		$title = apply_filters( 'the_title', $menu_item->title, $menu_item->ID );
+
+		$title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
+
+		$item_output  = $args->before;
+
+      if( $depth === 0 ){
+         $item_output .= '<div class="d-flex"><a' . $attributes . '>';
+         $item_output .= $args->link_before . $title . $args->link_after;
+         $item_output .= '</a></div>';
+      }
+      else{
+         $item_output .= '<a' . $attributes . '>';
+         $item_output .= $args->link_before . $title . $args->link_after;
+         $item_output .= '</a>';
       }
 
-      // Nav no click
-      if ( $item->nolink != '' ) {
-         $classes[] = 'nav-no-click';
-      }
+		
+		$item_output .= $args->after;
 
-      /**
-       * Filters the arguments for a single nav menu item.
-       *
-       * @since 4.4.0
-       *
-       * @param stdClass $args  An object of wp_nav_menu() arguments.
-       * @param WP_Post  $item  Menu item data object.
-       * @param int      $depth Depth of menu item. Used for padding.
-       */
-      $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $menu_item, $depth, $args );
+	}
 
-      /**
-       * Filters the CSS class(es) applied to a menu item's list item element.
-       *
-       * @since 3.0.0
-       * @since 4.1.0 The `$depth` parameter was added.
-       *
-       * @param array    $classes The CSS classes that are applied to the menu item's `<li>` element.
-       * @param WP_Post  $item    The current menu item.
-       * @param stdClass $args    An object of wp_nav_menu() arguments.
-       * @param int      $depth   Depth of menu item. Used for padding.
-       */
-      $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-      $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-      /**
-       * Filters the ID applied to a menu item's list item element.
-       *
-       * @since 3.0.1
-       * @since 4.1.0 The `$depth` parameter was added.
-       *
-       * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
-       * @param WP_Post  $item    The current menu item.
-       * @param stdClass $args    An object of wp_nav_menu() arguments.
-       * @param int      $depth   Depth of menu item. Used for padding.
-       */
-      $id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
-      $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+	public function end_el( &$output, $data_object, $depth = 0, $args = null ) {
+		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+			$t = '';
+			$n = '';
+		} else {
+			$t = "\t";
+			$n = "\n";
+		}
+		$output .= "</li>{$n}";
+	}
 
-      $output .= $indent . '<li' . $id . $class_names . '>';
-
-      $atts           = array();
-      $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-      $atts['target'] = ! empty( $item->target ) ? $item->target : '';
-      $atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
-      $atts['href']   = ! empty( $item->url ) ? $item->url : '';
-
-      /**
-       * Filters the HTML attributes applied to a menu item's anchor element.
-       *
-       * @since 3.6.0
-       * @since 4.1.0 The `$depth` parameter was added.
-       *
-       * @param array $atts {
-       *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
-       *
-       *     @type string $title  Title attribute.
-       *     @type string $target Target attribute.
-       *     @type string $rel    The rel attribute.
-       *     @type string $href   The href attribute.
-       * }
-       * @param WP_Post  $item  The current menu item.
-       * @param stdClass $args  An object of wp_nav_menu() arguments.
-       * @param int      $depth Depth of menu item. Used for padding.
-       */
-      $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
-
-      $attributes = '';
-      foreach ( $atts as $attr => $value ) {
-         if ( ! empty( $value ) ) {
-            $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-            $attributes .= ' ' . $attr . '="' . $value . '"';
-         }
-      }
-
-      /** This filter is documented in wp-includes/post-template.php */
-      $title = apply_filters( 'the_title', $item->title, $item->ID );
-
-      /**
-       * Filters a menu item's title.
-       *
-       * @since 4.4.0
-       *
-       * @param string   $title The menu item's title.
-       * @param WP_Post  $item  The current menu item.
-       * @param stdClass $args  An object of wp_nav_menu() arguments.
-       * @param int      $depth Depth of menu item. Used for padding.
-       */
-      $title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
-
-      // Output
-      $item_output = $args->before;
-
-      $item_output .= '<a' . $attributes . ' class="menu-link">';
-
-      $item_output .= $args->link_before . $title . $args->link_after;
-
-      // Description
-      if ( $item->description && 0 != $depth ) {
-         $item_output .= '<span class="nav-content">' . $item->description . '</span>';
-      }
-
-      $item_output .= '</a>';
-
-      if ( ( $item->template || $item->mega_template ) && $this->megamenu != '' ) {
-         ob_start();
-            include OCEANWP_INC_DIR . 'walker/template.php';
-            $template_content = ob_get_contents();
-         ob_end_clean();
-         $item_output .= $template_content;
-      }
-
-      if ( $item->megamenu_widgetarea && $this->megamenu != '' ) {
-         ob_start();
-            dynamic_sidebar( $item->megamenu_widgetarea );
-            $sidebar_content = ob_get_contents();
-         ob_end_clean();
-         $item_output .= $sidebar_content;
-      }
-
-      $item_output .= $args->after;
-
-      /**
-       * Filters a menu item's starting output.
-       *
-       * The menu item's starting output only includes `$args->before`, the opening `<a>`,
-       * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
-       * no filter for modifying the opening and closing `<li>` for a menu item.
-       *
-       * @since 3.0.0
-       *
-       * @param string   $item_output The menu item's starting HTML output.
-       * @param WP_Post  $item        Menu item data object.
-       * @param int      $depth       Depth of menu item. Used for padding.
-       * @param stdClass $args        An object of wp_nav_menu() arguments.
-       */
-      $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-
-   }
-
-   /**
-    * Ends the element output, if needed.
-    *
-    * @since 3.0.0
-    *
-    * @see Walker::end_el()
-    *
-    * @param string   $output Used to append additional content (passed by reference).
-    * @param WP_Post  $item   Page data object. Not used.
-    * @param int      $depth  Depth of page. Not Used.
-    * @param stdClass $args   An object of wp_nav_menu() arguments.
-    */
-   public function end_el( &$output, $item, $depth = 0, $args = null ) {
-
-      // Header style
-      // $header_style = oceanwp_header_style();
-
-      if ( $depth === 0 && $item->category_post != ''
-         && 'full_screen' != $header_style && 'vertical' != $header_style ) {
-         global $post;
-
-         $output .= "\n<ul class=\"megamenu col-4 sub-menu\">\n";
-
-            // Sub Categories ===============================================================
-         if ( $item->category_post != '' && $item->object == 'category' ) {
-            $no_sub_categories = $sub_categories_exists = $sub_categories = '';
-
-            $query_args     = array(
-               'child_of' => $item->object_id,
-            );
-            $sub_categories = get_categories( $query_args );
-
-            // Check if the category doesn't contain any sub categories.
-            if ( count( $sub_categories ) == 0 ) {
-               $sub_categories    = array( $item->object_id );
-               $no_sub_categories = true;
-            }
-
-            foreach ( $sub_categories as $category ) {
-
-               if ( ! $no_sub_categories ) {
-                  $cat_id = $category->term_id;
-               } else {
-                  $cat_id = $category;
-               }
-
-               $original_post = $post;
-               $count         = 0;
-
-               $args      = array(
-                  'posts_per_page'      => 4,
-                  'cat'                 => $cat_id,
-                  'no_found_rows'       => true,
-                  'ignore_sticky_posts' => true,
-               );
-               $cat_query = new WP_Query( $args );
-
-               // Title
-               $output .= '<h3 class="mega-cat-title">' . esc_html__( 'Latest in', 'oceanwp' ) . ' ' . get_cat_name( $cat_id ) . '</h3>';
-
-               while ( $cat_query->have_posts() ) {
-
-                  // first post
-                  $count++;
-
-                  if ( $count == 1 ) {
-                     $classes = 'mega-cat-post first';
-                  } else {
-                     $classes = 'mega-cat-post';
-                  }
-
-                  $cat_query->the_post();
-
-                  $output .= '<li class="' . $classes . '">';
-
-                  if ( has_post_thumbnail() ) {
-
-                     // Image args.
-                     $img_args = array(
-                        'alt' => get_the_title(),
-                     );
-
-                     $output .= '<a href="' . get_permalink() . '" class="mega-post-link">';
-
-                        $output .= get_the_post_thumbnail( get_the_ID(), 'medium', $img_args );
-
-                        $output .= '<span class="overlay"></span>';
-                     $output     .= '</a>';
-
-                     $output .= '<h3 class="mega-post-title"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h3>';
-
-                  }
-
-                  $output .= '</li>';
-               }
-
-               wp_reset_postdata();
-
-            }
-
-            $output .= '</ul>';
-         }
-      }
-
-      // </li> output.
-      $output .= '</li>';
-
-   }
-
-   /**
-    * Ends the list of after the elements are added.
-    *
-    * @since 3.0.0
-    *
-    * @see Walker::end_lvl()
-    *
-    * @param string   $output Used to append additional content (passed by reference).
-    * @param int      $depth  Depth of menu item. Used for padding.
-    * @param stdClass $args   An object of wp_nav_menu() arguments.
-    */
-   public function end_lvl( &$output, $depth = 0, $args = null ) {
-      $indent  = str_repeat( "\t", $depth );
-      $output .= "$indent</div></div>\n";
-   }
-
+	protected function build_atts( $atts = array() ) {
+		$attribute_string = '';
+		foreach ( $atts as $attr => $value ) {
+			if ( false !== $value && '' !== $value && is_scalar( $value ) ) {
+				$value             = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+				$attribute_string .= ' ' . $attr . '="' . $value . '"';
+			}
+		}
+		return $attribute_string;
+	}
 }

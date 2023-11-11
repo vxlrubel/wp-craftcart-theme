@@ -11,28 +11,15 @@
     <div class="container">
         <div class="HerosDiv row">
             <div class="col-2 hideOnPhone ComputerCatagoris NavSubBranceLI MidCataIcon">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Furniture</a>
-                        </div>
-                    </li>
 
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Holiday</a>
-                        </div>
-                    </li>
+                <?php cc_category_menu(); ?>
+
+                <ul class="navbar-nav">
+                    
 
                     <li class="nav-item">
                         <div class="d-flex">
                             <a class="nav-link" aria-current="page" href="./AllProduct.html">Lighting</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Bath</a>
                         </div>
                     </li>
 
@@ -110,24 +97,6 @@
                     <li class="nav-item">
                         <div class="d-flex">
                             <a class="nav-link" aria-current="page" href="./AllProduct.html">Kitchern</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Bedding</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Baby and Kids</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <div class="d-flex">
-                            <a class="nav-link" aria-current="page" href="./AllProduct.html">Celling</a>
                         </div>
                     </li>
 

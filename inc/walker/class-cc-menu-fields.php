@@ -47,7 +47,7 @@ class CC_Menu_Fields{
       
       ?> 
          <p>
-            <input type="checkbox" id="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>" value="megamenu" name="menu-item-megamenu[<?php echo esc_attr( $item->ID ); ?>]" <?php checked( $item->megamenu, 'megamenu'); ?> >
+            <input type="checkbox" id="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>" value="1" name="menu-item-megamenu[<?php echo esc_attr( $item->ID ); ?>]" <?php checked( $item->megamenu, '1'); ?> >
             <label for="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>"><?php esc_html_e( 'Enable Megamenu', CC_DOMAIN ); ?></label>
          </p>
 

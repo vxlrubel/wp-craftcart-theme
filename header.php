@@ -66,7 +66,7 @@
                                 <div class="NavClickAction" id="NavClickAction">
     
                                     <!-- category menu -->
-                                    <?php cc_category_menu(); ?>
+                                    
 
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
