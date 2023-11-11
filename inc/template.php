@@ -165,7 +165,8 @@ if( ! function_exists('cc_category_menu') ){
                 'theme_location' => 'category_menu',
                 'menu_class'     => 'navbar-nav',
                 'container'      => '',
-                'walker'        => new CC_Nav_Walker()
+                'menu_id'        => 'categoryMenu',
+                'walker'         => new CC_Nav_Walker()
             ];
             wp_nav_menu( $args );
         }
@@ -1222,6 +1223,7 @@ if( ! function_exists('cc_header_middle_area') ){
             <div class="MidNev">
                 <div class="container">
                     <div class="row">
+
                         <div class="logo col-2">
                             <?php cc_logo(); ?>
                         </div>
@@ -1282,6 +1284,7 @@ if( ! function_exists('cc_header_middle_area') ){
                             <?php cc_wc_profile(); ?>
 
                         </div>
+                        
                     </div>
                 </div>
             </div>

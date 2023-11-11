@@ -16,7 +16,6 @@ class CC_Menu_Fields{
       add_action( 'wp_update_nav_menu_item', [ $this, 'update_custom_fields' ], 10, 3);
    }
 
-
 	/**
 	 * Add custom menu style fields data to the menu.
 	 *
@@ -59,6 +58,7 @@ class CC_Menu_Fields{
          </p>
       <?php
    }
+
 
    /**
 	 * Add the custom menu style fields menu item data to fields in database.

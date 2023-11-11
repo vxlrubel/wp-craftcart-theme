@@ -12,11 +12,12 @@
         <div class="HerosDiv row">
             <div class="col-2 hideOnPhone ComputerCatagoris NavSubBranceLI MidCataIcon">
 
-                <?php cc_category_menu(); ?>
+                <?php 
+                    cc_category_menu();
+                 ?>
 
-                <ul class="navbar-nav">
+                <!-- <ul class="navbar-nav" id="categoryMenu">
                     
-
                     <li class="nav-item">
                         <div class="d-flex">
                             <a class="nav-link" aria-current="page" href="./AllProduct.html">Lighting</a>
@@ -40,7 +41,6 @@
                             </div>
                         </div>
 
-                        <!-- for deorop down li dtart -->
                         <div class="category-sub-menu bg-1 TabletopSubMenu">
                             <div class="row g-4">
                                 <div class="col-lg-4">
@@ -111,7 +111,7 @@
                             <a class="nav-link" aria-current="page" href="./AllProduct.html">Pet Supplies</a>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="col-7 fullwidtTebe HerosCarosul">
