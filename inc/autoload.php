@@ -33,6 +33,7 @@ require_once dirname(__FILE__) . '/options.php';
 $classes = [
     'tgm-plugin-activation',
     'activation',
+    'nav-walker'
 ];
 
 foreach ( $classes as $class ) {
