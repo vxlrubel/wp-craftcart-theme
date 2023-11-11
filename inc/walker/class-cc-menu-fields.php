@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Walker;
 // directly access denied
 defined('ABSPATH') || exit;
 

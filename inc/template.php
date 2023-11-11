@@ -153,6 +153,26 @@ if( ! function_exists('cc_primary_menu') ){
 }
 
 /**
+ * create category menu
+ * category menu will be the megamenu
+ * 
+ * @return void
+ */
+if( ! function_exists('cc_category_menu') ){
+    function cc_category_menu(){
+        if( has_nav_menu( 'category_menu' ) ){
+            $args  = [
+                'theme_location' => 'category_menu',
+                'menu_class'     => 'navbar-nav',
+                'container'      => '',
+                'walker'        => new CC_Nav_Walker()
+            ];
+            wp_nav_menu( $args );
+        }
+    }
+}
+
+/**
  * create custom footer menu
  * theme location 'footer_menu'
  * @return void
