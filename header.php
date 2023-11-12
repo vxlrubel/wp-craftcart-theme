@@ -63,7 +63,9 @@
                                 <i class="fa fa-xmark CatagorisIcinHideCros" id="CatagorisIcinHideCros"></i>
 
                                 <!-- scorle click action -->
-                                <div class="NavClickAction" id="NavClickAction"></div>
+                                <div class="NavClickAction" id="NavClickAction">
+                                    <?php cc_category_menu(); ?>
+                                </div>
                             </div>
         
                             <div class="horizontal-menu col-10">

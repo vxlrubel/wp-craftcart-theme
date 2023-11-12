@@ -26,11 +26,9 @@ class CC_Menu_Fields{
    public function add_custom_fields_meta( $menu_item ){
 
       $menu_item->megamenu     = get_post_meta( $menu_item->ID, '_menu_item_megamenu', true );
-      $menu_item->megamenu_col = get_post_meta( $menu_item->ID, '_menu_item_megamenu_col', true );
       
       return $menu_item;
    }
-
 
     /**
      * Add custom megamenu fields data to the menu.
@@ -49,13 +47,6 @@ class CC_Menu_Fields{
             <input type="checkbox" id="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>" value="1" name="menu-item-megamenu[<?php echo esc_attr( $item->ID ); ?>]" <?php checked( $item->megamenu, '1'); ?> >
             <label for="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>"><?php esc_html_e( 'Enable Megamenu', CC_DOMAIN ); ?></label>
          </p>
-
-         <p>
-            <label for="edit-menu-column-<?php echo esc_attr( $item->ID ); ?>">
-               <?php esc_html_e( 'Megamenu column width (max 3).', CC_DOMAIN ); ?>
-            </label>
-            <input type="number" min="2" max="3" id="edit-menu-column-<?php echo esc_attr( $item->ID ); ?>" value="<?php echo esc_attr( $item->megamenu_col ); ?>" name="menu-item-megamenu_col[<?php echo esc_attr( $item->ID ); ?>]" class="widefat">
-         </p>
       <?php
    }
 
@@ -71,17 +62,15 @@ class CC_Menu_Fields{
 	 */
    public function update_custom_fields( $menu_id, $menu_item_db_id, $args ){
 
-      $check = [ 'megamenu', 'megamenu_col' ];
+      $check = [ 'megamenu' ];
 
       foreach ($check as $key) {
          if( ! isset( $_POST['menu-item-'. $key][$menu_item_db_id] ) ){
             $_POST['menu-item-'. $key][$menu_item_db_id] = '';
          }
-
          $value = sanitize_text_field( wp_unslash( $_POST['menu-item-'. $key][$menu_item_db_id] ) );
 
          update_post_meta( $menu_item_db_id, "_menu_item_{$key}", $value );
-
       }
 
    }

@@ -3,7 +3,6 @@
         init() {
             this.carousel();
             this.increaseNDecrease();
-            this.cloneMenu();
         }
         carousel() {
             // brand carousel
@@ -72,10 +71,6 @@
                 // }
                 $('.updateable-cart').removeAttr('disabled');
             });
-        }
-
-        cloneMenu() {
-            $('#categoryMenu').clone().attr('class', 'navbar-nav').appendTo('#NavClickAction');
         }
     }
 
