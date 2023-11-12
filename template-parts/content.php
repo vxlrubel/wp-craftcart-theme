@@ -1,7 +1,7 @@
 <?php while( have_posts() ): the_post(); ?>
     <div class="col-lg-6 PerBlogDIvCol">
         <div class="PerBlogDIv">
-
+            <!-- get trimed title -->
             <h2><?php echo get_cc_trim_post_title(); ?></h2>
 
             <div>
@@ -37,7 +37,7 @@
 
             <?php 
                 printf( 
-                    '<a href="%s" class="BlogDatilsL">%s ></a>',
+                    '<a href="%s" class="BlogDatilsL">%s</a>',
                     esc_url( get_permalink( get_the_ID() ) ),
                     __( 'Read More', CC_DOMAIN )
                 );
