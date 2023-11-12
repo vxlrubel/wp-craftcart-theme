@@ -96,11 +96,14 @@
 
                             <!-- navber menu -->    
                             <div class="collapse navbar-collapse NavCaragoris" id="navbarNav">
+
+                                <!-- responsive mobile menu -->
+                                <?php cc_responsive_mobile_menu(); ?>
+                                
                                 <ul class="navbar-nav">
                                     <li class="MobileMwnuTitle">
                                         <span>All Categories</span> 
                                         <i class="fa-solid fa-xmark hidemobomenu" onclick="HideMiniNev()"></i>
-                                    </i>
                                     </li>
 
                                     <li class="nav-item">
@@ -146,9 +149,7 @@
                                             </div>
 
                                             <div>
-                                                <h6>
-                                                    Bed Room Furniture
-                                                </h6>
+                                                <h6>Bed Room Furniture</h6>
                                                 <ul>
                                                     <li><a href="./AllProduct.html">Flip Flops</a></li>
                                                     <li><a href="./AllProduct.html">Heeled Sandals</a></li>
@@ -228,6 +229,7 @@
                                     </li>
                                 </ul>
                             </div>
+                            
                             <!-- navber menu -->   
 
                             <div class="col-4 LogoTabe">

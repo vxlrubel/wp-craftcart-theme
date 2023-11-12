@@ -173,6 +173,21 @@ if( ! function_exists('cc_category_menu') ){
     }
 }
 
+
+if( ! function_exists('cc_responsive_mobile_menu') ){
+    function cc_responsive_mobile_menu(){
+        if( has_nav_menu( 'mobile_menu' ) ){
+            $args = [
+                'theme_location' => 'mobile_menu',
+                'menu_class'     => 'navbar-nav'
+            ];
+            wp_nav_menu( $args );
+        }
+    }
+}
+
+
+
 /**
  * create custom footer menu
  * theme location 'footer_menu'
@@ -1229,11 +1244,8 @@ if( ! function_exists('cc_header_middle_area') ){
                         </div>
 
                         <div class="Serchber col-7">
-
                             <?php cc_search_form(); ?>
-                            
                         </div>
-
                         <div class="SelectedIocn col-3">
                             <!-- <a href="./ShopingCart.html"> -->
                                 <div class="IconDiv NavCart">

@@ -203,6 +203,7 @@ final class Craft_Cart{
         $menus = [
             'primary_menu'  => __( 'Primary Menu', CC_DOMAIN ),
             'category_menu' => __( 'Category Menu', CC_DOMAIN ),
+            'mobile_menu'   => __( 'Responsive Mobile Menu', CC_DOMAIN ),
             'footer_menu'   => __( 'Footer Menu', CC_DOMAIN )
         ];
         register_nav_menus( $menus );
