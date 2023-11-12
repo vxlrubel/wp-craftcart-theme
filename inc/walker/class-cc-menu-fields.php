@@ -26,6 +26,7 @@ class CC_Menu_Fields{
    public function add_custom_fields_meta( $menu_item ){
 
       $menu_item->megamenu     = get_post_meta( $menu_item->ID, '_menu_item_megamenu', true );
+      $menu_item->responsive_menu     = get_post_meta( $menu_item->ID, '_menu_item_responsive_menu', true );
       
       return $menu_item;
    }
@@ -47,6 +48,11 @@ class CC_Menu_Fields{
             <input type="checkbox" id="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>" value="1" name="menu-item-megamenu[<?php echo esc_attr( $item->ID ); ?>]" <?php checked( $item->megamenu, '1'); ?> >
             <label for="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>"><?php esc_html_e( 'Enable Megamenu', CC_DOMAIN ); ?></label>
          </p>
+         <p>
+            <input type="checkbox" id="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>" value="1" name="menu-item-responsive_menu[<?php echo esc_attr( $item->ID ); ?>]" <?php checked( $item->responsive_menu, '1'); ?> >
+            <label for="edit-menu-item-<?php echo esc_attr( $item->ID ); ?>"><?php esc_html_e( 'Enable Responsive Mobile Menu', CC_DOMAIN ); ?></label>
+         </p>
+         
       <?php
    }
 
@@ -62,7 +68,7 @@ class CC_Menu_Fields{
 	 */
    public function update_custom_fields( $menu_id, $menu_item_db_id, $args ){
 
-      $check = [ 'megamenu' ];
+      $check = [ 'megamenu', 'responsive_menu' ];
 
       foreach ($check as $key) {
          if( ! isset( $_POST['menu-item-'. $key][$menu_item_db_id] ) ){

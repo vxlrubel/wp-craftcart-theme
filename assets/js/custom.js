@@ -3,6 +3,7 @@
         init() {
             this.carousel();
             this.increaseNDecrease();
+            this.closeMobileResponsiveMenu();
         }
         carousel() {
             // brand carousel
@@ -71,6 +72,10 @@
                 // }
                 $('.updateable-cart').removeAttr('disabled');
             });
+        }
+        closeMobileResponsiveMenu() {
+            $('#responsive-mobile-menu')
+                .prepend('<li class="MobileMwnuTitle"><span>All Categories</span><i class="fa-solid fa-xmark hidemobomenu" onclick="HideMiniNev()"></i></li>');
         }
     }
 

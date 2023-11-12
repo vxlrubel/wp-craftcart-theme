@@ -173,13 +173,21 @@ if( ! function_exists('cc_category_menu') ){
     }
 }
 
-
+/**
+ * create responsive mobile menu
+ * category menu will be the megamenu
+ * 
+ * @return void
+ */
 if( ! function_exists('cc_responsive_mobile_menu') ){
     function cc_responsive_mobile_menu(){
         if( has_nav_menu( 'mobile_menu' ) ){
             $args = [
                 'theme_location' => 'mobile_menu',
-                'menu_class'     => 'navbar-nav'
+                'menu_class'     => 'navbar-nav',
+                'container'      => '',
+                'menu_id'        => 'responsive-mobile-menu',
+                'walker'         => new CC_Nav_Responsive_Walker()
             ];
             wp_nav_menu( $args );
         }

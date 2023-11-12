@@ -97,7 +97,8 @@ foreach ( $widgets_item as $item ) {
  */
 $walker_items = [
     'cc-menu-fields',
-    'cc-nav-walker'
+    'cc-nav-walker',
+    'cc-nav-responsive-walker'
 ];
 
 foreach ( $walker_items as $item ) {
