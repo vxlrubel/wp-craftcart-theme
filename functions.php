@@ -32,7 +32,7 @@ final class Craft_Cart{
         new CC\Frontend\Register_Scripts;
 
         // recomended & required plugins activate
-        // new CC\Plugins\Activation;
+        new CC\Plugins\Activation;
 
         // initiate the default programms
         add_action( 'after_setup_theme', [ $this, 'initiate_theme'] );
