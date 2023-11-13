@@ -52,7 +52,6 @@ if( ! function_exists('is_enable_options') ){
 
         // enable theme options 
         global $cc;
-
         if( $cc[$options] == 1 )
             return true;
 
@@ -1468,16 +1467,16 @@ if( !function_exists('cc_get_product_query')){
  * @return void
  */
 if( ! function_exists('cc_custom_cat_product') ){
-    function cc_custom_cat_product( array $categories ){ ?>
+    function cc_custom_cat_product( array $categories, string $title = '' ){
+        if( ! class_exists('WooCommerce') ) return;
+        $shop_page_url = esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ); ?>
 
         <section class="CommonpaddingSection TitleBorderBottom">
             <div class="container">
                 <div class="row Brandsection">
                     <div class="Titelh42 row RowPadingError RowMarginError">
                         <div class="col-3 RowPadingError RowMarginError">
-                            <h4>
-                                Furniture
-                            </h4>
+                            <h4><?php echo $title?></h4>
                         </div>
                         <!-- Dropdown title div start -->
                         <div class="col-6 ProductDropdown DisNoneinPhone">
@@ -1521,7 +1520,7 @@ if( ! function_exists('cc_custom_cat_product') ){
 
                         <div class="col-3 TitleCntent RowPadingError RowMarginError">
                             <div class="SeeAlSpan">
-                                <a href="./AllProduct.html">
+                                <a href="<?php echo $shop_page_url; ?>">
                                     See More
                                 </a>
                             </div>
@@ -1563,8 +1562,6 @@ if( ! function_exists('cc_custom_cat_product') ){
 
                     <!-- Tile Dropdown  expend start -->
                     <div class="tab-content">
-
-
 
                     <?php
                         foreach ( $categories as $key => $category_name ) {
@@ -1637,4 +1634,130 @@ if( ! function_exists('cc_custom_cat_product') ){
         </section>        
         <?php
     }
+}
+
+
+/**
+ * get furniture product section
+ * 
+ * @return object
+ */
+if( ! function_exists('cc_product_furniture') ){
+    function cc_product_furniture(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-product-furniture-visibility') ) return;
+
+        if( ! class_exists('WooCommerce') ) return;
+
+        $title = esc_html( $cc['cc-homepage-product-furniture-title'] );
+
+        cc_custom_cat_product( $cc['cc-homepage-product-furniture-cat'], $title );
+            
+    }
+}
+
+
+/**
+ * get light product section
+ * 
+ * @return object
+ */
+if( ! function_exists('cc_product_light') ){
+    function cc_product_light(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-product-light-visibility') ) return;
+
+        if( ! class_exists('WooCommerce') ) return;
+
+        $title = esc_html( $cc['cc-homepage-product-light-title'] );
+
+        cc_custom_cat_product( $cc['cc-homepage-product-light-cat'], $title );
+            
+    }
+}
+
+/**
+ * get pet suplies product section
+ * 
+ * @return object
+ */
+if( ! function_exists('cc_product_pet_suplies') ){
+    function cc_product_pet_suplies(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-product-pet_suplies-visibility') ) return;
+
+        if( ! class_exists('WooCommerce') ) return;
+
+        $title = esc_html( $cc['cc-homepage-product-pet_suplies-title'] );
+
+        cc_custom_cat_product( $cc['cc-homepage-product-pet_suplies-cat'], $title );
+            
+    }
+}
+
+/**
+ * get kitchen product section
+ * 
+ * @return object
+ */
+if( ! function_exists('cc_product_kitchen') ){
+    function cc_product_kitchen(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-product-kitchen-visibility') ) return;
+
+        if( ! class_exists('WooCommerce') ) return;
+
+        $title = esc_html( $cc['cc-homepage-product-kitchen-title'] );
+
+        cc_custom_cat_product( $cc['cc-homepage-product-kitchen-cat'], $title );
+            
+    }
+}
+
+/**
+ * get bedding product section
+ * 
+ * @return object
+ */
+if( ! function_exists('cc_product_bedding') ){
+    function cc_product_bedding(){
+        global $cc;
+
+        if( ! is_enable_options('cc-homepage-product-bedding-visibility') ) return;
+
+        if( ! class_exists('WooCommerce') ) return;
+
+        $title = esc_html( $cc['cc-homepage-product-bedding-title'] );
+
+        cc_custom_cat_product( $cc['cc-homepage-product-bedding-cat'], $title );
+            
+    }
+}
+
+if( ! function_exists( 'cc_hero_section') ){
+    function cc_hero_section(){ ?>
+        <section class="HerosSection HerosSection2">
+            <div class="container">
+                <div class="HerosDiv row">
+                    <div class="col-2 hideOnPhone ComputerCatagoris NavSubBranceLI MidCataIcon">
+
+                        <!-- category meny -->
+                        <?php cc_category_menu(); ?>
+                    </div>
+
+                    <div class="col-7 fullwidtTebe HerosCarosul">
+                        <?php cc_home_slider(); ?>
+                    </div>
+
+                    <div class="col-3 hideOnPhone HerosRightSide">
+                        <?php cc_home_top_side_banner(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php }
 }
