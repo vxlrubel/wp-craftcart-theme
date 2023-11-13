@@ -38,6 +38,17 @@ CraftCart is a beautifully designed and feature-rich WooCommerce theme tailored 
 
 ### Menu
 
- - 01. Primary Menu:
+ - Primary Menu:
    - create a primary menu from menu section. Goto Appearance&gt;Menus. Add items to primary menu and check
                   the primary menu below the menu item and save changes.
+ - Megamenu (category):
+   - Create a category menu and add menu items from left side to the menu. check the "Enable Megamenu"
+                  options then cheage the menu items depth using drag and drop. remember there will 3 column so depth
+                  will be maximum 3 and where depth two this will be be the column title without link.
+ - Responsive Mobile Menu:
+   - create a responsive mobile menu and add item into the menu then check the "Enable Responsive Mobile
+                  Menu". and it also allow 3 depth of the menu items. finaly check "responsive mobile menu" below the
+                  menu item and save changes. it will show when your site is going to mobile view.
+
+### Typhography
+   - comming soon...
