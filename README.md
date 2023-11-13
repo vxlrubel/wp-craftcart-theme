@@ -17,13 +17,13 @@ CraftCart is a beautifully designed and feature-rich WooCommerce theme tailored 
 ### Header Options
 
 - Inside the header options you can see 3 different options
-   - 01. Top Section: 
+   - Top Section: 
       - Show All the content of top header.
       - You may able to change the top header content from here.
-   - 02. Middle Section
+   - Middle Section
       - Show All the content of Middle header.
       - You may able to change the Middle header content from here.
-   - 03. Bottom Section
+   - Bottom Section
       - Show All the content of Bottom Header.
       - You may able to change the bottom header content from here.
 
