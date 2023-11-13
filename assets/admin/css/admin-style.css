@@ -19,6 +19,14 @@
     padding-left: 1.5rem;
 }
 
+.d-block {
+    display: block !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
 .p-15 {
     padding: 15px !important;
 }
