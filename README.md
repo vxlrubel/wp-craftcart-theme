@@ -30,11 +30,11 @@ CraftCart is a beautifully designed and feature-rich WooCommerce theme tailored 
 
 ### Homepage
 
-   - 01. Create a page (example: Homepage ) from page section and select template "frontend" and publish.
-   - 02. After publish the page goto Setting&gt;Reading select hompage from static page.
-   - 03. After that visit homepage sectino from craft cart menu.
-   - 04. Modify the homepage content.
-   - 05. All available content inside the homepage section.
+   - Create a page (example: Homepage ) from page section and select template "frontend" and publish.
+   - After publish the page goto Setting&gt;Reading select hompage from static page.
+   - After that visit homepage sectino from craft cart menu.
+   - Modify the homepage content.
+   - All available content inside the homepage section.
 
 ### Menu
 
