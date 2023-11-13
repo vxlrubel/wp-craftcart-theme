@@ -1433,15 +1433,14 @@ if( ! function_exists('cc_wc_profile') ){
 }
 
 
-
+/**
+ * get product category query
+ *
+ * @param [type] $term_id
+ * @return $query | object
+ */
 if( !function_exists('cc_get_product_query')){
 
-    /**
-     * get product category query
-     *
-     * @param [type] $term_id
-     * @return $query | object
-     */
     function cc_get_product_query( $term_id ){
         $args = [
             'post_type'      => 'product',
@@ -1462,9 +1461,14 @@ if( !function_exists('cc_get_product_query')){
 }
 
 
-
+/**
+ * get mixitup product
+ *
+ * @param array $categories
+ * @return void
+ */
 if( ! function_exists('cc_custom_cat_product') ){
-    function cc_custom_cat_product( array $categories ){?>
+    function cc_custom_cat_product( array $categories ){ ?>
 
         <section class="CommonpaddingSection TitleBorderBottom">
             <div class="container">
@@ -1475,14 +1479,17 @@ if( ! function_exists('cc_custom_cat_product') ){
                                 Furniture
                             </h4>
                         </div>
-
                         <!-- Dropdown title div start -->
                         <div class="col-6 ProductDropdown DisNoneinPhone">
                             <ul class="nav nav-tab">
 
                                 <?php
-                                    foreach ( $categories as $category_name ) {
-                                        $category = get_term_by( 'name', $category_name, 'product_cat' );
+                                    foreach ( $categories as $key => $category_name ) {
+                                        $category     = get_term_by( 'name', $category_name, 'product_cat' );
+                                        $active_class = '';
+                                        if( $key === 0 ){
+                                            $active_class = 'active';
+                                        }
 
                                         if( $category ){
 
@@ -1490,7 +1497,13 @@ if( ! function_exists('cc_custom_cat_product') ){
 
                                             if( $cat->have_posts() ):
 
-                                                printf( '<li><a class="nav-link text-capitalize" data-bs-toggle="tab" href="#%s">%s</a></li>', $category_name, $category_name );
+                                                printf( 
+                                                    '<li class="%s"><a class="nav-link text-capitalize %s" data-bs-toggle="tab" href="#%s">%s</a></li>',
+                                                    $active_class,
+                                                    $active_class,
+                                                    $category_name,
+                                                    $category_name,
+                                                );
 
                                             else:
                                                 echo 'No Category Found';
@@ -1554,8 +1567,14 @@ if( ! function_exists('cc_custom_cat_product') ){
 
 
                     <?php
-                        foreach ( $categories as $category_name ) {
+                        foreach ( $categories as $key => $category_name ) {
                             $category = get_term_by( 'name', $category_name, 'product_cat' );
+
+                            if( $key ==- 0 ){
+                                $active_class = 'show active';
+                            }else{
+                                $active_class = 'nothing';
+                            }
 
                             if( $category ){
 
@@ -1563,51 +1582,37 @@ if( ! function_exists('cc_custom_cat_product') ){
                                 $cat = cc_get_product_query( $category->term_id );
 
                                 if( $cat->have_posts() ): ?>
-                                    <div class="tab-pane fade show active" id="<?php echo $category_name; ?>">
+                                    <div class="tab-pane fade <?php echo $active_class; ?>" id="<?php echo $category_name; ?>">
                                         <div class="row"> 
                                             <?php while( $cat->have_posts() ): $cat->the_post(); ?>
 
-                                                <?php wc_get_template_part('content', 'product'); ?>
-
-                                                <!-- <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
+                                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
                                                     <div class="PerProductDiv">
-                                                        <a href="./Product-Page.html">
+                                                        <a href="<?php esc_url(the_permalink( get_the_ID() )); ?>">
                                                             <div class="ProductImgage">
-                                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
-                                                                <div class="DiscountPersentese">
-                                                                    -30%
-                                                                </div>
-                                                                <div class="ProductLove">
-                                                                    <i class="fa-regular fa-heart"></i>
-                                                                </div>
+                                                                <?php 
+                                                                    if( has_post_thumbnail( get_the_ID() )){
+                                                                        the_post_thumbnail();
+                                                                    }
+                                                                ?>
+                                                                <div class="cc-flast-sale">
+                                                                <?php woocommerce_show_product_loop_sale_flash(); ?>
+                                                            </div>
+                                                            <div class="cc-wishlist">
+                                                                <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
+                                                            </div>
                                                             </div>
 
                                                             <div class="PrductText">
-                                                                <p class="ProductTitle">Bathroom Cabinets</p>
-                                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
+                                                                <p class="ProductTitle"><?php echo get_cc_trim_post_title(25); ?></p>
+                                                                <p><span class="Price"> <?php woocommerce_template_loop_price(); ?> </span></p>
                                                                 <ul class="StartList"> 
-                                                                    <li>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </li> 
-                                                                    <li>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </li> 
-                                                                    <li>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </li> 
-                                                                    <li>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </li> 
-                                                                    <li>
-                                                                        <i class="fa-solid fa-star"></i>
-                                                                    </li>
-                                                                </ul>
+                                                                <?php woocommerce_template_loop_rating(); ?>
+                                                            </ul>
                                                             </div>
                                                         </a>
                                                     </div>
-                                                </div> -->
-
+                                                </div>
 
                                             <?php endwhile;
 
@@ -1625,155 +1630,11 @@ if( ! function_exists('cc_custom_cat_product') ){
                                 echo 'Category Not Found';
                             }
                         }
-                    
-                    
                     ?>
-                    
-                    
-                    
-                    
-                    
-                    
-
-
-                        <div class="tab-pane fade" id="Bath">
-                            <div class="row">
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product4.jpg" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="kitchen">
-                            <div class="row">
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product1.jpg" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="Dining">
-                            <div class="row">
-                                <div class="DuleProduct laptopWideth20 col-md-4 col-sm-4 Mobile50">
-                                    <div class="PerProductDiv">
-                                        <a href="./Product-Page.html">
-                                            <div class="ProductImgage">
-                                                <img src="<?php echo get_template_directory_uri(); ?> /assets/img/Product/Product6.jpg" alt="">
-                                                <div class="DiscountPersentese">
-                                                    -30%
-                                                </div>
-                                                <div class="ProductLove">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </div>
-                                            </div>
-
-                                            <div class="PrductText">
-                                                <p class="ProductTitle">Bathroom Cabinets Bathroom Cabinets</p>
-                                                <p><span class="Price"> 500৳ </span> </span><span class="Discount">৳600</span></p>
-
-                                                <ul class="StartList"> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li> 
-                                                    <li>
-                                                        <i class="fa-solid fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
-                    <!-- Tile Dropdown  expend start -->
                 </div>
             </div>
-        </section>
-
-  
-        
+        </section>        
         <?php
     }
 }

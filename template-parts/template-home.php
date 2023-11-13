@@ -50,20 +50,25 @@ cc_banner_image(1);
 <?php cc_popular_categories(); ?>
 <!-- Catagoris end -->
 
-
-<div class="container py-5">
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi saepe dolorum, incidunt nihil sit facere consectetur quibusdam earum fugiat quidem.</p>
-
-
-</div>
-
 <!-- Flash Sale start -->
 
 <?php cc_flash_sale_product(); ?>
 
 <!-- Furniture section start -->
 
-<?php cc_custom_cat_product(['accessories', 'hoodies', 'tshirts']); ?>
+
+<?php global $cc; 
+
+
+
+pre( $cc['cc-homepage-product-furniture-title']);
+
+
+
+?>
+
+
+<?php cc_custom_cat_product( $cc['cc-homepage-product-furniture-cat']); ?>
 
 
 <Section class="CommonpaddingSection TitleBorderBottom">
@@ -314,7 +319,7 @@ cc_banner_image(1);
                         </div>
                     </div>
                 </div>
-                
+
             </div>
             <!-- Tile Dropdown  expend start -->
         </div>

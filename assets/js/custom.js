@@ -118,6 +118,8 @@
             });
         });
 
+        // add active & show class
+
     });
 
     // add to cart items count
