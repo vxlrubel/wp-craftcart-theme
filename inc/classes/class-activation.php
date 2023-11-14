@@ -18,44 +18,33 @@ class Activation{
 	 * @return void
 	 */
 	public function activate(){
-		$plugins = array(
-			// array(
-			// 	'name'               => 'TGM Example Plugin',
-			// 	'slug'               => 'tgm-example-plugin',
-			// 	'source'             => get_template_directory() . '/lib/plugins/tgm-example-plugin.zip',
-			// 	'required'           => true,
-			// 	'version'            => '',
-			// 	'force_activation'   => false,
-			// 	'force_deactivation' => false, 
-			// 	'external_url'       => '', 
-			// 	'is_callable'        => '',
-			// ),
-	
-			// array(
-			// 	'name'         => 'TGM New Media Plugin',
-			// 	'slug'         => 'tgm-new-media-plugin',
-			// 	'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip',
-			// 	'required'     => true,
-			// 	'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader',
-			// ),
-			array(
-				'name'      => 'Adminbar Link Comments to Pending',
-				'slug'      => 'adminbar-link-comments-to-pending',
-				'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
-			),
-			array(
+
+		$plugins = [
+			[
 				'name'      => 'WooCommerce',
 				'slug'      => 'woocommerce',
 				'required'  => true,
-			),
-			array(
-				'name'        => 'WordPress SEO by Yoast',
-				'slug'        => 'wordpress-seo',
-				'is_callable' => 'wpseo_init',
-			),
+			],
+			[
+				'name'      => 'YITH WooCommerce Wishlist',
+				'slug'      => 'yith-woocommerce-wishlist',
+				'required'  => true,
+			],
+			[
+				'name'        => 'Litespeed Cache',
+				'slug'        => 'litespeed-cache',
+			],
+			[
+				'name'        => 'Rank Math',
+				'slug'        => 'seo-by-rank-math',
+			],
+			[
+				'name'        => 'Elementor Page Builder',
+				'slug'        => 'elementor',
+			],
 	
-		);
-		$config = array(
+		];
+		$config = [
 			'id'           => 'craft-cart',
 			'default_path' => '',
 			'menu'         => 'tgmpa-install-plugins',
@@ -64,7 +53,7 @@ class Activation{
 			'dismiss_msg'  => '', 
 			'is_automatic' => false,
 			'message'      => '', 
-		);
+		];
 		tgmpa( $plugins, $config );
 	}
 }
