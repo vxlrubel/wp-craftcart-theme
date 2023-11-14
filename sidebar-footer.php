@@ -2,7 +2,8 @@
     <div class="container CommonpaddingSection">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h4>Buy And Sell</h4>
+                <?php dynamic_sidebar( 'cc-footer-widgets-1' ); ?>
+                <!-- <h4>Buy And Sell</h4>
 
                 <ul>
                     <li class="footerLi">
@@ -34,11 +35,12 @@
                             <span>-</span>Property material buy&sell
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h4>Document Processing</h4>
+                <?php dynamic_sidebar( 'cc-footer-widgets-2' ); ?>
+                <!-- <h4>Document Processing</h4>
 
                 <ul>
                     <li class="footerLi">
@@ -70,11 +72,12 @@
                             <span>-</span>Inherited property clearance
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h4>Real Estate Productss</h4>
+                <?php dynamic_sidebar( 'cc-footer-widgets-3' ); ?>
+                <!-- <h4>Real Estate Productss</h4>
 
                 <ul>
                     <li class="footerLi">
@@ -106,11 +109,12 @@
                             <span>-</span>Govt. and Private project
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <h4>Property Marketing</h4>
+                <?php dynamic_sidebar( 'cc-footer-widgets-4' ); ?>
+                <!-- <h4>Property Marketing</h4>
 
                 <ul>
 
@@ -143,7 +147,7 @@
                             <span>-</span>Property advertisement setup
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
