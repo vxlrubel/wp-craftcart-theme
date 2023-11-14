@@ -192,6 +192,26 @@ if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] )
 // Add content after the form.
 $args['footer_text'] = '<p>' . esc_html__( 'This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
 
+
+
+$args['footer_text'] = '
+<div class="def-info">
+   <div class="thumb">
+      <img src="https://avatars.githubusercontent.com/u/45916970?v=4" alt="rubel mahmud">
+   </div>
+   <div class="details">
+      <h3>Rubel Mahmud (Sujan)</h3>
+      <strong>Connect with me:</strong>
+      <p>
+         <a href="https://www.linkedin.com/in/vxlrubel/" target="_blank">Linkedin</a>
+         <a href="https://twitter.com/vxlrubel" target="_blank">Twitter</a>
+         <a href="https://github.com/vxlrubel" target="_blank">Github</a>
+         <a href="https://www.reddit.com/user/vxlrubel" target="_blank">Reddit</a>
+         <a href="https://www.facebook.com/rubel.ft.me" target="_blank">Facebook</a>
+      </p>
+   </div>
+</div>
+';
 Redux::set_args( $opt_name, $args );
 
 /**

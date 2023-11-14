@@ -194,3 +194,65 @@
     margin-right: 3px;
     color: var(--color-primary);
 }
+
+/* developer info style */
+
+.def-info {
+    display: flex;
+    align-items: center;
+}
+
+.def-info .thumb {
+    width: 100px;
+    margin-right: 25px;
+}
+
+.def-info .thumb img {
+    border-radius: 4px;
+}
+
+.def-info .thumb img {
+    width: 100%;
+}
+
+.def-info .details {
+    width: calc(100% - 100px);
+}
+
+.def-info .details h3 {
+    margin: 0 0 5px;
+}
+
+.def-info .details a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    padding: 0 15px;
+    text-decoration: none;
+    color: white;
+    background: rgb(45, 52, 54);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.def-info .details a:nth-child(1) {
+    background: #0A63BC;
+}
+
+.def-info .details a:nth-child(2) {
+    background: #1C9BE9;
+}
+
+.def-info .details a:nth-child(3) {
+    background: #13161B;
+}
+
+.def-info .details a:nth-child(4) {
+    background: #F74300;
+}
+
+.def-info .details a:nth-child(5) {
+    background: #395693;
+}
