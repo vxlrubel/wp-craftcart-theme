@@ -229,7 +229,7 @@ final class Craft_Cart{
     /**
      * create singletone instance
      *
-     * @return void
+     * @return $instance
      */
     public static function init(){
         if( is_null( self::$instance ) )

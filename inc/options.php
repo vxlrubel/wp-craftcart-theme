@@ -155,23 +155,23 @@ $args = array(
 
 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
 $args['share_icons'][] = array(
-	'url'   => '//github.com/ReduxFramework/ReduxFramework',
+	'url'   => 'https://github.com/vxlrubel',
 	'title' => 'Visit us on GitHub',
 	'icon'  => 'el el-github',
 );
 $args['share_icons'][] = array(
-	'url'   => '//www.facebook.com/pages/Redux-Framework/243141545850368',
-	'title' => esc_html__( 'Like us on Facebook', 'your-textdomain-here' ),
+	'url'   => 'https://www.facebook.com/rubel.ft.me',
+	'title' => esc_html__( 'Like us on Facebook', CC_DOMAIN ),
 	'icon'  => 'el el-facebook',
 );
 $args['share_icons'][] = array(
-	'url'   => '//twitter.com/reduxframework',
-	'title' => esc_html__( 'Follow us on Twitter', 'your-textdomain-here' ),
+	'url'   => 'https://twitter.com/vxlrubel',
+	'title' => esc_html__( 'Follow us on Twitter', CC_DOMAIN ),
 	'icon'  => 'el el-twitter',
 );
 $args['share_icons'][] = array(
-	'url'   => '//www.linkedin.com/company/redux-framework',
-	'title' => esc_html__( 'Find us on LinkedIn', 'your-textdomain-here' ),
+	'url'   => 'https://www.linkedin.com/in/vxlrubel/',
+	'title' => esc_html__( 'Find us on LinkedIn', CC_DOMAIN ),
 	'icon'  => 'el el-linkedin',
 );
 
@@ -184,9 +184,9 @@ if ( ! isset( $args['global_variable'] ) || false !== $args['global_variable'] )
 	}
 
 	// translators:  Panel opt_name.
-	$args['intro_text'] = '<p>' . sprintf( esc_html__( 'Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: $%1$s', 'your-textdomain-here' ), '<strong>' . $v . '</strong>' ) . '<p>';
+	// $args['intro_text'] = '<p>' . sprintf( esc_html__( 'Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: $%1$s', 'your-textdomain-here' ), '<strong>' . $v . '</strong>' ) . '<p>';
 } else {
-	$args['intro_text'] = '<p>' . esc_html__( 'This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
+	// $args['intro_text'] = '<p>' . esc_html__( 'This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.', 'your-textdomain-here' ) . '</p>';
 }
 
 // Add content after the form.

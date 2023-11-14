@@ -200,6 +200,9 @@
 .def-info {
     display: flex;
     align-items: center;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    background: rgb(245, 246, 250);
 }
 
 .def-info .thumb {
