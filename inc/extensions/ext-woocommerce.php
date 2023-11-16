@@ -275,10 +275,30 @@ Redux::set_section(
          [
             'id'       => 'cc-commerce-payment-method-image',
             'type'     => 'media',
-            'title'    => esc_html__( 'Image', CC_DOMAIN ),
+            'title'    => esc_html__( 'Image 1', CC_DOMAIN ),
             'subtitle' => esc_html__( 'Change the payment image.', CC_DOMAIN ),
             'desc'     => esc_html__( 'Change the image to show in front-end.', CC_DOMAIN ),
             'default'  => [ 'url'=> CC_ASSETS_IMG . 'payment-method-default.jpg' ],
+            'url'      => false,
+            'required'=> [ 'cc-commerce-payment-method-visibility', '=', true ]
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-image2',
+            'type'     => 'media',
+            'title'    => esc_html__( 'Image 2', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the payment image.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change the image to show in front-end.', CC_DOMAIN ),
+            'default'  => [ 'url'=> CC_ASSETS_IMG . 'payment-method-default-2.jpg' ],
+            'url'      => false,
+            'required'=> [ 'cc-commerce-payment-method-visibility', '=', true ]
+         ],
+         [
+            'id'       => 'cc-commerce-payment-method-image3',
+            'type'     => 'media',
+            'title'    => esc_html__( 'Image 3', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the payment image.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Change the image to show in front-end.', CC_DOMAIN ),
+            'default'  => [ 'url'=> CC_ASSETS_IMG . 'payment-method-default-3.jpg' ],
             'url'      => false,
             'required'=> [ 'cc-commerce-payment-method-visibility', '=', true ]
          ],

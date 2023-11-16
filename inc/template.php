@@ -524,6 +524,15 @@ if( ! function_exists('cc_payment_method_image_integration') ){
                 '<div class="panel-body"><img src="%s"></div>',
                 $cc['cc-commerce-payment-method-image']['url']
             );
+            printf(
+                '<div class="panel-body"><img src="%s"></div>',
+                $cc['cc-commerce-payment-method-image2']['url']
+            );
+            printf(
+                '<div class="panel-body"><img src="%s"></div>',
+                $cc['cc-commerce-payment-method-image3']['url']
+            );
+            
             echo "</div>\n";
         endif;
     }
