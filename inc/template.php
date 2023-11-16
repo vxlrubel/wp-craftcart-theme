@@ -1420,7 +1420,7 @@ if( ! function_exists('cc_wc_profile') ){
                             printf(
                                 '<a href="%s" class="cc-login-logout-url">%s</a>',
                                 esc_url( wc_get_page_permalink('myaccount') ),
-                                esc_html('Login')
+                                esc_html('Login/Register')
                             );
                         }
 
