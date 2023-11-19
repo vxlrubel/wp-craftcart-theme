@@ -111,7 +111,9 @@ get_header(); ?>
                            <?php woocommerce_template_single_add_to_cart(); ?>
 
                            <div class="cc-single-page-wishlish">
-                              <?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); ?>
+                              <?php 
+                              echo do_shortcode( '[yith_wcwl_add_to_wishlist]'); 
+                              ?>
                            </div>
                         </div>
                      <?php endif; ?>
