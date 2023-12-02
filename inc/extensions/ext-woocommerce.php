@@ -393,3 +393,37 @@ Redux::set_section(
 
    ]
 );
+
+// login register form url generate options
+Redux::set_section(
+	$opt_name,
+	[
+      'id'         => 'cc-commerce-login-register',
+      'title'      => esc_html__( 'Login/Register', CC_DOMAIN ),
+      'subtitle'   => esc_html__( 'Change the login and register url.', CC_DOMAIN ),
+      'desc'       => esc_html__( 'You may change the login and register page url from here.', CC_DOMAIN ),
+      'subsection' => true,
+      'fields'     => [
+         [
+            'id'       => 'cc-commerce-login',
+            'type'     => 'text',
+            'title'    => esc_html__( 'Login', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the login url.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Paste the login url here. ', CC_DOMAIN ),
+            'default'  => esc_url( home_url('/') ),
+            'validate' => 'url'
+         ],
+         [
+            'id'       => 'cc-commerce-register',
+            'type'     => 'text',
+            'title'    => esc_html__( 'Register', CC_DOMAIN ),
+            'subtitle' => esc_html__( 'Change the register url.', CC_DOMAIN ),
+            'desc'     => esc_html__( 'Paste the register url here. ', CC_DOMAIN ),
+            'default'  => esc_url( home_url('/') ),
+            'validate' => 'url'
+         ],
+
+      ]
+
+   ]
+);

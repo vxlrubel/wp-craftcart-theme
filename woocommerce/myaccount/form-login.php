@@ -19,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+global $cc;
+
+$register_url = esc_url( $cc['cc-commerce-register'] );
+
 do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
@@ -29,19 +33,19 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php endif; ?>
 		<div class="cc-form-center">
-			<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+			<h2 class="my-4"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
 			<form class="woocommerce-form woocommerce-form-login login" method="post">
 
 				<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide  overflow-hidden">
 					<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text w-100" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 				</p>
-				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide overflow-hidden">
 					<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-					<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+					<input class="woocommerce-Input woocommerce-Input--text input-text w-100" type="password" name="password" id="password" autocomplete="current-password" />
 				</p>
 
 				<?php do_action( 'woocommerce_login_form' ); ?>
@@ -55,12 +59,15 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 				<div class="form-row">
 					<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-					<button type="submit" class="button-theme woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">
+					<button type="submit" class="w-100 py-2 px-3 border-0 rounded button-theme woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">
 						<?php esc_html_e( 'Log in', 'woocommerce' ); ?>
 					</button>
 				</div>
-				<p class="woocommerce-LostPassword lost_password">
+				<p class="woocommerce-LostPassword lost_password my-1 text-center">
 					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+				</p>
+				<p class="text-center">
+				Don't have an account ? <a href="<?php echo $register_url; ?>">Registrer here</a>
 				</p>
 
 				<?php do_action( 'woocommerce_login_form_end' ); ?>

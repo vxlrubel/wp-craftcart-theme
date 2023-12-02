@@ -41,6 +41,18 @@
                             </div>
         
                             <div class="ContactDiv col-5">
+                                <?php 
+                                    if( ! is_user_logged_in() ){
+                                        $login_url    = esc_url( $cc['cc-commerce-login'] );
+                                        $register_url = esc_url( $cc['cc-commerce-register'] );
+                                        ?>
+                                            <div class="float-right mx-3">
+                                                <a href="<?php echo $login_url; ?>">Login</a> / 
+                                                <a href="<?php echo $register_url; ?>">Register</a>
+                                            </div>
+                                        <?php
+                                    }
+                                ?>
                                 
                                 <div class="SocialIocn float-right">
                                     <?php cc_get_social_share(); ?>
