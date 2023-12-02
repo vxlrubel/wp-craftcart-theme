@@ -41,6 +41,7 @@
                             </div>
         
                             <div class="ContactDiv col-5">
+                                
                                 <div class="SocialIocn float-right">
                                     <?php cc_get_social_share(); ?>
                                 </div>
