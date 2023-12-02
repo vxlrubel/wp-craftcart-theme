@@ -6,7 +6,6 @@
 
  get_header(); ?>
 
-
 <section class="HerosSection CommonpaddingSection LoginSection">
    <div class="container">
       <div class="row">
@@ -20,7 +19,6 @@
       </div>
    </div>
 </section>
-
 
 
 <?php
