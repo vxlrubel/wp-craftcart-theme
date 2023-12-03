@@ -75,15 +75,27 @@ class Register_Scripts{
         }
 
         // if is single page 
-        if( is_singular() ){
-            wp_enqueue_script( 
-                'magiczoomplus',
-                CC_ASSETS_JS . 'magiczoomplus.js',
-                ['jquery'],
-                CC_VERSION,
-                true
-            );
-        }
+        // if( is_singular() ){
+        //     wp_enqueue_script( 
+        //         'magiczoomplus',
+        //         CC_ASSETS_JS . 'magiczoomplus.js',
+        //         ['jquery'],
+        //         CC_VERSION,
+        //         true
+        //     );
+        // }
+
+
+        // zoom magnifing
+        // if( is_singular() ){
+        //     wp_enqueue_script( 
+        //         'ez-plus',
+        //         CC_ASSETS_JS . 'ez-plus.js',
+        //         ['jquery'],
+        //         CC_VERSION,
+        //         true
+        //     );
+        // }
 
         wp_localize_script('customjs', 'cc', [
             'ajax_url' => admin_url('admin-ajax.php'),
@@ -113,14 +125,14 @@ class Register_Scripts{
         }
 
 
-        if( is_singular() ){
-            wp_enqueue_style( 
-                'magiczoomplus', 
-                CC_ASSETS_CSS . 'magiczoomplus.css', 
-                '', 
-                CC_VERSION
-            );
-        }
+        // if( is_singular() ){
+        //     wp_enqueue_style( 
+        //         'magiczoomplus', 
+        //         CC_ASSETS_CSS . 'magiczoomplus.css', 
+        //         '', 
+        //         CC_VERSION
+        //     );
+        // }
         wp_enqueue_style( 
             'cc-stylesheet', 
             get_stylesheet_uri(),

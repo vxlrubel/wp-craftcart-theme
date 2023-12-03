@@ -245,3 +245,23 @@ if( ! function_exists('craft_cart') ){
     }
 }
 craft_cart();
+
+
+// Retrieve product gallery image URLs
+function get_product_gallery_images() {
+    global $product;
+
+    // Get the product gallery attachment IDs
+    $attachment_ids = $product->get_gallery_image_ids();
+
+    // Initialize an empty array to store image URLs
+    $gallery_images = array();
+
+    // Loop through each attachment ID and get the image URL
+    foreach ($attachment_ids as $attachment_id) {
+        $image_url = wp_get_attachment_url($attachment_id);
+        $gallery_images[] = $image_url;
+    }
+
+    return $gallery_images;
+}

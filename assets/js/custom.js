@@ -118,7 +118,21 @@
             });
         });
 
-        // add active & show class
+
+        // magnifing box image
+        $('.custom-magnify-image-box').on('click', 'img', function (e) {
+            e.preventDefault();
+            let image_src = $(this).attr('src');
+            let target_img = $(this).closest('.magnify-parent').find('figure').children('img');
+
+            target_img.fadeOut(200, () => {
+                target_img.attr('src', image_src);
+                target_img.fadeIn(200);
+            });
+
+        })
+
+
 
     });
 
