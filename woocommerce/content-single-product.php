@@ -64,49 +64,6 @@ get_header(); ?>
                   echo '</div>';
                ?>
 
-
-
-
-               <!-- <div class="BigImg">
-                     <a href="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" class="MagicZoom" id="jeans">
-                        <?php the_post_thumbnail(); ?>
-                     </a>
-               </div> -->
-
-               <?php 
-
-                  
-
-                  // thumbnail
-                  // $thumbnail_url = esc_url( get_the_post_thumbnail_url( get_the_ID() ) );
-                  // printf(
-                  //    '<img id="zoom_03" src="%s" data-zoom-image="%s">',
-                  //    $thumbnail_url,
-                  //    $thumbnail_url
-                  // );
-                  
-                  /**
-                   * Showing product gallary images
-                   */
-                  // do_action( 'woocommerce_product_thumbnails' );
-
-                  // $gallery_images = get_product_gallery_images();
-
-                  // echo '<div id="gallery_01">';
-                  
-                  // foreach( $gallery_images as $image_url ){
-                  //    $url = esc_url( $image_url );
-                     ?>
-                           <!-- <a href="#" data-image="<?php echo $url; ?>" data-zoom-image="<?php echo $url; ?>">
-                              <img src="<?php echo $url; ?>"/>
-                           </a> -->
-                     <?php
-                  // }
-
-                  // echo '</div>';
-
-                  ?>
-
                   <?php
 
                   /**

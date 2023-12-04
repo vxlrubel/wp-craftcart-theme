@@ -137,7 +137,7 @@ holder.addEventListener('mousemove', () => {
     let height = image.clientHeight;
     let width = image.clientWidth;
     let previewWidth = imagePreview.clientWidth;
-    let scaleValue = 2500 / previewWidth;
+    let scaleValue = 3000 / previewWidth;
     imagePreview.style.transform = 'scale(' + scaleValue + ')';
 
     let magTop = top - 50;
