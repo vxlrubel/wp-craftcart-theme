@@ -1,0 +1,31 @@
+.redux-container-editor .mceLayout td {
+  border-width: 1px;
+  margin: 0;
+  padding: 1px;
+}
+.redux-container-editor input,
+.redux-container-editor textarea {
+  margin: inherit;
+}
+.redux-container-editor textarea {
+  border: 0 none;
+}
+.redux-container-editor .wp-editor-container {
+  border-radius: 3px;
+}
+.redux-container-editor .wp-editor-container textarea {
+  border-radius: 0;
+  border-style: inherit;
+}
+.redux-container-editor .quicktags-toolbar input {
+  margin: 2px 1px 4px;
+  display: inline-block;
+  min-width: 26px;
+  padding: 2px 4px;
+  font: 12px/18px Arial, Helvetica, sans-serif normal;
+  color: #464646;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  background: #eee;
+  background-image: linear-gradient(to top, #e3e3e3, #fff);
+}

@@ -1,0 +1,29 @@
+.redux-main .filter .redux-filter {
+  width: 40%;
+  display: inline-block;
+  margin-left: 30px;
+}
+.redux-main div[class^=redux-][class$=-filter-container] {
+  padding-top: 20px;
+}
+.redux-main div[class^=redux-][class$=-filter-container] .container-label {
+  margin-bottom: 20px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #E7E7E7;
+  font-weight: 600;
+  font-size: 12px;
+  color: #999;
+}
+.redux-main div[class^=redux-][class$=-filter-container] .filter {
+  display: inline-block;
+  width: 47%;
+  margin-bottom: 5px;
+}
+.redux-main div[class^=redux-][class$=-filter-container] .filter label {
+  display: inline-block;
+  width: 135px;
+  color: #999999;
+}
+.redux-main div[class^=redux-][class$=-filter-container] .filter label.pro-disabled .filter-value {
+  color: #cccccc;
+}

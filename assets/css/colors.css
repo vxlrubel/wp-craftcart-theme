@@ -1,0 +1,1224 @@
+/*Ain't this some complicated shit!*/
+.redux-main fieldset.disabled h2,
+.redux-main .redux-group-tab.disabled h2 {
+  padding-top: 10px;
+}
+.redux-main fieldset.disabled::before,
+.redux-main .redux-group-tab.disabled::before {
+  color: #0073aa;
+}
+
+#redux-header {
+  border-color: #00a0d2 !important;
+  background: #23282d !important;
+}
+#redux-header .display_header h2 {
+  color: #eee;
+}
+#redux-header .display_header span {
+  color: #eee !important;
+}
+
+.redux-container {
+  background: #23282d;
+}
+.redux-container .redux-sidebar {
+  font-size: 13px;
+  font-weight: 400 !important;
+  line-height: 18px;
+}
+.redux-container .redux-sidebar .redux-group-menu {
+  background-color: #23282d;
+}
+.redux-container .redux-sidebar .redux-group-menu li.divide {
+  border-bottom-color: #11b2ff !important;
+  border-top-color: #11b2ff !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background-color: #0073aa !important;
+  color: #fff !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections .subsection li.active a {
+  font-weight: 700 !important;
+  color: #fff !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.active a {
+  background-color: #0073aa !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.active a:hover {
+  background-color: #0073aa;
+  color: #eee !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li a {
+  font-weight: 400 !important;
+  color: #eee !important;
+  opacity: 0.9 !important;
+  border-style: hidden !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li a:hover {
+  color: #eee !important;
+  background-color: #0073aa !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li .subsection {
+  background: #32373c;
+}
+.redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a {
+  font-weight: 400 !important;
+  color: rgba(240, 245, 250, 0.7) !important;
+  background-color: #32373c !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a:hover {
+  background-color: #32373c !important;
+  color: #00b9eb !important;
+  opacity: 1;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover > a {
+  background-color: #0073aa;
+  color: #eee !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover > a::after {
+  border-right-color: #32373c;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a:hover {
+  color: #eee !important;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection {
+  background-color: #32373c;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection .redux-group-tab-link-a {
+  transition: all 0.2s ease-in-out;
+}
+.redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection .redux-group-tab-link-a:hover {
+  background-color: #23282d;
+  color: #00b9eb !important;
+}
+.redux-container .redux-main {
+  border-left-width: 0;
+}
+
+.postbox.redux-metabox .redux-container .redux-group-menu li.active a {
+  background-color: #00b9eb;
+}
+
+.button.ui-datepicker-current,
+button.ui-datepicker-close {
+  background-color: #007db9 !important;
+}
+
+.ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #0073aa !important;
+  color: #fff !important;
+  border: 1px solid #002e44 !important;
+}
+
+.ui-datepicker-header {
+  background-color: #00a0d2 !important;
+  color: #fff !important;
+}
+
+.ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.ui-datepicker td .ui-state-hover {
+  color: #007db9 !important;
+}
+.ui-datepicker td .ui-state-highlight {
+  background: #0073aa !important;
+  border: 1px solid #00a0d2 !important;
+  color: #fff !important;
+}
+
+.redux-container-switch .cb-disable,
+.redux-container-switch .cb-enable,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+
+.redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+
+.redux-container-spinner .ui-widget .ui-spinner-button.ui-state-hover span {
+  background-color: #0084c4 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#009ce7), to(#0084c4)) !important;
+  background-image: -linear-gradient(top, #009ce7, #0084c4) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009ce7", endColorstr="#0084c4", GradientType=0) !important;
+  border-color: #0084c4 !important;
+  border-color: #0076af !important;
+}
+
+.redux-container-spinner .ui-widget .ui-spinner-button.ui-state-active span {
+  background-color: #003f5e !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#005781), to(#003f5e)) !important;
+  background-image: -linear-gradient(top, #005781, #003f5e) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005781", endColorstr="#003f5e", GradientType=0) !important;
+  border-color: #001d2b !important;
+  border-color: #002e44 !important;
+  color: #fff;
+}
+
+.redux-container-spinner .ui-widget .ui-spinner-button .ui-icon,
+.redux-container-switch .cb-enable.selected,
+.redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #0073aa !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#008bce), to(#0073aa)) !important;
+  background-image: -linear-gradient(top, #008bce, #0073aa) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008bce", endColorstr="#0073aa", GradientType=0) !important;
+  border-color: #003f5e !important;
+  border-color: #005177 !important;
+  box-shadow: inset 0 1px 0 #00a7f7, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.redux-container-image_select .redux-image-select-selected img {
+  border-color: #0073aa !important;
+}
+
+.redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #0073aa !important;
+}
+
+.select2-results .select2-results__option--highlighted {
+  background: #0073aa !important;
+}
+
+.select2-container--classic.select2-container--open .select2-dropdown, .select2-container--classic.select2-container--open .select2-selection--single, .select2-container--classic.select2-container--open .select2-selection--multiple,
+.select2-container--classic .select2-selection--single:focus {
+  border-color: #0073aa !important;
+}
+
+.noUi-connect {
+  background-color: #007db9 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#0096dd), to(#007db9)) !important;
+  background-image: -linear-gradient(top, #0096dd, #007db9) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0096dd", endColorstr="#007db9", GradientType=0) !important;
+}
+
+#redux-footer #redux-share a {
+  color: #0073aa;
+}
+#redux-footer #redux-share a:hover {
+  color: #002e44;
+}iner-multi.select2-container-active .select2-choices,
+.wp-customizer .select2-drop.select2-drop-above.select2-drop-active,
+.wp-customizer .select2-container-active .select2-choice,
+.wp-customizer .select2-container-active .select2-choices,
+.wp-customizer .select2-dropdown-open.select2-drop-above .select2-choice,
+.wp-customizer .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #0073aa;
+}
+.admin-color-fresh .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-fresh .select2-dropdown-open.select2-drop-above .select2-choices,
+.wp-customizer .select2-dropdown-open.select2-drop-above .select2-choice,
+.wp-customizer .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-fresh .noUi-connect,
+.wp-customizer .noUi-connect {
+  background-color: #007db9 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#0096dd), to(#007db9)) !important;
+  background-image: -linear-gradient(top, #0096dd, #007db9) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0096dd", endColorstr="#007db9", GradientType=0) !important;
+}
+
+/* Light admin theme */
+.admin-color-light .button.ui-datepicker-current,
+.admin-color-light button.ui-datepicker-close {
+  background-color: #04b0db !important;
+}
+.admin-color-light .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #0384a4 !important;
+  color: #fff !important;
+  border: 1px solid #013340 !important;
+}
+.admin-color-light .ui-datepicker-header {
+  background-color: #888888 !important;
+  color: #fff !important;
+}
+.admin-color-light .ui-datepicker td .ui-state-active {
+  background-color: #04b0db !important;
+  color: #fff !important;
+}
+.admin-color-light .ui-datepicker td .ui-state-hover {
+  color: #04b0db !important;
+}
+.admin-color-light .ui-datepicker td .ui-state-highlight {
+  background: #04a4cc !important;
+  border: 1px solid #888888 !important;
+  color: #fff !important;
+}
+.admin-color-light .redux-container-switch .cb-disable,
+.admin-color-light .redux-container-switch .cb-enable,
+.admin-color-light .ui-state-default,
+.admin-color-light .ui-widget-content .ui-state-default,
+.admin-color-light .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-light .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-light .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-light .redux-container-switch .cb-enable.selected,
+.admin-color-light .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #04a4cc !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#05c0ef), to(#04a4cc)) !important;
+  background-image: -linear-gradient(top, #05c0ef, #04a4cc) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#05c0ef", endColorstr="#04a4cc", GradientType=0) !important;
+  border-color: #036881 !important;
+  border-color: #037c9a !important;
+  box-shadow: inset 0 1px 0 #22cffb, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-light #redux-header {
+  background: #888888;
+  border-color: #04a4cc;
+}
+.admin-color-light #redux-header .display_header span {
+  color: #e6e6e6;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.active a, .admin-color-light .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #888888;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-light .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #0384a4;
+  background: #6f6f6f;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #04a4cc;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #04a4cc;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #04a4cc;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #888888;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #e6e6e6;
+  text-shadow: 1px 1px #9a9a9a;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #888888;
+  text-shadow: none;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #04a4cc;
+  text-shadow: 1px 1px #025468;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #888888;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-light .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #888888;
+  background: #6f6f6f;
+}
+.admin-color-light .redux-container-image_select .redux-image-select-selected img {
+  border-color: #04a4cc;
+}
+.admin-color-light .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #04a4cc;
+}
+.admin-color-light #redux-footer #redux-share a {
+  color: #04a4cc;
+}
+.admin-color-light #redux-footer #redux-share a:hover {
+  color: #025468;
+}
+.admin-color-light .select2-results .select2-highlighted {
+  background: #04a4cc;
+}
+.admin-color-light .select2-drop-active,
+.admin-color-light .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-light .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-light .select2-container-active .select2-choice,
+.admin-color-light .select2-container-active .select2-choices,
+.admin-color-light .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-light .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #04a4cc;
+}
+.admin-color-light .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-light .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-light .noUi-connect {
+  background-color: #04b0db !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#09cafa), to(#04b0db)) !important;
+  background-image: -linear-gradient(top, #09cafa, #04b0db) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#09cafa", endColorstr="#04b0db", GradientType=0) !important;
+}
+
+/* Blue admin theme */
+.admin-color-blue .button.ui-datepicker-current,
+.admin-color-blue button.ui-datepicker-close {
+  background-color: #509dba !important;
+}
+.admin-color-blue .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #db9825 !important;
+  color: #fff !important;
+  border: 1px solid #845c16 !important;
+}
+.admin-color-blue .ui-datepicker-header {
+  background-color: #096484 !important;
+  color: #fff !important;
+}
+.admin-color-blue .ui-datepicker td .ui-state-active {
+  background-color: #509dba !important;
+  color: #fff !important;
+}
+.admin-color-blue .ui-datepicker td .ui-state-hover {
+  color: #509dba !important;
+}
+.admin-color-blue .ui-datepicker td .ui-state-highlight {
+  background: #4796b3 !important;
+  border: 1px solid #096484 !important;
+  color: #fff !important;
+}
+.admin-color-blue .redux-container-switch .cb-disable,
+.admin-color-blue .redux-container-switch .cb-enable,
+.admin-color-blue .ui-state-default,
+.admin-color-blue .ui-widget-content .ui-state-default,
+.admin-color-blue .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-blue .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-blue .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-blue .redux-container-switch .cb-enable.selected,
+.admin-color-blue .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #4796b3 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5ea5bf), to(#4796b3)) !important;
+  background-image: -linear-gradient(top, #5ea5bf, #4796b3) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5ea5bf", endColorstr="#4796b3", GradientType=0) !important;
+  border-color: #31687c !important;
+  border-color: #39778e !important;
+  box-shadow: inset 0 1px 0 #7cb6cb, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-blue #redux-header {
+  background: #096484;
+  border-color: #4796b3;
+}
+.admin-color-blue #redux-header .display_header span {
+  color: #e2ecf1;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.active a, .admin-color-blue .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #096484;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-blue .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #db9825;
+  background: #064054;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #4796b3;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #4796b3;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #4796b3;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #096484;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #e2ecf1;
+  text-shadow: 1px 1px #7ba8bf;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #096484;
+  text-shadow: none;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #4796b3;
+  text-shadow: 1px 1px #2a596a;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #096484;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-blue .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #096484;
+  background: #064054;
+}
+.admin-color-blue .redux-container-image_select .redux-image-select-selected img {
+  border-color: #4796b3;
+}
+.admin-color-blue .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #4796b3;
+}
+.admin-color-blue #redux-footer #redux-share a {
+  color: #4796b3;
+}
+.admin-color-blue #redux-footer #redux-share a:hover {
+  color: #2a596a;
+}
+.admin-color-blue .select2-results .select2-highlighted {
+  background: #4796b3;
+}
+.admin-color-blue .select2-drop-active,
+.admin-color-blue .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-blue .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-blue .select2-container-active .select2-choice,
+.admin-color-blue .select2-container-active .select2-choices,
+.admin-color-blue .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-blue .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #4796b3;
+}
+.admin-color-blue .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-blue .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-blue .noUi-connect {
+  background-color: #509dba !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#69abc4), to(#509dba)) !important;
+  background-image: -linear-gradient(top, #69abc4, #509dba) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#69abc4", endColorstr="#509dba", GradientType=0) !important;
+}
+
+/* Coffee admin theme */
+.admin-color-coffee .button.ui-datepicker-current,
+.admin-color-coffee button.ui-datepicker-close {
+  background-color: #ccad93 !important;
+}
+.admin-color-coffee .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #ba906d !important;
+  color: #fff !important;
+  border: 1px solid #835d3e !important;
+}
+.admin-color-coffee .ui-datepicker-header {
+  background-color: #46403c !important;
+  color: #fff !important;
+}
+.admin-color-coffee .ui-datepicker td .ui-state-active {
+  background-color: #ccad93 !important;
+  color: #fff !important;
+}
+.admin-color-coffee .ui-datepicker td .ui-state-hover {
+  color: #ccad93 !important;
+}
+.admin-color-coffee .ui-datepicker td .ui-state-highlight {
+  background: #c7a589 !important;
+  border: 1px solid #46403c !important;
+  color: #fff !important;
+}
+.admin-color-coffee .redux-container-switch .cb-disable,
+.admin-color-coffee .redux-container-switch .cb-enable,
+.admin-color-coffee .ui-state-default,
+.admin-color-coffee .ui-widget-content .ui-state-default,
+.admin-color-coffee .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-coffee .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-coffee .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-coffee .redux-container-switch .cb-enable.selected,
+.admin-color-coffee .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #c7a589 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d2b7a1), to(#c7a589)) !important;
+  background-image: -linear-gradient(top, #d2b7a1, #c7a589) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d2b7a1", endColorstr="#c7a589", GradientType=0) !important;
+  border-color: #ae7d55 !important;
+  border-color: #b78b66 !important;
+  box-shadow: inset 0 1px 0 #e0cdbd, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-coffee #redux-header {
+  background: #46403c;
+  border-color: #c7a589;
+}
+.admin-color-coffee #redux-header .display_header span {
+  color: #cdcbc9;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.active a, .admin-color-coffee .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #46403c;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-coffee .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #ba906d;
+  background: #2b2724;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #c7a589;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #c7a589;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #c7a589;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #46403c;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #cdcbc9;
+  text-shadow: 1px 1px #837f7a;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #46403c;
+  text-shadow: none;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #c7a589;
+  text-shadow: 1px 1px #9f714b;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #46403c;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-coffee .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #46403c;
+  background: #2b2724;
+}
+.admin-color-coffee .redux-container-image_select .redux-image-select-selected img {
+  border-color: #c7a589;
+}
+.admin-color-coffee .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #c7a589;
+}
+.admin-color-coffee #redux-footer #redux-share a {
+  color: #c7a589;
+}
+.admin-color-coffee #redux-footer #redux-share a:hover {
+  color: #9f714b;
+}
+.admin-color-coffee .select2-results .select2-highlighted {
+  background: #c7a589;
+}
+.admin-color-coffee .select2-drop-active,
+.admin-color-coffee .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-coffee .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-coffee .select2-container-active .select2-choice,
+.admin-color-coffee .select2-container-active .select2-choices,
+.admin-color-coffee .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-coffee .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #c7a589;
+}
+.admin-color-coffee .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-coffee .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-coffee .noUi-connect {
+  background-color: #ccad93 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d7bfac), to(#ccad93)) !important;
+  background-image: -linear-gradient(top, #d7bfac, #ccad93) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7bfac", endColorstr="#ccad93", GradientType=0) !important;
+}
+
+/* Ectoplasm admin theme */
+.admin-color-ectoplasm .button.ui-datepicker-current,
+.admin-color-ectoplasm button.ui-datepicker-close {
+  background-color: #a9bd4f !important;
+}
+.admin-color-ectoplasm .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #89993a !important;
+  color: #fff !important;
+  border: 1px solid #474f1e !important;
+}
+.admin-color-ectoplasm .ui-datepicker-header {
+  background-color: #413256 !important;
+  color: #fff !important;
+}
+.admin-color-ectoplasm .ui-datepicker td .ui-state-active {
+  background-color: #a9bd4f !important;
+  color: #fff !important;
+}
+.admin-color-ectoplasm .ui-datepicker td .ui-state-hover {
+  color: #a9bd4f !important;
+}
+.admin-color-ectoplasm .ui-datepicker td .ui-state-highlight {
+  background: #a3b745 !important;
+  border: 1px solid #413256 !important;
+  color: #fff !important;
+}
+.admin-color-ectoplasm .redux-container-switch .cb-disable,
+.admin-color-ectoplasm .redux-container-switch .cb-enable,
+.admin-color-ectoplasm .ui-state-default,
+.admin-color-ectoplasm .ui-widget-content .ui-state-default,
+.admin-color-ectoplasm .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-ectoplasm .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-ectoplasm .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-ectoplasm .redux-container-switch .cb-enable.selected,
+.admin-color-ectoplasm .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #a3b745 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b0c25e), to(#a3b745)) !important;
+  background-image: -linear-gradient(top, #b0c25e, #a3b745) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b0c25e", endColorstr="#a3b745", GradientType=0) !important;
+  border-color: #727f30 !important;
+  border-color: #829237 !important;
+  box-shadow: inset 0 1px 0 #bfcd7b, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-ectoplasm #redux-header {
+  background: #413256;
+  border-color: #a3b745;
+}
+.admin-color-ectoplasm #redux-header .display_header span {
+  color: #cbc5d3;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.active a, .admin-color-ectoplasm .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #413256;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-ectoplasm .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #89993a;
+  background: #291f36;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #a3b745;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #a3b745;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #a3b745;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #413256;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #cbc5d3;
+  text-shadow: 1px 1px #7d6e91;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #413256;
+  text-shadow: none;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #a3b745;
+  text-shadow: 1px 1px #616d29;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #413256;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-ectoplasm .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #413256;
+  background: #291f36;
+}
+.admin-color-ectoplasm .redux-container-image_select .redux-image-select-selected img {
+  border-color: #a3b745;
+}
+.admin-color-ectoplasm .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #a3b745;
+}
+.admin-color-ectoplasm #redux-footer #redux-share a {
+  color: #a3b745;
+}
+.admin-color-ectoplasm #redux-footer #redux-share a:hover {
+  color: #616d29;
+}
+.admin-color-ectoplasm .select2-results .select2-highlighted {
+  background: #a3b745;
+}
+.admin-color-ectoplasm .select2-drop-active,
+.admin-color-ectoplasm .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-ectoplasm .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-ectoplasm .select2-container-active .select2-choice,
+.admin-color-ectoplasm .select2-container-active .select2-choices,
+.admin-color-ectoplasm .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-ectoplasm .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #a3b745;
+}
+.admin-color-ectoplasm .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-ectoplasm .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-ectoplasm .noUi-connect {
+  background-color: #a9bd4f !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b6c669), to(#a9bd4f)) !important;
+  background-image: -linear-gradient(top, #b6c669, #a9bd4f) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b6c669", endColorstr="#a9bd4f", GradientType=0) !important;
+}
+
+/* Midnight admin theme */
+.admin-color-midnight .button.ui-datepicker-current,
+.admin-color-midnight button.ui-datepicker-close {
+  background-color: #e35950 !important;
+}
+.admin-color-midnight .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #d92c23 !important;
+  color: #fff !important;
+  border: 1px solid #811a15 !important;
+}
+.admin-color-midnight .ui-datepicker-header {
+  background-color: #363b3f !important;
+  color: #fff !important;
+}
+.admin-color-midnight .ui-datepicker td .ui-state-active {
+  background-color: #e35950 !important;
+  color: #fff !important;
+}
+.admin-color-midnight .ui-datepicker td .ui-state-hover {
+  color: #e35950 !important;
+}
+.admin-color-midnight .ui-datepicker td .ui-state-highlight {
+  background: #e14d43 !important;
+  border: 1px solid #363b3f !important;
+  color: #fff !important;
+}
+.admin-color-midnight .redux-container-switch .cb-disable,
+.admin-color-midnight .redux-container-switch .cb-enable,
+.admin-color-midnight .ui-state-default,
+.admin-color-midnight .ui-widget-content .ui-state-default,
+.admin-color-midnight .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-midnight .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-midnight .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-midnight .redux-container-switch .cb-enable.selected,
+.admin-color-midnight .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #e14d43 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e66a62), to(#e14d43)) !important;
+  background-image: -linear-gradient(top, #e66a62, #e14d43) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e66a62", endColorstr="#e14d43", GradientType=0) !important;
+  border-color: #ba281e !important;
+  border-color: #d02c21 !important;
+  box-shadow: inset 0 1px 0 #ec8b85, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-midnight #redux-header {
+  background: #363b3f;
+  border-color: #e14d43;
+}
+.admin-color-midnight #redux-header .display_header span {
+  color: #c2c4c5;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.active a, .admin-color-midnight .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #363b3f;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-midnight .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #d92c23;
+  background: #1e2124;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #e14d43;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #e14d43;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #e14d43;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #363b3f;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #c2c4c5;
+  text-shadow: 1px 1px #74787a;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #363b3f;
+  text-shadow: none;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #e14d43;
+  text-shadow: 1px 1px #a4231a;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #363b3f;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-midnight .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #363b3f;
+  background: #1e2124;
+}
+.admin-color-midnight .redux-container-image_select .redux-image-select-selected img {
+  border-color: #e14d43;
+}
+.admin-color-midnight .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #e14d43;
+}
+.admin-color-midnight #redux-footer #redux-share a {
+  color: #e14d43;
+}
+.admin-color-midnight #redux-footer #redux-share a:hover {
+  color: #a4231a;
+}
+.admin-color-midnight .select2-results .select2-highlighted {
+  background: #e14d43;
+}
+.admin-color-midnight .select2-drop-active,
+.admin-color-midnight .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-midnight .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-midnight .select2-container-active .select2-choice,
+.admin-color-midnight .select2-container-active .select2-choices,
+.admin-color-midnight .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-midnight .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #e14d43;
+}
+.admin-color-midnight .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-midnight .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-midnight .noUi-connect {
+  background-color: #e35950 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e8776f), to(#e35950)) !important;
+  background-image: -linear-gradient(top, #e8776f, #e35950) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8776f", endColorstr="#e35950", GradientType=0) !important;
+}
+
+/* Ocean admin theme */
+.admin-color-ocean .button.ui-datepicker-current,
+.admin-color-ocean button.ui-datepicker-close {
+  background-color: #a7c0a9 !important;
+}
+.admin-color-ocean .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #86a988 !important;
+  color: #fff !important;
+  border: 1px solid #547555 !important;
+}
+.admin-color-ocean .ui-datepicker-header {
+  background-color: #627c83 !important;
+  color: #fff !important;
+}
+.admin-color-ocean .ui-datepicker td .ui-state-active {
+  background-color: #a7c0a9 !important;
+  color: #fff !important;
+}
+.admin-color-ocean .ui-datepicker td .ui-state-hover {
+  color: #a7c0a9 !important;
+}
+.admin-color-ocean .ui-datepicker td .ui-state-highlight {
+  background: #9ebaa0 !important;
+  border: 1px solid #627c83 !important;
+  color: #fff !important;
+}
+.admin-color-ocean .redux-container-switch .cb-disable,
+.admin-color-ocean .redux-container-switch .cb-enable,
+.admin-color-ocean .ui-state-default,
+.admin-color-ocean .ui-widget-content .ui-state-default,
+.admin-color-ocean .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-ocean .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-ocean .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-ocean .redux-container-switch .cb-enable.selected,
+.admin-color-ocean .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #9ebaa0 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b3c9b4), to(#9ebaa0)) !important;
+  background-image: -linear-gradient(top, #b3c9b4, #9ebaa0) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b3c9b4", endColorstr="#9ebaa0", GradientType=0) !important;
+  border-color: #719a74 !important;
+  border-color: #80a583 !important;
+  box-shadow: inset 0 1px 0 #cbdacc, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-ocean #redux-header {
+  background: #627c83;
+  border-color: #9ebaa0;
+}
+.admin-color-ocean #redux-header .display_header span {
+  color: #d5dddf;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.active a, .admin-color-ocean .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #627c83;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-ocean .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #86a988;
+  background: #4c6066;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #9ebaa0;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #9ebaa0;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #9ebaa0;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #627c83;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #d5dddf;
+  text-shadow: 1px 1px #7e979d;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #627c83;
+  text-shadow: none;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #9ebaa0;
+  text-shadow: 1px 1px #658d68;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #627c83;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-ocean .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #627c83;
+  background: #4c6066;
+}
+.admin-color-ocean .redux-container-image_select .redux-image-select-selected img {
+  border-color: #9ebaa0;
+}
+.admin-color-ocean .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #9ebaa0;
+}
+.admin-color-ocean #redux-footer #redux-share a {
+  color: #9ebaa0;
+}
+.admin-color-ocean #redux-footer #redux-share a:hover {
+  color: #658d68;
+}
+.admin-color-ocean .select2-results .select2-highlighted {
+  background: #9ebaa0;
+}
+.admin-color-ocean .select2-drop-active,
+.admin-color-ocean .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-ocean .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-ocean .select2-container-active .select2-choice,
+.admin-color-ocean .select2-container-active .select2-choices,
+.admin-color-ocean .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-ocean .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #9ebaa0;
+}
+.admin-color-ocean .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-ocean .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-ocean .noUi-connect {
+  background-color: #a7c0a9 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#bccfbd), to(#a7c0a9)) !important;
+  background-image: -linear-gradient(top, #bccfbd, #a7c0a9) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bccfbd", endColorstr="#a7c0a9", GradientType=0) !important;
+}
+
+/* Sunrise admin theme */
+.admin-color-sunrise .button.ui-datepicker-current,
+.admin-color-sunrise button.ui-datepicker-close {
+  background-color: #df8a48 !important;
+}
+.admin-color-sunrise .ui-datepicker-buttonpane button.ui-datepicker-current {
+  background: #cc6c23 !important;
+  color: #fff !important;
+  border: 1px solid #753e14 !important;
+}
+.admin-color-sunrise .ui-datepicker-header {
+  background-color: #b43c38 !important;
+  color: #fff !important;
+}
+.admin-color-sunrise .ui-datepicker td .ui-state-active {
+  background-color: #df8a48 !important;
+  color: #fff !important;
+}
+.admin-color-sunrise .ui-datepicker td .ui-state-hover {
+  color: #df8a48 !important;
+}
+.admin-color-sunrise .ui-datepicker td .ui-state-highlight {
+  background: #dd823b !important;
+  border: 1px solid #b43c38 !important;
+  color: #fff !important;
+}
+.admin-color-sunrise .redux-container-switch .cb-disable,
+.admin-color-sunrise .redux-container-switch .cb-enable,
+.admin-color-sunrise .ui-state-default,
+.admin-color-sunrise .ui-widget-content .ui-state-default,
+.admin-color-sunrise .ui-widget-header .ui-state-default {
+  background-color: #f5f5f5 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f5f5f5)) !important;
+  background-image: -linear-gradient(top, #f8f8f8, #f5f5f5) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8", endColorstr="#f5f5f5", GradientType=0) !important;
+  border-color: #ccc !important;
+}
+.admin-color-sunrise .ui-datepicker td .ui-state-active {
+  color: #000 !important;
+  font-weight: 700 !important;
+  background: #fff !important;
+}
+.admin-color-sunrise .redux-container-switch .cb-disable.selected {
+  background-color: #646464 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#929292), to(#646464)) !important;
+  background-image: -linear-gradient(top, #929292, #646464) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292", endColorstr="#646464", GradientType=0) !important;
+  border-color: #767676 !important;
+}
+.admin-color-sunrise .redux-container-switch .cb-enable.selected,
+.admin-color-sunrise .redux-field-container .ui-buttonset .ui-state-active {
+  background-color: #dd823b !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e29559), to(#dd823b)) !important;
+  background-image: -linear-gradient(top, #e29559, #dd823b) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e29559", endColorstr="#dd823b", GradientType=0) !important;
+  border-color: #ad5d1e !important;
+  border-color: #c36922 !important;
+  box-shadow: inset 0 1px 0 #e8ac7c, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+}
+.admin-color-sunrise #redux-header {
+  background: #b43c38;
+  border-color: #dd823b;
+}
+.admin-color-sunrise #redux-header .display_header span {
+  color: #f0c8c6;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.active a, .admin-color-sunrise .redux-sidebar .redux-group-menu li.activeChild a {
+  color: #b43c38;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a:hover, .admin-color-sunrise .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a:hover {
+  color: #cc6c23;
+  background: #8d2f2c;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a {
+  color: #dd823b;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a :hover {
+  color: #dd823b;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.active.hasSubSections a {
+  background: #dd823b;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+  background: #b43c38;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #f0c8c6;
+  text-shadow: 1px 1px #d0534d;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+  background: #b43c38;
+  text-shadow: none;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+  background: #dd823b;
+  text-shadow: 1px 1px #98511a;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.redux-section-hover a {
+  background: #b43c38;
+  opacity: 1;
+  border-style: hidden;
+}
+.admin-color-sunrise .redux-sidebar .redux-group-menu li.redux-section-hover a:hover {
+  color: #b43c38;
+  background: #8d2f2c;
+}
+.admin-color-sunrise .redux-container-image_select .redux-image-select-selected img {
+  border-color: #dd823b;
+}
+.admin-color-sunrise .redux-container-image_select .redux-image-select-selected .tiles {
+  border-color: #dd823b;
+}
+.admin-color-sunrise #redux-footer #redux-share a {
+  color: #dd823b;
+}
+.admin-color-sunrise #redux-footer #redux-share a:hover {
+  color: #98511a;
+}
+.admin-color-sunrise .select2-results .select2-highlighted {
+  background: #dd823b;
+}
+.admin-color-sunrise .select2-drop-active,
+.admin-color-sunrise .select2-container-multi.select2-container-active .select2-choices,
+.admin-color-sunrise .select2-drop.select2-drop-above.select2-drop-active,
+.admin-color-sunrise .select2-container-active .select2-choice,
+.admin-color-sunrise .select2-container-active .select2-choices,
+.admin-color-sunrise .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-sunrise .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: #dd823b;
+}
+.admin-color-sunrise .select2-dropdown-open.select2-drop-above .select2-choice,
+.admin-color-sunrise .select2-dropdown-open.select2-drop-above .select2-choices {
+  border-top: inherit;
+}
+.admin-color-sunrise .noUi-connect {
+  background-color: #df8a48 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e59e66), to(#df8a48)) !important;
+  background-image: -linear-gradient(top, #e59e66, #df8a48) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e59e66", endColorstr="#df8a48", GradientType=0) !important;
+}

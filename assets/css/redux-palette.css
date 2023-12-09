@@ -1,0 +1,40 @@
+.redux-container-palette label {
+  border: 3px solid transparent;
+  border-radius: 0;
+  width: 100% !important;
+  display: block;
+}
+.redux-container-palette label.ui-button.ui-widget {
+  width: 95%;
+  background: none;
+  padding: 0;
+  display: flex;
+}
+.redux-container-palette label.ui-button.ui-widget .ui-checkboxradio-icon,
+.redux-container-palette label.ui-button.ui-widget .ui-checkboxradio-icon-space {
+  display: none;
+}
+.redux-container-palette label.ui-button.ui-widget span {
+  padding: 10px;
+  flex-grow: 1;
+  font-size: 0;
+  line-height: 10px;
+  color: rgba(0, 0, 0, 0);
+  transition: all 200ms ease-in-out;
+}
+.redux-container-palette label.ui-button.ui-widget span:hover {
+  flex-grow: 3;
+  font-weight: bold;
+  min-width: 60px;
+  font-size: 12px;
+  line-height: 10px;
+  color: #333;
+  text-shadow: 0 0 8px #fff, 0 0 8px #fff;
+}
+.redux-container-palette label.ui-state-active {
+  border: 3px solid #333 !important;
+}
+
+.wp-customizer .redux-main .redux-container-palette label {
+  margin-bottom: 3px;
+}
