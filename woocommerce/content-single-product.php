@@ -135,7 +135,16 @@ get_header(); ?>
                         </div>
                      <?php endif; ?>
                      
+
+                     <!-- buy now button -->
+                     <form class="buy-now-form" method="post" action="<?php echo esc_url(wc_get_checkout_url()); ?>">
+                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( get_the_ID() ); ?>">
+                        <button type="submit" class="single_add_to_cart_button button alt">Buy Now</button>
+                     </form>
+
+                     <!-- buy now button -->
                      <!-- will be sharing icon -->
+                     
                      <?php 
                         if( is_enable_options('cc-commerce-share-link-single-visibility') ){
                            cc_wc_product_share_icon();
