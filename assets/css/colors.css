@@ -5,22 +5,22 @@
 }
 .redux-main fieldset.disabled::before,
 .redux-main .redux-group-tab.disabled::before {
-  color: #0073aa;
+  color: #9ebaa0;
 }
 
 #redux-header {
-  border-color: #00a0d2 !important;
-  background: #23282d !important;
+  border-color: #aa9d88 !important;
+  background: #738e96 !important;
 }
 #redux-header .display_header h2 {
-  color: #eee;
+  color: #fff;
 }
 #redux-header .display_header span {
-  color: #eee !important;
+  color: #fff !important;
 }
 
 .redux-container {
-  background: #23282d;
+  background: #738e96;
 }
 .redux-container .redux-sidebar {
   font-size: 13px;
@@ -28,14 +28,14 @@
   line-height: 18px;
 }
 .redux-container .redux-sidebar .redux-group-menu {
-  background-color: #23282d;
+  background-color: #738e96;
 }
 .redux-container .redux-sidebar .redux-group-menu li.divide {
-  border-bottom-color: #11b2ff !important;
-  border-top-color: #11b2ff !important;
+  border-bottom-color: #dae4da !important;
+  border-top-color: #dae4da !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
-  background-color: #0073aa !important;
+  background-color: #9ebaa0 !important;
   color: #fff !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.activeChild.hasSubSections .subsection li.active a {
@@ -43,80 +43,80 @@
   color: #fff !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.active a {
-  background-color: #0073aa !important;
+  background-color: #9ebaa0 !important;
   color: #fff !important;
   opacity: 1 !important;
   font-weight: 700 !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.active a:hover {
-  background-color: #0073aa;
-  color: #eee !important;
+  background-color: #9ebaa0;
+  color: #fff !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li a {
   font-weight: 400 !important;
-  color: #eee !important;
+  color: #fff !important;
   opacity: 0.9 !important;
   border-style: hidden !important;
   transition: all 0.2s ease-in-out !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li a:hover {
-  color: #eee !important;
-  background-color: #0073aa !important;
+  color: #fff !important;
+  background-color: #9ebaa0 !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li .subsection {
-  background: #32373c;
+  background: #627c83;
 }
 .redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a {
   font-weight: 400 !important;
-  color: rgba(240, 245, 250, 0.7) !important;
-  background-color: #32373c !important;
+  color: #d5dde0 !important;
+  background-color: #627c83 !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a:hover {
-  background-color: #32373c !important;
-  color: #00b9eb !important;
+  background-color: #627c83 !important;
+  color: #9ebaa0 !important;
   opacity: 1;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover > a {
-  background-color: #0073aa;
-  color: #eee !important;
+  background-color: #9ebaa0;
+  color: #fff !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover > a::after {
-  border-right-color: #32373c;
+  border-right-color: #627c83;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .redux-group-tab-link-a:hover {
-  color: #eee !important;
+  color: #fff !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection {
-  background-color: #32373c;
+  background-color: #627c83;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection .redux-group-tab-link-a {
   transition: all 0.2s ease-in-out;
 }
 .redux-container .redux-sidebar .redux-group-menu li.hasSubSections.redux-section-hover .subsection .redux-group-tab-link-a:hover {
-  background-color: #23282d;
-  color: #00b9eb !important;
+  background-color: #738e96;
+  color: #9ebaa0 !important;
 }
 .redux-container .redux-main {
   border-left-width: 0;
 }
 
 .postbox.redux-metabox .redux-container .redux-group-menu li.active a {
-  background-color: #00b9eb;
+  background-color: #9ebaa0;
 }
 
 .button.ui-datepicker-current,
 button.ui-datepicker-close {
-  background-color: #007db9 !important;
+  background-color: #a7c0a9 !important;
 }
 
 .ui-datepicker-buttonpane button.ui-datepicker-current {
-  background: #0073aa !important;
+  background: #9ebaa0 !important;
   color: #fff !important;
-  border: 1px solid #002e44 !important;
+  border: 1px solid #658d68 !important;
 }
 
 .ui-datepicker-header {
-  background-color: #00a0d2 !important;
+  background-color: #aa9d88 !important;
   color: #fff !important;
 }
 
@@ -126,11 +126,11 @@ button.ui-datepicker-close {
   background: #fff !important;
 }
 .ui-datepicker td .ui-state-hover {
-  color: #007db9 !important;
+  color: #a7c0a9 !important;
 }
 .ui-datepicker td .ui-state-highlight {
-  background: #0073aa !important;
-  border: 1px solid #00a0d2 !important;
+  background: #9ebaa0 !important;
+  border: 1px solid #aa9d88 !important;
   color: #fff !important;
 }
 
@@ -155,65 +155,67 @@ button.ui-datepicker-close {
 }
 
 .redux-container-spinner .ui-widget .ui-spinner-button.ui-state-hover span {
-  background-color: #0084c4 !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#009ce7), to(#0084c4)) !important;
-  background-image: -linear-gradient(top, #009ce7, #0084c4) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009ce7", endColorstr="#0084c4", GradientType=0) !important;
-  border-color: #0084c4 !important;
-  border-color: #0076af !important;
+  background-color: #adc5af !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c2d3c3), to(#adc5af)) !important;
+  background-image: -linear-gradient(top, #c2d3c3, #adc5af) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c2d3c3", endColorstr="#adc5af", GradientType=0) !important;
+  border-color: #adc5af !important;
+  border-color: #a1bca3 !important;
 }
 
 .redux-container-spinner .ui-widget .ui-spinner-button.ui-state-active span {
-  background-color: #003f5e !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#005781), to(#003f5e)) !important;
-  background-image: -linear-gradient(top, #005781, #003f5e) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#005781", endColorstr="#003f5e", GradientType=0) !important;
-  border-color: #001d2b !important;
-  border-color: #002e44 !important;
+  background-color: #719a74 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#86a989), to(#719a74)) !important;
+  background-image: -linear-gradient(top, #86a989, #719a74) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#86a989", endColorstr="#719a74", GradientType=0) !important;
+  border-color: #5a7f5d !important;
+  border-color: #658d68 !important;
   color: #fff;
 }
 
 .redux-container-spinner .ui-widget .ui-spinner-button .ui-icon,
 .redux-container-switch .cb-enable.selected,
 .redux-field-container .ui-buttonset .ui-state-active {
-  background-color: #0073aa !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#008bce), to(#0073aa)) !important;
-  background-image: -linear-gradient(top, #008bce, #0073aa) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008bce", endColorstr="#0073aa", GradientType=0) !important;
-  border-color: #003f5e !important;
-  border-color: #005177 !important;
-  box-shadow: inset 0 1px 0 #00a7f7, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
+  background-color: #9ebaa0 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#b3c9b4), to(#9ebaa0)) !important;
+  background-image: -linear-gradient(top, #b3c9b4, #9ebaa0) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b3c9b4", endColorstr="#9ebaa0", GradientType=0) !important;
+  border-color: #719a74 !important;
+  border-color: #80a583 !important;
+  box-shadow: inset 0 1px 0 #cbdacc, 0 1px 0 rgba(0, 0, 0, 0.15) !important;
 }
 
 .redux-container-image_select .redux-image-select-selected img {
-  border-color: #0073aa !important;
+  border-color: #9ebaa0 !important;
 }
 
 .redux-container-image_select .redux-image-select-selected .tiles {
-  border-color: #0073aa !important;
+  border-color: #9ebaa0 !important;
 }
 
 .select2-results .select2-results__option--highlighted {
-  background: #0073aa !important;
+  background: #9ebaa0 !important;
 }
 
 .select2-container--classic.select2-container--open .select2-dropdown, .select2-container--classic.select2-container--open .select2-selection--single, .select2-container--classic.select2-container--open .select2-selection--multiple,
 .select2-container--classic .select2-selection--single:focus {
-  border-color: #0073aa !important;
+  border-color: #9ebaa0 !important;
 }
 
 .noUi-connect {
-  background-color: #007db9 !important;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#0096dd), to(#007db9)) !important;
-  background-image: -linear-gradient(top, #0096dd, #007db9) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0096dd", endColorstr="#007db9", GradientType=0) !important;
+  background-color: #a7c0a9 !important;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#bccfbd), to(#a7c0a9)) !important;
+  background-image: -linear-gradient(top, #bccfbd, #a7c0a9) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bccfbd", endColorstr="#a7c0a9", GradientType=0) !important;
 }
 
 #redux-footer #redux-share a {
-  color: #0073aa;
+  color: #9ebaa0;
 }
 #redux-footer #redux-share a:hover {
-  color: #002e44;
+  color: #658d68;
+}98511a;
+}02e44;
 }iner-multi.select2-container-active .select2-choices,
 .wp-customizer .select2-drop.select2-drop-above.select2-drop-active,
 .wp-customizer .select2-container-active .select2-choice,
